@@ -1,0 +1,12 @@
+@media (max-width: 767px){
+    .fullImage{
+        height: 300px;
+
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@font-face{
+    font-family: "Mont";
+    font-weight: 100;
+    src: url('/wp-content/themes/supersonicfood/fonts/Mont/Mont-Book.woff') format('woff');
+}
+@font-face{
+    font-family: "Mont";
+    font-weight: 400;
+    src: url('/wp-content/themes/supersonicfood/fonts/Mont/Mont-SemiBold.woff2') format('woff2');
+}
+@font-face{
+    font-family: "Mont";
+    font-weight: 600;
+    src: url('/wp-content/themes/supersonicfood/fonts/Mont/Mont-Bold.ttf') format('truetype');
+}
+
+body{
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+
+    a{
+        transition: ease .3s;
+        text-decoration: none;
+    }
+
+    p,
+    a,
+    input,
+    button,
+    textarea,
+    optgroup,
+    select,
+    span,
+    li{
+        font-family: "Mont" !important;
+        font-weight: 300;
+        outline: none !important;
+
+        b{
+            font-weight: 400 !important;
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        font-family: "Mont" !important;
+        font-weight: 700;
+    }
+}

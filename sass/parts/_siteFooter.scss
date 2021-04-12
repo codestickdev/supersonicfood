@@ -1,0 +1,212 @@
+.siteFooter{
+    margin: 0 35px;
+    border-top: 1px solid #DBDBDB;
+
+    &__top{
+        display: flex;
+        padding: 25px 15px;
+        position: relative;
+    }
+    &__logo{
+        width: 250px;
+        position: absolute;
+        left: 0;
+
+        img{
+            max-width: 80px;
+            width: 100%;
+        }
+    }
+    &__linksWrap{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    &__links{
+        padding-right: 80px;
+
+        &:last-of-type{
+            padding-right: 0;
+        }
+    }
+    &__link{
+        font-size: 12px;
+        font-weight: 300;
+        color: #B1B1B1 !important;
+        padding: 0 20px;
+        position: relative;
+        transition: ease .3s;
+
+        &:first-of-type{
+            font-weight: 400;
+            padding-left: 0;
+        }
+        &:last-of-type{
+            padding-right: 0;
+        }
+
+        &--socialig{
+            &:before{
+                content: '\f16d';
+                font-family: "FontAwesome";
+                font-size: 14px;
+            }
+        }
+        &--socialfb{
+            &:before{
+                content: '\f082';
+                font-family: "FontAwesome";
+                font-size: 14px;
+            }
+        }
+        &:hover{
+            opacity: .7;
+        }
+    }
+
+    &__bottom{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__logos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+    }
+    &__logosLogo{
+        max-height: 30px;
+
+        img{
+            max-width: 110px;
+            max-height: inherit;
+            object-fit: contain;
+        }
+
+        &--divider{
+            width: 0;
+            position: relative;
+
+            &:before{
+                content: '';
+                width: 1px;
+                height: 20px;
+                background-color: #DBDBDB;
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__copyrights{
+        text-align: center;
+        padding: 25px 10px 20px;
+
+        p{
+            font-size: 14px;
+            color: #B1B1B1;
+            margin: 0;
+            
+            a{
+                color: #000;
+
+                &:hover{
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1640px){
+    .siteFooter{
+        &__top{
+            display: flex;
+            flex-direction: column;
+        }
+        &__logo{
+            position: relative;
+            width: 100%;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+        &__linksWrap{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 1500px){
+    .siteFooter{
+        &__linksWrap{
+            align-items: flex-start;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+        &__link{
+            padding: 0 10px;
+        }
+    }
+}
+@media (max-width: 1300px){
+    .siteFooter{
+        &__links{
+            padding-right: 40px;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .siteFooter{
+        &__linksWrap{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__links{
+            padding: 0 0 20px;
+
+            &:last-of-type{
+                padding: 0;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .siteFooter{
+        &__linksWrap{
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        &__links{
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+        }
+        &__link{
+            padding: 0 0 10px;
+        }
+    }   
+}
+@media (max-width: 550px){
+    .siteFooter{
+        &__link{
+            font-size: 10px;
+        }
+        &__logos{
+            height: 30px;
+        }
+        &__logosLogo{
+            max-height: 15px;
+
+            img{
+                max-width: 70px;
+            }
+        }
+        &__copyrights{
+            p{
+                font-size: 12px;
+            }
+        }
+    }
+}

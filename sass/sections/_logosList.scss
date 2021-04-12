@@ -1,0 +1,43 @@
+.logosList{
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #C8C8C8;
+
+    h2{
+        margin: 0 0 50px
+    }
+    &__list{
+        display: flex;
+    }
+    &__logo{
+        text-align: center;
+    }
+}
+@media (max-width: 1199px){
+    .logosList{
+        &__logo{
+            img{
+                max-width: 90%;
+            }
+        }
+    }
+}
+@media (max-width: 768px){
+    .logosList{
+        &__list{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__logo{
+            width: 100% !important;
+            max-width: 230px;
+            height: 120px;
+
+            img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.siteHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 30px;
+  height: 48px;
+  border-bottom: 1px solid #C8C8C8;
+}
+
+.siteHeader__logo {
+  text-align: center;
+}
+
+.siteHeader__logo img {
+  max-width: 200px;
+  width: 100%;
+}
+/*# sourceMappingURL=siteHeader.css.map */
