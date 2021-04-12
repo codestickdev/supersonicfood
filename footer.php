@@ -205,7 +205,7 @@
 			<div class="siteFooter__links">
 				<a href="/produkt/supersonic-powder" class="siteFooter__link">Produkty</a>
 				<a href="/produkt/supersonic-powder" class="siteFooter__link">Powder</a>
-				<a href="/produkt/izotonik" class="siteFooter__link">Isotonic</a>
+				<a href="/produkt/izotonik" class="siteFooter__link">Isotonik</a>
 				<a href="/produkt/supersonic-shaker" class="siteFooter__link">Shaker</a>
 			</div>
 			<div class="siteFooter__links">
