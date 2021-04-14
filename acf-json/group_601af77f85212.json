@@ -520,6 +520,27 @@
                     "maxlength": "",
                     "rows": 4,
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_607639c1d4659",
+                    "label": "Link artykułu",
+                    "name": "homeInfoTiles_link",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
                 }
             ]
         },
@@ -949,5 +970,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617464524
+    "modified": 1618360799
 }

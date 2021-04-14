@@ -37,6 +37,10 @@
         text-align: center;
         margin: 0;
     }
+    .btn{
+        max-width: fit-content;
+        margin: 15px auto 0;
+    }
 }
 @media (max-width: 1629px){
     .homeInfoTile{

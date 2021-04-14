@@ -295,9 +295,9 @@
 			</a>
 			<a href="<?php echo wc_get_cart_url(); ?>" class="btn">
 				<?php if($lang == 'en-US'): ?>
-					<span>Order and pay</span>
+					<span>Go to cart and order</span>
 				<?php else: ?>
-					<span>Zamów i zapłać</span>
+					<span>Przejdź do koszyka i zamów</span>
 				<?php endif; ?>
 			</a>
 		</div>

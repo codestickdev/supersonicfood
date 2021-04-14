@@ -77,6 +77,7 @@ get_header(); ?>
                 $image = get_sub_field('homeInfoTiles_image');
                 $title = get_sub_field('homeInfoTiles_title');
                 $content = get_sub_field('homeInfoTiles_content');
+                $link = get_sub_field('homeInfoTiles_link');
             ?>
             <div class="homeInfoTile__tile">
                 <div class="homeInfoTile__thumb">
@@ -84,6 +85,7 @@ get_header(); ?>
                 </div>
                 <p class="homeInfoTile__title"><?php echo $title; ?></p>
                 <p class="homeInfoTile__content"><?php echo $content; ?></p>
+                <a href="<?php echo $link; ?>" class="btn btn--bigFont"><span>Czytaj więcej</span></a>
             </div>
             <?php endwhile; ?>
         </div>
