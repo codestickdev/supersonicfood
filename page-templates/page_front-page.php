@@ -85,7 +85,9 @@ get_header(); ?>
                 </div>
                 <p class="homeInfoTile__title"><?php echo $title; ?></p>
                 <p class="homeInfoTile__content"><?php echo $content; ?></p>
+                <?php if($link): ?>
                 <a href="<?php echo $link; ?>" class="btn btn--bigFont"><span>Czytaj więcej</span></a>
+                <?php endif; ?>
             </div>
             <?php endwhile; ?>
         </div>
