@@ -1,25 +1,14 @@
 <div id="cartModal" class="cartModal" test="run3">
     <div class="cartModal__wrap">
-        <?php if ($lang == 'en-US') : ?>
-            <h2 class="cartModal__title">My cart</h2>
-        <?php else : ?>
-            <h2 class="cartModal__title">Mój koszyk</h2>
-        <?php endif; ?>
+        <h2 class="cartModal__title"><?php _e('My cart', 'codestick'); ?></h2>
         <?php
         global $woocommerce;
         $count = $woocommerce->cart->cart_contents_count;
         if ($count == 0) : ?>
-            <?php if ($lang == 'en-US') : ?>
-                <div class="cartModal__emptycart">
-                    <p>Cart is empty</p>
-                    <a href="/en/produkt/powder/" class="btn"><span>Go to shop</span></a>
-                </div>
-            <?php else : ?>
-                <div class="cartModal__emptycart">
-                    <p>Twój koszyk jest pusty</p>
-                    <a href="/produkt/powder/" class="btn"><span>Przejdź do sklepu</span></a>
-                </div>
-            <?php endif; ?>
+            <div class="cartModal__emptycart">
+                <p><?php _e('Your cart is empty', 'codestick'); ?></p>
+                <a href="<?php echo home_url(); ?>" class="btn"><span><?php _e('Go to shop', 'codestick'); ?></span></a>
+            </div>
         <?php else : ?>
 
             <div class="cartModal__products">
@@ -65,7 +54,9 @@
                                             $valuename = str_replace('-', ' ', $value);
                                             if ($lang == 'en-US') {
                                                 echo 'Flavour: <span>' . ucfirst($valuename) . '</span>';
-                                            } else {
+                                            }else if($lang == 'de-DE') {
+                                                echo 'Geschmack: <span>' . ucfirst($valuename) . '</span>';
+                                            }else{
                                                 echo 'Smak: <span>' . ucfirst($valuename) . '</span>';
                                             };
                                         } ?>
