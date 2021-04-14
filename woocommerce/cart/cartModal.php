@@ -106,69 +106,36 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <?php if ($lang == 'en-US') : ?>
-                    <div class="cartModal__summary">
-                        <table>
-                        <?php
-                        global $woocommerce;
-                        $country = $woocommerce->customer->get_shipping_country();
-                        $price = WC()->cart->total;
-                        if (!is_user_logged_in()) : ?>
-                            <tr>
-                                <td>Shipping</td>
-                                <td style="font-size: 12px; line-height: 14px;">Shipping costs will be calculated when ordering.</td>
-                            </tr>
-                        <?php else: ?>
-                            <tr>
-                                <td>Shipping</td>
-                                <?php if ($price >= 180 && $country == 'PL'): ?>
-                                    <td>Free!</td>
-                                <?php else: ?>
-                                    <td>From 5€</td>
-                                <?php endif; ?>
-                            </tr>
-                        <?php endif; ?>
-                            <tr>
-                                <td>Total</td>
-                                <td><?php echo wc_price(WC()->cart->total); ?></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="cartModal__actions">
-                        <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span>Proceed to checkout</span></a>
-                    </div>
-                <?php else : ?>
-                    <div class="cartModal__summary">
-                        <table>
-                        <?php
-                        global $woocommerce;
-                        $country = $woocommerce->customer->get_shipping_country();
-                        $price = WC()->cart->total;
-                        if (!is_user_logged_in()) : ?>
-                            <tr>
-                                <td>Wysyłka</td>
-                                <td style="font-size: 12px; line-height: 14px;">Koszty wysyłki zostaną obliczone przy zamówieniu.</td>
-                            </tr>
-                        <?php else: ?>
-                            <tr>
-                                <td>Wysyłka</td>
-                                <?php if ($price >= 180 && $country == 'PL'): ?>
-                                    <td>Za darmo!</td>
-                                <?php else: ?>
-                                    <td>Od 15zł</td>
-                                <?php endif; ?>
-                            </tr>
-                        <?php endif; ?>
-                            <tr>
-                                <td>Suma</td>
-                                <td><?php echo wc_price($price); ?></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="cartModal__actions">
-                    <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span>Zamów i zapłać</span></a>
-                    </div>
-                <?php endif; ?>
+                <div class="cartModal__summary">
+                    <table>
+                    <?php
+                    global $woocommerce;
+                    $country = $woocommerce->customer->get_shipping_country();
+                    $price = WC()->cart->total;
+                    if (!is_user_logged_in()) : ?>
+                        <tr>
+                            <td><?php _e('Shipping', 'codestick'); ?></td>
+                            <td style="font-size: 12px; line-height: 14px;"><?php _e('Shipping costs will be calculated when ordering.', 'codestick'); ?></td>
+                        </tr>
+                    <?php else: ?>
+                        <tr>
+                            <td><?php _e('Shipping', 'codestick'); ?></td>
+                            <?php if ($price >= 180 && $country == 'PL'): ?>
+                                <td><?php _e('Free!', 'codestick'); ?></td>
+                            <?php else: ?>
+                                <td><?php _e('From 5€', 'codestick'); ?></td>
+                            <?php endif; ?>
+                        </tr>
+                    <?php endif; ?>
+                        <tr>
+                            <td><?php _e('Total', 'codestick'); ?></td>
+                            <td><?php echo wc_price(WC()->cart->total); ?></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="cartModal__actions">
+                    <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Proceed to checkout', 'codestick'); ?></span></a>
+                </div>
             </div>
         <?php endif; ?>
     </div>
