@@ -1,14 +1,25 @@
 <div id="cartModal" class="cartModal">
     <div class="cartModal__wrap">
-        <h2 class="cartModal__title"><?php _e('My cart', 'codestick'); ?></h2>
+        <?php if ($lang == 'en-US') : ?>
+            <h2 class="cartModal__title">My cart</h2>
+        <?php else : ?>
+            <h2 class="cartModal__title">Mój koszyk</h2>
+        <?php endif; ?>
         <?php
         global $woocommerce;
         $count = $woocommerce->cart->cart_contents_count;
         if ($count == 0) : ?>
-            <div class="cartModal__emptycart">
-                <p><?php _e('Your cart is empty', 'codestick'); ?></p>
-                <a href="<?php echo home_url(); ?>" class="btn"><span><?php _e('Go to shop', 'codestick'); ?></span></a>
-            </div>
+            <?php if ($lang == 'en-US') : ?>
+                <div class="cartModal__emptycart">
+                    <p>Cart is empty</p>
+                    <a href="/en/produkt/powder/" class="btn"><span>Go to shop</span></a>
+                </div>
+            <?php else : ?>
+                <div class="cartModal__emptycart">
+                    <p>Twój koszyk jest pusty</p>
+                    <a href="/produkt/powder/" class="btn"><span>Przejdź do sklepu</span></a>
+                </div>
+            <?php endif; ?>
         <?php else : ?>
 
             <div class="cartModal__products">
@@ -90,36 +101,69 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <div class="cartModal__summary">
-                    <table>
-                    <?php
-                    global $woocommerce;
-                    $country = $woocommerce->customer->get_shipping_country();
-                    $price = WC()->cart->total;
-                    if (!is_user_logged_in()) : ?>
-                        <tr>
-                            <td><?php _e('Shipping', 'codestick'); ?></td>
-                            <td style="font-size: 12px; line-height: 14px;"><?php _e('Shipping costs will be calculated when ordering.', 'codestick'); ?></td>
-                        </tr>
-                    <?php else: ?>
-                        <tr>
-                            <td><?php _e('Shipping', 'codestick'); ?></td>
-                            <?php if ($price >= 180 && $country == 'PL'): ?>
-                                <td><?php _e('Free!', 'codestick'); ?></td>
-                            <?php else: ?>
-                                <td><?php _e('From 5€', 'codestick'); ?></td>
-                            <?php endif; ?>
-                        </tr>
-                    <?php endif; ?>
-                        <tr>
-                            <td>Total</td>
-                            <td><?php echo wc_price(WC()->cart->total); ?></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="cartModal__actions">
-                    <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Proceed to checkout', 'codestick'); ?></span></a>
-                </div>
+                <?php if ($lang == 'en-US') : ?>
+                    <div class="cartModal__summary">
+                        <table>
+                        <?php
+                        global $woocommerce;
+                        $country = $woocommerce->customer->get_shipping_country();
+                        $price = WC()->cart->total;
+                        if (!is_user_logged_in()) : ?>
+                            <tr>
+                                <td>Shipping</td>
+                                <td style="font-size: 12px; line-height: 14px;">Shipping costs will be calculated when ordering.</td>
+                            </tr>
+                        <?php else: ?>
+                            <tr>
+                                <td>Shipping</td>
+                                <?php if ($price >= 180 && $country == 'PL'): ?>
+                                    <td>Free!</td>
+                                <?php else: ?>
+                                    <td>From 5€</td>
+                                <?php endif; ?>
+                            </tr>
+                        <?php endif; ?>
+                            <tr>
+                                <td>Total</td>
+                                <td><?php echo wc_price(WC()->cart->total); ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cartModal__actions">
+                        <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span>Proceed to checkout</span></a>
+                    </div>
+                <?php else : ?>
+                    <div class="cartModal__summary">
+                        <table>
+                        <?php
+                        global $woocommerce;
+                        $country = $woocommerce->customer->get_shipping_country();
+                        $price = WC()->cart->total;
+                        if (!is_user_logged_in()) : ?>
+                            <tr>
+                                <td>Wysyłka</td>
+                                <td style="font-size: 12px; line-height: 14px;">Koszty wysyłki zostaną obliczone przy zamówieniu.</td>
+                            </tr>
+                        <?php else: ?>
+                            <tr>
+                                <td>Wysyłka</td>
+                                <?php if ($price >= 180 && $country == 'PL'): ?>
+                                    <td>Za darmo!</td>
+                                <?php else: ?>
+                                    <td>Od 15zł</td>
+                                <?php endif; ?>
+                            </tr>
+                        <?php endif; ?>
+                            <tr>
+                                <td>Suma</td>
+                                <td><?php echo wc_price($price); ?></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cartModal__actions">
+                    <a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span>Zamów i zapłać</span></a>
+                    </div>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>
