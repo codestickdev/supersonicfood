@@ -129,7 +129,7 @@ if (post_password_required()) {
                 </div>
                 <?php endwhile; ?>
             </div>
-            <a id="openModal" class="btn"><span><?php _e('See full Ingredients list') ?></span></a>
+            <a id="openModal" class="btn"><span><?php _e('See full Ingredients list', 'codestick') ?></span></a>
         </section>
         <?php endif; ?>
         <?php if(get_field('product_expert_title')): ?>
@@ -220,7 +220,7 @@ if (post_password_required()) {
                                 <div class="status__current" style="width: calc(<?php echo $price; ?>% + 10px); background-color: <?php echo $color; ?>"></div>
                             </div>
                             <div class="value">
-                                <p><?php echo $price; ?><span class="currentCurrency"></span></p>
+                                <p><?php echo $price; ?> <span class="currentCurrency"></span></p>
                             </div>
                         </div>
                     </div>
