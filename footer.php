@@ -197,8 +197,8 @@
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Customer service</a>
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Contact</a>
 				<a href="/en/shipping/" class="siteFooter__link">Shipping</a>
-				<a href="<?php echo the_field('regulamin_link', 11701); ?>" class="siteFooter__link">Terms and Conditions</a>
-				<a href="<?php echo the_field('privacy_policy_link', 11701); ?>" class="siteFooter__link">Privacy policy</a>
+				<a href="<?php the_field('regulamin_link', 11701); ?>" class="siteFooter__link">Terms and Conditions</a>
+				<a href="<?php the_field('privacy_policy_link', 11701); ?>" class="siteFooter__link">Privacy policy</a>
 			</div>
 		</div>
 		<?php else: ?>
@@ -220,8 +220,8 @@
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Obsługa klienta</a>
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Kontakt</a>
 				<a href="/wysylka" class="siteFooter__link">Wysyłka</a>
-				<a href="<?php echo the_field('regulamin_link', 11377); ?>" class="siteFooter__link">Regulamin</a>
-				<a href="<?php echo the_field('privacy_policy_link', 11377); ?>" class="siteFooter__link">Polityka Prywatności</a>
+				<a href="<?php the_field('regulamin_link', 11377); ?>" class="siteFooter__link">Regulamin</a>
+				<a href="<?php the_field('privacy_policy_link', 11377); ?>" class="siteFooter__link">Polityka Prywatności</a>
 			</div>
 		</div>
 		<?php endif; ?>
