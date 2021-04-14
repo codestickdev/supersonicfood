@@ -75,7 +75,20 @@
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     <?php endif; ?>
-                                <?php else : ?>
+                                <?php elseif($lang == 'de-DE') : ?>
+                                    <p class="quantity">Menge: <span><?php echo $getQuantity; ?></span></p>
+                                    <p class="price">Kosten: <?php echo $price; ?></p>
+                                    <?php if($productID !== 103 && $productID !== 1215 && $productID !== 1213): ?>
+                                        <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
+                                    <?php endif; ?>
+                                    <?php if($productID == 103): ?>
+                                        <?php if($productQuantityPL > 1): ?>
+                                            <?php if($getQuantity > 1): ?>
+                                                <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
+                                            <?php endif; ?>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php else: ?>
                                     <p class="quantity">Ilość: <span><?php echo $getQuantity; ?></span></p>
                                     <p class="price">Koszt: <?php echo $price; ?></p>
                                     <?php if($productID !== 103 && $productID !== 1215 && $productID !== 1213): ?>
