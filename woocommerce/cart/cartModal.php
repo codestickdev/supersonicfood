@@ -51,7 +51,11 @@
                                     <?php if ($attributes) : ?>
                                         <?php foreach ($attributes as $key => $value) {
                                             $valuename = str_replace('-', ' ', $value);
-                                            echo _e('Flavour', 'codestick') . ': <span>' . ucfirst($valuename) . '</span>';
+                                            if ($lang == 'en-US') {
+                                                echo 'Flavour: <span>' . ucfirst($valuename) . '</span>';
+                                            } else {
+                                                echo 'Smak: <span>' . ucfirst($valuename) . '</span>';
+                                            };
                                         } ?>
                                     <?php endif; ?>
                                 </p>
