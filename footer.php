@@ -29,15 +29,7 @@
 			<img src="/wp-content/themes/supersonicfood/images/icons/closemodal_ico.png"/>
 		</div>
 		<div class="componentsModal__openContent">
-			<h2>
-			<?php
-				if($lang == 'en-US'){
-					echo "List of ingredients and nutritional values";
-				}else{
-					echo "Lista składników i wartości odżywczych";
-				}
-			?>
-			</h2>
+			<h2><?php _e('List of ingredients and nutritional values', 'codestick'); ?></h2>
 			<?php the_field('components_modal_opencontent', $productid); ?>
 		</div>
 		<div class="componentsModal__flavours">
@@ -49,7 +41,7 @@
 			?>
 			<div class="componentsModal__flavour">
 				<div class="heading">
-					<h2><?php if($lang == 'en-US'){echo "Flavour: ";}else{echo "Smak: ";}?><?php echo $flavour_name; ?></h2>
+					<h2><?php _e('Flavour', 'codestick'); ?>:<?php echo $flavour_name; ?></h2>
 				</div>
 				<div class="content">
 					<div class="content__desc">
@@ -57,22 +49,22 @@
 					</div>
 					<?php if(get_sub_field('components_modal_tables_falvour_alegreninfo')): ?>
 					<div class="content__alergik">
-						<h3><?php if($lang == 'en-US'){echo "Allergens:";}else{echo "Informacja dla alergików:";}?></h3>
+						<h3><?php _e('Allergens', 'codestick'); ?>:</h3>
 						<p><?php echo $alergik; ?></p>
 					</div>
 					<?php endif; ?>
 					<?php if( have_rows('components_modal_tables_falvour_table_wartosciodzywcze', $productid) ): ?>
 					<div class="content__wartosciodzywcze">
-						<h3><?php if($lang == 'en-US'){echo "Nutritional values:";}else{echo "Wartości odżywcze:";}?></h3>
+						<h3><?php _e('Nutritional values', 'codestick'); ?>:</h3>
 						<div class="componentsModal__tableWrap">
 							<table border="1">
 								<thead>
 									<tr>
-										<th><?php if($lang == 'en-US'){echo "Nutritional value";}else{echo "Wartość odżywcza:";}?></th>
-										<th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-										<th><?php if($lang == 'en-US'){echo "%NRV";}else{echo "% RWS";}?></th>
-										<th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
-										<th><?php if($lang == 'en-US'){echo "%NRV*";}else{echo "% RWS*";}?></th>
+										<th><?php _e('Nutritional value', 'codestick'); ?></th>
+										<th><?php _e('in 100g', 'codestick'); ?></th>
+										<th><?php _e('%NRV', 'codestick'); ?></th>
+										<th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
+										<th><?php _e('%NRV*', 'codestick'); ?></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -103,16 +95,16 @@
 					<?php endif; ?>
 					<?php if( have_rows('components_modal_tables_falvour_table_witaminy', $productid) ): ?>
 					<div class="content__witaminy">
-						<h3><th><?php if($lang == 'en-US'){echo "Vitamins and minerals:";}else{echo "Witaminy i składniki mineralne:";}?></th></h3>
+						<h3><th><?php _e('Vitamins and minerals', 'codestick'); ?></th></h3>
 						<div class="componentsModal__tableWrap">
 							<table border="1">
 								<thead>
 									<tr>
-										<th><?php if($lang == 'en-US'){echo "Vitamins and minerals";}else{echo "Witaminy i składniki mineralne";}?></th>
-										<th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-										<th><?php if($lang == 'en-US'){echo "%NRV";}else{echo "% RWS";}?></th>
-										<th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
-										<th><?php if($lang == 'en-US'){echo "%NRV*";}else{echo "% RWS*";}?></th>
+										<th><?php _e('Vitamins and minerals', 'codestick'); ?></th>
+										<th><?php _e('in 100g', 'codestick'); ?></th>
+										<th><?php _e('%NRV', 'codestick'); ?></th>
+										<th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
+										<th><?php _e('%NRV*', 'codestick'); ?></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -138,14 +130,14 @@
 					<?php endif; ?>
 					<?php if( have_rows('components_modal_tables_falvour_table_aktywne', $productid) ): ?>
 					<div class="content__aktywne">
-						<h3><?php if($lang == 'en-US'){echo "Active ingredients:";}else{echo "Składniki aktywne:";}?></h3>
+						<h3><?php _e('Active ingredients', 'codestick'); ?></h3>
 						<div class="componentsModal__tableWrap">
 							<table border="1">
 								<thead>
 									<tr>
-										<th><?php if($lang == 'en-US'){echo "Active ingredient";}else{echo "Składnik aktywny";}?></th>
-										<th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-										<th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
+										<th><?php _e('Active ingredient', 'codestick'); ?></th>
+										<th><?php _e('in 100g', 'codestick'); ?></th>
+										<th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -246,13 +238,8 @@
 <div id="modalAdded" class="modalAdded">
 	<div class="modalAdded__wrap">
 		<div class="modalAdded__heading">
-			<?php if($lang == 'en-US'): ?>
-				<h2>The product has been added to the cart</h2>
-				<p>Check out our other products or go to the cart.</p>
-			<?php else: ?>
-				<h2>Produkt został dodany do koszyka</h2>
-				<p>Sprawdź nasze inne produkty lub przejdź do koszyka.</p>
-			<?php endif; ?>
+			<h2><?php _e('The product has been added to the cart', 'codestick'); ?></h2>
+			<p><?php _e('Check out our other products or go to the cart.', 'codestick'); ?></p>
 		</div>
 		<?php
 			$post_objects = get_field('modalAdded_products');
@@ -288,20 +275,8 @@
 				$current_url = get_permalink( $obj_id );
 				$redirect = $current_url . '?cartModal=success';
 				echo $redirect;
-			?>" class="continue">
-				<?php if($lang == 'en-US'): ?>
-					<span>Continue shopping</span>
-				<?php else: ?>
-					<span>Kontynuuj zakupy</span>
-				<?php endif; ?>
-			</a>
-			<a href="<?php echo wc_get_cart_url(); ?>" class="btn">
-				<?php if($lang == 'en-US'): ?>
-					<span>Go to cart and order</span>
-				<?php else: ?>
-					<span>Przejdź do koszyka i zamów</span>
-				<?php endif; ?>
-			</a>
+			?>" class="continue"><span><?php _e('Continue shopping', 'codestick'); ?></span></a>
+			<a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Go to cart and order', 'codestick'); ?></span></a>
 		</div>
 	</div>
 </div>
