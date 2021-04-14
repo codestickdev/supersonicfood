@@ -1,4 +1,4 @@
-<div id="cartModal" class="cartModal" test="run2">
+<div id="cartModal" class="cartModal" test="run3">
     <div class="cartModal__wrap">
         <?php if ($lang == 'en-US') : ?>
             <h2 class="cartModal__title">My cart</h2>
@@ -51,10 +51,11 @@
                         $getQuantity = $values['quantity'];
                         $attributes = $_product->get_attributes();
                         $price = WC()->cart->get_product_price($_productData);
+                        $thumbnail = $_product->get_image();
                     ?>
                         <div class="cartModal__product" id="<?php echo $productID; ?>" quantity="<?php if($productQuantityEN > 0 ){ echo $productQuantityEN; }else{ echo $productQuantityPL;}; ?>">
                             <div class="cartModal__thumb">
-                                
+                                <?php echo $thumbnail; ?>
                             </div>
                             <div class="cartModal__content">
                                 <p class="title"><?php echo $_product->get_title() ?></p>
