@@ -1,4 +1,4 @@
-<div id="cartModal" class="cartModal" test="true1">
+<div id="cartModal" class="cartModal" test="run2">
     <div class="cartModal__wrap">
         <?php if ($lang == 'en-US') : ?>
             <h2 class="cartModal__title">My cart</h2>
@@ -54,7 +54,7 @@
                     ?>
                         <div class="cartModal__product" id="<?php echo $productID; ?>" quantity="<?php if($productQuantityEN > 0 ){ echo $productQuantityEN; }else{ echo $productQuantityPL;}; ?>">
                             <div class="cartModal__thumb">
-                                <?php $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key ); echo $thumbnail; ?>
+                                
                             </div>
                             <div class="cartModal__content">
                                 <p class="title"><?php echo $_product->get_title() ?></p>
