@@ -113,6 +113,42 @@
         $('.blogCategory__wrap').find('.blogCategory__post').addClass('blogCategory__post--full');
     }
 
+    /* Checkout payment */
+    // $('form.checkout').on('update change', function(){
+    //     if($('input[name="payment_method"]').is(":checked")){
+    //         $(this).parent().addClass('checked');
+    //     }
+    //     else if($('input[name="payment_method"]').is(":not(:checked)")){
+    //         $(this).parent().removeClass('checked');
+    //     }
+    //     $('input[name="payment_method"]').on('click', function(){
+    //         $('input[name="payment_method"]').parent().removeClass('checked');
+    //         if($(this).is(":checked")){
+    //             $(this).parent().addClass('checked');
+    //         }
+    //         else if($(this).is(":not(:checked)")){
+    //             $(this).parent().removeClass('checked');
+    //         }
+    //     });
+    // })
+    // $(document.body).on('update_checkout init_payment_methods payment_method_selected', function(){
+    //     if($('input[name="payment_method"]').is(":checked")){
+    //         $(this).parent().addClass('checked');
+    //     }
+    //     else if($('input[name="payment_method"]').is(":not(:checked)")){
+    //         $(this).parent().removeClass('checked');
+    //     }
+    //     $('input[name="payment_method"]').on('click', function(){
+    //         $('input[name="payment_method"]').parent().removeClass('checked');
+    //         if($(this).is(":checked")){
+    //             $(this).parent().addClass('checked');
+    //         }
+    //         else if($(this).is(":not(:checked)")){
+    //             $(this).parent().removeClass('checked');
+    //         }
+    //     });
+    // });
+
     /* PRODUCT MODAL */
 
     var openModalbtn = $('a[href="http://openModal"');

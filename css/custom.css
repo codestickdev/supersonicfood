@@ -1995,11 +1995,6 @@ body.postid-20294 .productComponents #openModal:hover {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 20px;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  background-color: #44c680;
-  padding: 0 10px;
 }
 
 .blogCategory__posts--full {
@@ -2137,10 +2132,11 @@ body.postid-20294 .productComponents #openModal:hover {
   font-size: 12px;
   line-height: 16px;
   font-weight: 300;
-  margin: 0 0 5px;
+  margin: 0 0 2px;
 }
 
 .blogCategory__post--small h3 a {
+  font-size: 16px;
   color: #000;
   font-weight: 500;
 }
@@ -3560,7 +3556,22 @@ body.woocommerce-checkout .woocommerce-form-login-toggle .woocommerce-info a {
   margin: 0;
 }
 
-.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li.payment_method_payu label {
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li {
+  margin-bottom: 15px;
+}
+
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li:last-of-type {
+  margin-bottom: 0;
+}
+
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li input {
+  float: left;
+  height: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3568,21 +3579,23 @@ body.woocommerce-checkout .woocommerce-form-login-toggle .woocommerce-info a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 14px;
+  height: 35px;
+  cursor: pointer;
 }
 
-.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li.payment_method_payu label img {
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li label img {
   max-width: 70px;
   position: relative;
   top: -4px;
   margin-left: 10px;
 }
 
-.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li.payment_method_payu div.payment_method_payu {
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li .payment_box {
   background-color: #efefef;
   padding: 12px;
 }
 
-.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li.payment_method_payu div.payment_method_payu p {
+.ssCheckout .checkout .ssCheckout__sidebar #order_review #payment .methods li .payment_box p {
   font-size: 12px;
   margin: 0;
   color: #515151;

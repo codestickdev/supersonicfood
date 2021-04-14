@@ -68,9 +68,6 @@
             font-size: 16px;
             font-weight: 500;
             margin: 0 0 20px;
-            max-width: fit-content;
-            background-color: #44c680;
-            padding: 0 10px;
         }
 
         &--full{
@@ -186,9 +183,10 @@
                     font-size: 12px;
                     line-height: 16px;
                     font-weight: 300;
-                    margin: 0 0 5px;
+                    margin: 0 0 2px;
                 }
                 a{
+                    font-size: 16px;
                     color: #000;
                     font-weight: 500;
     
