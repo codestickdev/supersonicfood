@@ -411,19 +411,15 @@ function wc_rations_view() {
         </div>
     </div>
     <div class="productDiscount" qty="0" postID="<?php echo $post->ID; ?>">
-        <p><?php if($lang == 'en-US'): ?>Product quantity<?php else: ?>Liczba opakowań<?php endif; ?> <span class="productQty">0</span> - <?php if($lang == 'en-US'): ?>discount<?php else: ?>rabat<?php endif; ?> <span><span class="rabatValue">0</span>%</span></p>
-        <p><span><span class="afterPrice">0</span><?php if($lang == 'en-US'): ?> €<?php else: ?> zł<?php endif; ?></span></p>
+        <p><?php _e('Product quantity', 'codestick'); ?> <span class="productQty">0</span> - <?php _e('discount', 'codestick'); ?> <span><span class="rabatValue">0</span>%</span></p>
+        <p><span><span class="afterPrice">0</span><?php if($lang == 'pl-PL'): ?> zł<?php else: ?> €<?php endif; ?></span></p>
     </div>
 
     <div class="info-container ic-desktop">
         <?php if($quantity > 1): ?>
-            <p class="form-title minimumQuantity"><?php _e('Minimalne zamówienie to '. $quantity .' opakowania', 'barbet-theme'); ?></p>
+            <p class="form-title minimumQuantity"><?php _e('The minimum order is '. $quantity .' packages', 'codestick'); ?></p>
         <?php endif; ?>
-        <?php if($lang == 'en-US'): ?>
-            <p class="free-shipping"><?php _e('Free delivery from 180zł in Poland', 'barbet-theme'); ?></p>
-        <?php else: ?>
-            <p class="free-shipping"><?php _e('Darmowa dostawa od 180zł na terenie Polski', 'barbet-theme'); ?></p>
-        <?php endif; ?>
+        <p class="free-shipping"><?php _e('Free delivery from 180zł in Poland', 'codestick'); ?></p>
     </div>
     <?php
 }
@@ -443,13 +439,9 @@ function wc_rations_mobile_view() {
     </div>
     <div class="info-container ic-mobile">
         <?php if($quantity > 1): ?>
-            <p class="form-title"><?php _e('Minimalne zamówienie to '. $quantity .' opakowania', 'barbet-theme'); ?></p>
+            <p class="form-title"><?php _e('The minimum order is '. $quantity .' packages', 'codestick'); ?></p>
         <?php endif; ?>
-        <?php if($lang == 'en-US'): ?>
-            <p class="free-shipping"><?php _e('Free delivery from 180zł in Poland', 'barbet-theme'); ?></p>
-        <?php else: ?>
-            <p class="free-shipping"><?php _e('Darmowa dostawa od 180zł na terenie Polski', 'barbet-theme'); ?></p>
-        <?php endif; ?>
+        <p class="free-shipping"><?php _e('Free delivery from 180zł in Poland', 'codestick'); ?></p>
     </div>
     <?php }
 }

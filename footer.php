@@ -41,7 +41,7 @@
 			?>
 			<div class="componentsModal__flavour">
 				<div class="heading">
-					<h2><?php _e('Flavour', 'codestick'); ?>:<?php echo $flavour_name; ?></h2>
+					<h2><?php _e('Flavour', 'codestick'); ?>: <?php echo $flavour_name; ?></h2>
 				</div>
 				<div class="content">
 					<div class="content__desc">
