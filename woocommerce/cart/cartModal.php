@@ -1,4 +1,4 @@
-<div id="cartModal" class="cartModal">
+<div id="cartModal" class="cartModal" test="true1">
     <div class="cartModal__wrap">
         <?php if ($lang == 'en-US') : ?>
             <h2 class="cartModal__title">My cart</h2>
