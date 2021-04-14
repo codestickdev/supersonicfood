@@ -480,19 +480,3 @@ function yoast_seo_admin_remove_columns( $columns ) {
   unset($columns['wqcmv_product_type']);
   return $columns;
 }
-
-add_action('wp_footer','custom_jquery_add_to_cart_script');
-function custom_jquery_add_to_cart_script(){
-    ?>
-        <script type="text/javascript">
-            // Ready state
-            (function($){ 
-
-                $( document.body ).on( 'added_to_cart', function(){
-                    console.log('EVENT: added_to_cart');
-                });
-
-            })(jQuery); // "jQuery" Working with WP (added the $ alias as argument)
-        </script>
-    <?php
-}
