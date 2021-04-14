@@ -419,7 +419,7 @@ function wc_rations_view() {
         <?php if($quantity > 1): ?>
             <p class="form-title minimumQuantity"><?php _e('The minimum order is '. $quantity .' packages', 'codestick'); ?></p>
         <?php endif; ?>
-        <p class="free-shipping"><?php _e('Free delivery from 180zł in Poland', 'codestick'); ?></p>
+        <p class="free-shipping"><?php _e('Free delivery from 30€ in Poland', 'codestick'); ?></p>
     </div>
     <?php
 }
