@@ -238,7 +238,8 @@
 
     /* Modal added to cart */
     $(document.body).on('added_to_cart', function(){
-        if(!$('.modalAdded').hasClass('modalAdded--toggle')){
+        console.log('product added - ready');
+        if($('.modalAdded').hasClass('modalAdded--toggle')){
             console.log('product added - modal opened');
         }else{
             console.log('product added - modal has closed');
