@@ -237,13 +237,15 @@
     });
 
     /* Modal added to cart */
-    $(document.body).on('added_to_cart', function(){
-        console.log('product added - ready');
-        if($('.modalAdded').hasClass('modalAdded--toggle')){
-            console.log('product added - modal opened');
-        }else{
-            console.log('product added - modal has closed');
-        }
+    $(document).ready(function(){
+        $(document.body).on('added_to_cart', function(){
+            console.log('product added - ready');
+            if($('.modalAdded').hasClass('modalAdded--toggle')){
+                console.log('product added - modal opened');
+            }else{
+                console.log('product added - modal has closed');
+            }
+        });
     });
 
     /* ---- TRIBE SUBPAGE ---- */
