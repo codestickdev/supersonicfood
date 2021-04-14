@@ -193,6 +193,21 @@
                     "return_format": "url"
                 },
                 {
+                    "key": "field_607652fe6fd94",
+                    "label": "Kolor przycisku",
+                    "name": "productspage_products_button_color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
                     "key": "field_60687d9c4e960",
                     "label": "Zdjęcie",
                     "name": "productspage_products_image",
@@ -238,5 +253,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617462530
+    "modified": 1618367257
 }

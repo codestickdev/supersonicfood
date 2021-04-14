@@ -25,6 +25,7 @@ get_header(); ?>
             $title = get_sub_field('productspage_products_title');
             $content = get_sub_field('productspage_products_content');
             $link = get_sub_field('productspage_products_button');
+            $color = get_sub_field('productspage_products_button_color');
             $image = get_sub_field('productspage_products_image');
         ?>
         <div class="productsInfo__section<?php if($position == 'left'): ?> productsInfo__section--imageleft<?php endif; ?>">
@@ -33,7 +34,7 @@ get_header(); ?>
                 <div class="text">
                     <?php echo $content; ?>
                 </div>
-                <a href="<?php echo $link; ?>" class="btn btn--bigFont"><span>Sprawdź</span></a>
+                <a href="<?php echo $link; ?>" class="btn btn--bigFont" style="background-color: <?php echo $color; ?>"><span>Sprawdź</span></a>
             </div>
             <div class="image">
                 <img src="<?php echo $image; ?>"/>
