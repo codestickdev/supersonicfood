@@ -220,8 +220,8 @@
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Obsługa klienta</a>
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Kontakt</a>
 				<a href="/wysylka" class="siteFooter__link">Wysyłka</a>
-				<a href="<?php the_field('regulamin_link', 11377); ?>" class="siteFooter__link">Regulamin</a>
-				<a href="<?php the_field('privacy_policy_link', 11377); ?>" class="siteFooter__link">Polityka Prywatności</a>
+				<a href="<?php the_field('regulamin_link'); ?>" class="siteFooter__link">Regulamin</a>
+				<a href="<?php the_field('privacy_policy_link'); ?>" class="siteFooter__link">Polityka Prywatności</a>
 			</div>
 		</div>
 		<?php endif; ?>

@@ -538,7 +538,7 @@
                         "post"
                     ],
                     "taxonomy": "",
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "allow_archives": 1,
                     "multiple": 0
                 }
@@ -1040,5 +1040,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618366433
+    "modified": 1618366517
 }
