@@ -1267,6 +1267,14 @@ body.postid-20294 .productComponents #openModal:hover {
 
 .productFaq__content {
   margin-top: 60px;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+.productFaq__content.loading {
+  opacity: .5;
+  pointer-events: none;
+  cursor: progress;
 }
 
 .productFaq__content .questions {

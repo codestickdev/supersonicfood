@@ -1103,6 +1103,13 @@ body.postid-20294{
     }
     &__content{
         margin-top: 60px;
+        transition: ease .5s;
+
+        &.loading{
+            opacity: .5;
+            pointer-events: none;
+            cursor: progress;
+        }
 
         .questions{
             display: none;
