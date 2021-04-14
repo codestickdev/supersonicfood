@@ -236,6 +236,11 @@
         }
     });
 
+    /* Modal added to cart */
+    $(document.body).on('added_to_cart', function(){
+        console.log('product added - again');
+    });
+
     /* ---- TRIBE SUBPAGE ---- */
 
     $(document).ready(function(){

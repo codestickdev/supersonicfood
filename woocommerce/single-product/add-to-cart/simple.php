@@ -31,7 +31,7 @@ if ( $product->is_in_stock() ) : ?>
 	<?php do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
     <div class="productPrice">
-        <h4><?php echo $product->get_price(); ?> <span class="currentCurrency"></span> <span>brutto</span><?php endif; ?></h4>
+        <h4><?php echo $product->get_price(); ?> <span class="currentCurrency"></span> <span>brutto</span></h4>
     </div>
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
