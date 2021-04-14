@@ -7,11 +7,7 @@ get_header(); ?>
 <?php $lang = get_bloginfo("language"); ?>
 <main class="ssfood ssfood--subpage">
     <section class="blogHeading container-lg">
-        <?php if($lang == 'en-US'): ?>
-            <h1>Guide</h1>
-        <?php else: ?>
-            <h1>Poradnik</h1>
-        <?php endif; ?>
+        <h1><?php _e('Guide', 'codestick'); ?></h1>
         <div class="blogHeading__select">
         <?php
             $categories = get_categories( array(
@@ -133,11 +129,7 @@ get_header(); ?>
             </div>
             <div class="blogCategory__all container-lg">
                 <a href="<?php echo get_category_link($category->cat_ID); ?>">
-                <?php if($lang == 'en-US'): ?>
-                    <span>See more articles >></span>
-                <?php else: ?>
-                    <span>Zobacz więcej artykułów >></span>
-                <?php endif; ?>
+                    <span><?php _e('See more articles', 'codestick'); ?> >></span>
                 </a>
             </div>
         </div>

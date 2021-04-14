@@ -19,15 +19,8 @@ get_header(); ?>
     </section>
     <section id="calcSection" class="calculator">
         <div class="calculator__wrap">
-        <?php $lang=get_bloginfo("language"); ?>
-        <?php if ($lang == 'en-US') { 
-            echo '<h2>Caloric demand calculator</h2>';
-            echo do_shortcode('[calorie_calculator show_firstname_only="true" show_email_field="false" send_to_email="false" unit="metricunit" template="general"]');
-        }else{
-            echo '<h2>Kalkulator zapotrzebowania kalorycznego</h2>';
-            echo do_shortcode('[calorie_calculator show_firstname_only="true" show_email_field="false" send_to_email="false" unit="metricunit" template="general"]');
-        }
-        ?>
+        <h2><?php _e('Caloric demand calculator', 'codestick'); ?></h2>
+        <?php echo do_shortcode('[calorie_calculator show_firstname_only="true" show_email_field="false" send_to_email="false" unit="metricunit" template="general"]'); ?>
         </div>
     </section>
     
