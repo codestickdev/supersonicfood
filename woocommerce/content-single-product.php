@@ -231,15 +231,7 @@ if (post_password_required()) {
         <?php endif; ?>
         <?php if(get_field('product_logos')): ?>
         <section class="productLogos container-lg">
-            <h2>
-            <?php
-                if($lang == 'en-US'){
-                    echo 'They wrote about us';
-                }else{
-                    echo 'Napisali o nas';
-                }
-            ?>
-            </h2>
+            <h2><?php _e('They wrote about us', 'codestick'); ?></h2>
             <div class="productLogos__list">
                 <?php while(have_rows('product_logos')): the_row();
                     $logo = get_sub_field('product_logos_logo');
@@ -253,15 +245,7 @@ if (post_password_required()) {
         <?php endif; ?>
         <?php if(get_field('product_reviews')): ?>
         <section class="productReviews container-lg">
-            <h2>
-            <?php
-                if($lang == 'en-US'){
-                    echo "Users' opinions";
-                }else{
-                    echo "Opinie uzytkowników";
-                }
-            ?>
-            </h2>
+            <h2><?php _e("Users' opinions", 'codestick'); ?></h2>
             <div class="productReviews__list">
                 <?php while(have_rows('product_reviews')): the_row();
                     $author = get_sub_field('product_reviews_author');
@@ -327,15 +311,7 @@ if (post_password_required()) {
                 <img src="/wp-content/themes/supersonicfood/images/icons/closemodal_ico.png"/>
             </div>
             <div class="componentsModal__openContent">
-                <h2>
-                <?php
-                    if($lang == 'en-US'){
-                        echo "List of ingredients and nutritional values";
-                    }else{
-                        echo "Lista składników i wartości odżywczych";
-                    }
-                ?>
-                </h2>
+                <h2><?php _e('List of ingredients and nutritional values', 'codestick'); ?></h2>
                 <?php the_field('components_modal_opencontent'); ?>
             </div>
             <?php if(get_field('components_rodzaj_produktu') == 'powder'): ?>
@@ -348,7 +324,7 @@ if (post_password_required()) {
                 ?>
                 <div class="componentsModal__flavour">
                     <div class="heading">
-                        <h2><?php if($lang == 'en-US'){echo "Flavour: ";}else{echo "Smak: ";}?><?php echo $flavour_name; ?></h2>
+                        <h2><?php _e('Flavour', 'codestick'); ?>: <?php echo $flavour_name; ?></h2>
                     </div>
                     <div class="content">
                         <div class="content__desc">
@@ -356,22 +332,22 @@ if (post_password_required()) {
                         </div>
                         <?php if(get_sub_field('components_modal_tables_falvour_alegreninfo')): ?>
                         <div class="content__alergik">
-                            <h3><?php if($lang == 'en-US'){echo "Allergens:";}else{echo "Informacja dla alergików:";}?></h3>
+                            <h3><?php _e('Allergens', 'codestick'); ?>:</h3>
                             <p><?php echo $alergik; ?></p>
                         </div>
                         <?php endif; ?>
                         <?php if( have_rows('components_modal_tables_falvour_table_wartosciodzywcze') ): ?>
                         <div class="content__wartosciodzywcze">
-                            <h3><?php if($lang == 'en-US'){echo "Nutritional values:";}else{echo "Wartości odżywcze:";}?></h3>
+                            <h3><?php _e('Nutritional values', 'codestick'); ?>:</h3>
                             <div class="componentsModal__tableWrap">
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th><?php if($lang == 'en-US'){echo "Nutritional value";}else{echo "Wartość odżywcza:";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV";}else{echo "% RWS";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV*";}else{echo "% RWS*";}?></th>
+                                        <th><?php _e('Nutritional value', 'codestick'); ?></th>
+										<th><?php _e('in 100g', 'codestick'); ?></th>
+										<th><?php _e('%NRV', 'codestick'); ?></th>
+										<th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
+										<th><?php _e('%NRV*', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -402,16 +378,16 @@ if (post_password_required()) {
                         <?php endif; ?>
                         <?php if( have_rows('components_modal_tables_falvour_table_witaminy') ): ?>
                         <div class="content__witaminy">
-                            <h3><th><?php if($lang == 'en-US'){echo "Vitamins and minerals:";}else{echo "Witaminy i składniki mineralne:";}?></th></h3>
+                            <h3><th><?php _e('Vitamins and minerals', 'codestick'); ?></th></h3>
                             <div class="componentsModal__tableWrap">
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th><?php if($lang == 'en-US'){echo "Vitamins and minerals";}else{echo "Witaminy i składniki mineralne";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV";}else{echo "% RWS";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV*";}else{echo "% RWS*";}?></th>
+                                            <th><?php _e('Vitamins and minerals', 'codestick'); ?></th>
+                                            <th><?php _e('in 100g', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV', 'codestick'); ?></th>
+                                            <th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV*', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -437,14 +413,14 @@ if (post_password_required()) {
                         <?php endif; ?>
                         <?php if( have_rows('components_modal_tables_falvour_table_aktywne') ): ?>
                         <div class="content__aktywne">
-                            <h3><?php if($lang == 'en-US'){echo "Active ingredients:";}else{echo "Składniki aktywne:";}?></h3>
+                            <h3><?php _e('Active ingredients', 'codestick'); ?></h3>
                             <div class="componentsModal__tableWrap">
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th><?php if($lang == 'en-US'){echo "Active ingredient";}else{echo "Składnik aktywny";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "in 100g";}else{echo "w 100g";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "Full meal portion (104.5g)";}else{echo "Porcja pełnego posiłku (104,5g)";}?></th>
+                                            <th><?php _e('Active ingredient', 'codestick'); ?></th>
+                                            <th><?php _e('in 100g', 'codestick'); ?></th>
+                                            <th><?php _e('Full meal portion (104.5g)', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -477,7 +453,7 @@ if (post_password_required()) {
                 ?>
                 <div class="componentsModal__flavour">
                     <div class="heading">
-                        <h2><?php if($lang == 'en-US'){echo "Flavour: ";}else{echo "Smak: ";}?><?php echo $flavour_name; ?></h2>
+                        <h2><?php _e('Flavour', 'codestick'); ?>: <?php echo $flavour_name; ?></h2>
                     </div>
                     <div class="content">
                         <div class="content__desc">
@@ -490,10 +466,10 @@ if (post_password_required()) {
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th><?php if($lang == 'en-US'){echo "In the daily portion (30 g)";}else{echo "W dziennej porcji (30 g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV* In the daily portion (30 g)";}else{echo "%RWS* W dziennej porcji (30 g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "In 100 g";}else{echo "W 100 g";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV* In 100 g*";}else{echo "%RWS* W 100 g";}?></th>
+                                            <th><?php _e('In the daily portion (30 g)', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV* In the daily portion (30 g)', 'codestick'); ?></th>
+                                            <th><?php _e('In 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV* In 100 g*', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -504,7 +480,7 @@ if (post_password_required()) {
                                             $rwsw100g = get_sub_field('beauty_components_modal_tables_falvour_table_energetyczna_rwsw100g');
                                         ?>
                                         <tr>
-                                            <td><?php if($lang == 'en-US'){echo "Energy value";}else{echo "Wartość energetyczna";}?></td>
+                                            <td><?php _e('Energy value', 'codestick'); ?></td>
                                             <td><?php echo $dziennaporcja; ?></td>
                                             <td><?php echo $rwsdziennaporcja; ?></td>
                                             <td><?php echo $w100g; ?></td>
@@ -518,16 +494,16 @@ if (post_password_required()) {
                         <?php endif; ?>
                         <?php if( have_rows('beauty_components_modal_tables_falvour_table_aktywne') ): ?>
                         <div class="content__aktywne">
-                            <h3><?php if($lang == 'en-US'){echo "Active ingredients:";}else{echo "Składniki aktywne:";}?></h3>
+                            <h3><?php _e('Active ingredients', 'codestick'); ?>:</h3>
                             <div class="componentsModal__tableWrap">
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <th><?php if($lang == 'en-US'){echo "Active ingredients";}else{echo "Składniki aktywne";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "In the daily portion (30 g)";}else{echo "W dziennej porcji (30 g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV* In the daily portion (30 g)";}else{echo "%RWS* W dziennej porcji (30 g)";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "In 100 g";}else{echo "W 100 g";}?></th>
-                                            <th><?php if($lang == 'en-US'){echo "%NRV* In 100 g*";}else{echo "%RWS* W 100 g";}?></th>
+                                            <th><?php _e('Active ingredients', 'codestick'); ?></th>
+                                            <th><?php _e('In the daily portion (30 g)', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV* In the daily portion (30 g)', 'codestick'); ?></th>
+                                            <th><?php _e('In 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('%NRV* In 100 g*', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
