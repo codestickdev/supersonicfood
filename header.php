@@ -50,7 +50,7 @@ foreach ($cart_items as $cart_item => $item){
 	}
 }
 ?>
-<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>">
+<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>">
 <?php wp_body_open(); ?>
 <?php $lang = get_bloginfo("language"); ?>
 <div id="page" class="site">

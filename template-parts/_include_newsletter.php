@@ -1,6 +1,6 @@
 <section class="newsletter">
     <div class="newsletter__wrap">
-        <?php $lang=get_bloginfo("language"); ?>
+        <?php $lang = get_bloginfo("language"); ?>
         <h2><?php _e('Sign up to our newsletter to receive information about news and valuable news about diet, nutrition and wellbeing from us.', 'codestick'); ?></h2>
         <div class="newsletterForm">
         <?php

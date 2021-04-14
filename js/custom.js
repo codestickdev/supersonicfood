@@ -149,6 +149,11 @@
     //     });
     // });
 
+    /* Currency load to span */
+    $(document).ready(function(){
+        var currenntcurrency = $('body').attr('currency');
+        $('.currentCurrency').text(currenntcurrency);
+    });
     /* PRODUCT MODAL */
 
     var openModalbtn = $('a[href="http://openModal"');
