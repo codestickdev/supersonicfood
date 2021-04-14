@@ -63,14 +63,7 @@ get_header(); ?>
     <?php endif; ?>
     <?php if( have_rows('homeInfoTiles') ): ?>
     <section class="homeInfoTile container-lg">
-        <h2 class="ssfood__secHeading">
-        <?php
-        if ($lang == 'en-US') {
-            echo 'What is your goal?';
-        }else{
-            echo 'Jaki jest Twój cel?';
-        }
-        ?>   
+        <h2 class="ssfood__secHeading"><?php _e('What is your goal?', 'codestick'); ?>
         </h2>
         <div class="homeInfoTile__wrap">
             <?php while( have_rows('homeInfoTiles') ): the_row(); 
@@ -86,7 +79,7 @@ get_header(); ?>
                 <p class="homeInfoTile__title"><?php echo $title; ?></p>
                 <p class="homeInfoTile__content"><?php echo $content; ?></p>
                 <?php if($link): ?>
-                <a href="<?php echo $link; ?>" class="btn btn--bigFont"><span>Czytaj więcej</span></a>
+                <a href="<?php echo $link; ?>" class="btn btn--bigFont"><span><?php _e('Read more', 'codestick'); ?></span></a>
                 <?php endif; ?>
             </div>
             <?php endwhile; ?>
@@ -118,15 +111,7 @@ get_header(); ?>
     <?php endif; ?>
     <?php if( have_rows('testimonials') ): ?>
     <section class="testimonials">
-        <h2 class="ssfood__secHeading">
-        <?php
-        if ($lang == 'en-US') {
-            echo 'Expert opinions';
-        }else{
-            echo 'Opinie ekspertów';
-        }
-        ?>
-        </h2>
+        <h2 class="ssfood__secHeading"><?php _e('Expert opinions', 'codestick'); ?></h2>
         <div class="testimonials__list">
             <?php while( have_rows('testimonials') ): the_row();
                 $image = get_sub_field('testimonials_image');
@@ -148,15 +133,7 @@ get_header(); ?>
     <?php endif; ?>
     <?php if( have_rows('logosList') ): ?>
     <section class="logosList container-lg">
-        <h2 class="ssfood__secHeading">
-        <?php
-        if ($lang == 'en-US') {
-            echo 'They wrote about us';
-        }else{
-            echo 'Napisali o nas';
-        }
-        ?>
-        </h2>
+        <h2 class="ssfood__secHeading"><?php _e('They wrote about us', 'codestick'); ?></h2>
         <div class="logosList__list">
             <?php while( have_rows('logosList') ): the_row();
                 $count = count(get_field('logosList'));
