@@ -32,9 +32,5 @@ $lang = get_bloginfo("language");
 	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>
 <?php if (get_field('product_complexInfo_title')): ?>
-	<?php if($lang == 'en-US'): ?>
-    	<a href="#morecontent" class="contentHref">Read more</a>
-	<?php else: ?>
-		<a href="#morecontent" class="contentHref">Dowiedz się więcej</a>
-	<?php endif; ?>
+    <a href="#morecontent" class="contentHref"><?php _e('Read more', 'codestick'); ?></a>
 <?php endif; ?>

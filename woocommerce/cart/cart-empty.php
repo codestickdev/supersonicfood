@@ -25,12 +25,7 @@ do_action( 'woocommerce_cart_is_empty' );
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 <?php $lang = get_bloginfo("language"); ?>
 	<div class="cartEmpty">
-        <?php if($lang == 'en-US'): ?>
-            <p>Your cart is empty</p>
-            <a href="/en/" class="btn"><span>Back to shop</span></a>
-        <?php else: ?>
-            <p>Twój koszyk jest pusty</p>
-            <a href="/" class="btn"><span>Wróć do sklepu</span></a>
-        <?php endif; ?>
+        <p><?php _e('Your cart is empty', 'codestick'); ?></p>
+        <a href="<?php echo home_url(); ?>" class="btn"><span><?php _e('Go to shop', 'codestick'); ?></span></a>
     </div>
 <?php endif; ?>
