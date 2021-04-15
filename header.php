@@ -129,7 +129,19 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [2476, 11732, 11796, 9696, 2474],
+			'post__in'			=> [2476, 11732, 20294, 11796, 9696, 2474],
+			'meta_query' => array(
+				array(
+				  'key' => 'product_main_visible',
+				  'value' => '1',
+				)
+			),
+		);
+		$productsDE = array(
+			'posts_per_page' 	=> -1,
+			'post_type' 		=> 'product',
+			'orderby'			=> 'post__in',
+			'post__in'			=> [21497, 21666, 21695, 21693, 21688, 21657],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -151,6 +163,8 @@ foreach ($cart_items as $cart_item => $item){
 		);
 		if($lang == 'en-US'){
 			$query = new WP_Query($productsEN);
+		}else if ($lang == 'de-DE'){
+			$query = new WP_Query($productsDE);
 		}else{
 			$query = new WP_Query($productsPL);
 		}
