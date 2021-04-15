@@ -480,3 +480,12 @@ function yoast_seo_admin_remove_columns( $columns ) {
   unset($columns['wqcmv_product_type']);
   return $columns;
 }
+
+/* Disable PayPal for PL */
+add_filter( 'woocommerce_available_payment_gateways', 'payment_gateway_disable_based_on_language' );
+function payment_gateway_disable_based_on_language( $available_gateways ) {
+    if (ICL_LANGUAGE_CODE == "pl"){
+        unset($available_gateways['bacs']);
+    }
+   return $available_gateways;
+}
