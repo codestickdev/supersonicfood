@@ -485,7 +485,7 @@ function yoast_seo_admin_remove_columns( $columns ) {
 add_filter( 'woocommerce_available_payment_gateways', 'payment_gateway_disable_based_on_language' );
 function payment_gateway_disable_based_on_language( $available_gateways ) {
     if (ICL_LANGUAGE_CODE == "pl"){
-        unset($available_gateways['bacs']);
+        unset($available_gateways['paypal']);
     }
    return $available_gateways;
 }
