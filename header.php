@@ -84,7 +84,9 @@ foreach ($cart_items as $cart_item => $item){
 		</div>
 		<div class="siteHeader__actions">
 			<div class="language">
+				<?php if(!is_cart() && !is_checkout()): ?>
 				<?php echo do_shortcode('[wpml_language_switcher type="custom" native=0][/wpml_language_switcher]'); ?>
+				<?php endif; ?>
 			</div>
 			<div class="user">
 				<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" class="user__account"><img src="<?php echo get_template_directory_uri() . '/images/icons/user_ico.svg' ?>"/></a>
@@ -110,7 +112,9 @@ foreach ($cart_items as $cart_item => $item){
 	
 	<div class="mobileMenu">
 		<div class="mobileMenu__actions">
+			<?php if(!is_cart() && !is_checkout()): ?>
 			<?php echo do_shortcode('[wpml_language_switcher type="custom" native=0][/wpml_language_switcher]'); ?>
+			<?php endif; ?>
 		</div>
 		<div class="mobileMenu__menu">
 			<?php
