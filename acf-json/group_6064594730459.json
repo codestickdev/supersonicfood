@@ -20,8 +20,32 @@
         },
         {
             "key": "field_6064596a092bd",
-            "label": "Zdjęcie",
-            "name": "productspage_heading_image",
+            "label": "Zdjęcie (desktop)",
+            "name": "productspage_heading_image_desktop",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6080a70ab1b6e",
+            "label": "Zdjęcie (mobile)",
+            "name": "productspage_heading_image_mobile",
             "type": "image",
             "instructions": "",
             "required": 1,
@@ -193,21 +217,6 @@
                     "return_format": "url"
                 },
                 {
-                    "key": "field_607652fe6fd94",
-                    "label": "Kolor przycisku",
-                    "name": "productspage_products_button_color",
-                    "type": "color_picker",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": ""
-                },
-                {
                     "key": "field_60687d9c4e960",
                     "label": "Zdjęcie",
                     "name": "productspage_products_image",
@@ -253,5 +262,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618367257
+    "modified": 1619044124
 }

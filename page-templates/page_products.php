@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <main class="ssfood ssfood--subpage pageProducts">
-    <section class="productsHeader">
+    <section class="productsHeader" style="background-image: url('<?php the_field('productspage_heading_image_desktop'); ?>');">
         <div class="productsHeader__content">
             <div class="wrap">
             <h1><?php the_field('productspage_heading_text'); ?></h1>
@@ -16,7 +16,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="productsHeader__image">
-            <img src="<?php the_field('productspage_heading_image'); ?>"/>
+            <img src="<?php the_field('productspage_heading_image_mobile'); ?>"/>
         </div>
     </section>
     <section class="productsInfo">
