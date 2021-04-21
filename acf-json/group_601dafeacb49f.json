@@ -434,6 +434,7 @@
             "max": 0,
             "layout": "row",
             "button_label": "Dodaj smak",
+            "jpn-tabs": "vertical",
             "sub_fields": [
                 {
                     "key": "field_6024646153029",
@@ -849,6 +850,7 @@
             "max": 0,
             "layout": "row",
             "button_label": "Dodaj smak",
+            "jpn-tabs": "vertical",
             "sub_fields": [
                 {
                     "key": "field_6027dffb47ca9",
@@ -1933,5 +1935,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1614198643
+    "modified": 1619042176
 }
