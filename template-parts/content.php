@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" class="contentPost">
 	<header class="postHeading">
 		<div class="postHeading__content">
-			<a href="/blog">Powrót do wszystkich wpisów</a>
+			<a href="<?php echo home_url('/blog') ?>"><?php _e('Back to all articles', 'codestick'); ?></a>
 			<h1><?php the_title(); ?></h1>
 			<p class="date"><?php echo get_the_date('j F Y'); ?></p>
 		</div>
