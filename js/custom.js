@@ -113,6 +113,16 @@
         $('.blogCategory__wrap').find('.blogCategory__post').addClass('blogCategory__post--full');
     }
 
+    /* Checkout form */
+    $(document).ready(function(){
+        // Error close
+        $('.woocommerce-checkout').bind('DOMSubtreeModified', function(){
+            $('.woocommerce-error').on('click', function(){
+                $(this).css('display', 'none');
+            });
+        });
+    });
+
     /* Checkout payment */
     // $('form.checkout').on('update change', function(){
     //     if($('input[name="payment_method"]').is(":checked")){

@@ -148,6 +148,7 @@
         .productsHeader{
             flex-direction: column-reverse;
             height: auto;
+            max-height: none;
             background-image: unset !important;
 
             &__image{
@@ -196,6 +197,7 @@
         .productsInfo{
             &__section{
                 flex-direction: column-reverse !important;
+                min-height: unset;
                 max-height: none;
 
                 .content{
@@ -227,6 +229,11 @@
                         font-size: 21px;
                         line-height: 28px;
                         margin: 0 0 15px;
+                    }
+                    .text{
+                        ul{
+                            padding-left: 15px;
+                        }
                     }
                 }
             }

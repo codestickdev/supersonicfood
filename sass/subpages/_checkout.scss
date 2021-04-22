@@ -31,6 +31,28 @@ body.woocommerce-checkout{
         display: flex;
         flex-direction: row;
 
+        .woocommerce-error{
+            position: relative;
+            padding: 10px 20px 10px 35px !important;
+
+            &:before{
+                content: 'x';
+                font-size: 12px;
+                line-height: 12px;
+                position: absolute;
+                background: #fff;
+                border-radius: 100%;
+                text-align: center;
+                width: 13px;
+                height: 13px;
+                left: 11px;
+                top: 50%;
+                transform: translate(0px, -50%);
+                color: #e2401c;
+                cursor: pointer;
+            }
+        }
+
         .ssCheckout__form{
             width: calc(100% - 545px);
 
@@ -338,6 +360,11 @@ body.woocommerce-checkout{
     .ssCheckout{
         .checkout{
             flex-direction: column;
+
+            .woocommerce-NoticeGroup-checkout{
+                max-width: none !important;
+                position: relative !important;
+            }
         }
         &__form{
             width: 100% !important;
