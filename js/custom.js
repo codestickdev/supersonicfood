@@ -154,6 +154,16 @@
         var currenntcurrency = $('body').attr('currency');
         $('.currentCurrency').text(currenntcurrency);
     });
+
+    /* Product flavours order */
+
+    // Powder
+    $(document).ready(function(){
+        $('.vpe_table tr.vpe_row:eq(4)').insertBefore('.vpe_table tr:eq(0)');
+        $('.vpe_table tr.vpe_row:eq(5)').insertBefore('.vpe_table tr:eq(2)');
+        console.log('ready');
+    });
+
     /* PRODUCT MODAL */
 
     var openModalbtn = $('a[href="http://openModal"');
