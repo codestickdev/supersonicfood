@@ -56,6 +56,24 @@ body.postid-21695{
         }
     }
 }
+.product.product_tag-shaker{
+    .productPage{
+        &__content{
+            span.form-title{
+                display: none !important;
+            }
+        }
+    }
+    form.variations_form{
+        margin-top: 30px;
+
+        .rations-price{
+            .rations{
+                opacity: 0 !important;
+            }
+        }
+    }
+}
 
 .productPage{
     &__main{

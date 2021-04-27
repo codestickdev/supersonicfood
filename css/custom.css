@@ -128,6 +128,18 @@ body.postid-21695 .productComponents #openModal:hover {
   background-color: #585757 !important;
 }
 
+.product.product_tag-shaker .productPage__content span.form-title {
+  display: none !important;
+}
+
+.product.product_tag-shaker form.variations_form {
+  margin-top: 30px;
+}
+
+.product.product_tag-shaker form.variations_form .rations-price .rations {
+  opacity: 0 !important;
+}
+
 .productPage__main {
   display: -webkit-box;
   display: -ms-flexbox;
