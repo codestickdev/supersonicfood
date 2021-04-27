@@ -129,16 +129,19 @@ body.postid-21695 .productComponents #openModal:hover {
 }
 
 .product.product_tag-supersonic-shaker .productPage__content span.form-title,
+.product.product_tag-shaker-de .productPage__content span.form-title,
 .product.product_tag-shaker .productPage__content span.form-title {
   display: none !important;
 }
 
 .product.product_tag-supersonic-shaker form.variations_form,
+.product.product_tag-shaker-de form.variations_form,
 .product.product_tag-shaker form.variations_form {
   margin-top: 30px;
 }
 
 .product.product_tag-supersonic-shaker form.variations_form .rations-price .rations,
+.product.product_tag-shaker-de form.variations_form .rations-price .rations,
 .product.product_tag-shaker form.variations_form .rations-price .rations {
   opacity: 0 !important;
 }
