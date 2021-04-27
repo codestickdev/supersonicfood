@@ -18,7 +18,7 @@
 
 defined('ABSPATH') || exit;
 ?>
-
+<img src="https://smartmailings.go2cloud.org/aff_l?offer_id=1176&adv_sub=<?php echo $order->get_id(); ?>" width="1" height="1" />
 <div class="woocommerce-order container" orderID="<?php echo $order->get_id(); ?>" orderAMOUNT="<?php $orderTax = $order->get_total_tax(); $orderValue = $order->get_total(); echo $orderValue - $orderTax;?>">
 
 	<?php
