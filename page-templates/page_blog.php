@@ -114,7 +114,7 @@ get_header(); ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
-                    <p class="otherPosts">Kolejne artykuły</p>
+                    <p class="otherPosts"><?php _e('More articles', 'codestick') ?></p>
                     <?php while( $the_querycontinue->have_posts() ) : $the_querycontinue->the_post(); ?>
                         <div class="blogCategory__post--small">
                             <h3>
