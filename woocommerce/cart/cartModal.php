@@ -27,6 +27,9 @@
                         if($productDataID == 2476){
                             $productQuantityEN += $getDataQuantity;
                         }
+                        if($productDataID == 21497){
+                            $productQuantityPL += $getDataQuantity;
+                        }
                         if($productDataID == 103){
                             $productQuantityPL += $getDataQuantity;
                         }
@@ -78,10 +81,10 @@
                                 <?php elseif($lang == 'de-DE') : ?>
                                     <p class="quantity">Menge: <span><?php echo $getQuantity; ?></span></p>
                                     <p class="price">Kosten: <?php echo $price; ?></p>
-                                    <?php if($productID !== 103 && $productID !== 1215 && $productID !== 1213): ?>
+                                    <?php if($productID !== 21497 && $productID !== 21657 && $productID !== 21664): ?>
                                         <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
                                     <?php endif; ?>
-                                    <?php if($productID == 103): ?>
+                                    <?php if($productID == 21497): ?>
                                         <?php if($productQuantityPL > 1): ?>
                                             <?php if($getQuantity > 1): ?>
                                                 <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
