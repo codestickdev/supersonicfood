@@ -301,7 +301,7 @@
 				$redirect = $current_url . '?cartModal=success';
 				echo $redirect;
 			?>" class="continue"><span><?php _e('Continue shopping', 'codestick'); ?></span></a>
-			<a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Go to cart and order', 'codestick'); ?></span></a>
+			<a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Go to cart', 'codestick'); ?></span></a>
 		</div>
 	</div>
 </div>
