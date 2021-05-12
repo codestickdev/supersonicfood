@@ -18,6 +18,8 @@
 	$produtid = 0;
 	if($lang == 'en-US'){
 		$productid = 2476;
+	}else if($lang == 'de-DE'){
+		$productid = 21497;
 	}else{
 		$productid = 103;
 	}
@@ -193,8 +195,31 @@
 				<a href="<?php the_field('privacy_policy_link', 11701); ?>" target="_blank" class="siteFooter__link">Privacy policy</a>
 			</div>
 		</div>
+		<?php elseif($lang == 'de-DE'): ?>
+		<div class="siteFooter__linksWrap">
+			<div class="siteFooter__links">
+				<a href="/de/produkt/supersonic-powder" class="siteFooter__link">Produkte</a>
+				<a href="/de/produkt/supersonic-powder" class="siteFooter__link">Powder</a>
+				<a href="/de/produkt/izotonik" class="siteFooter__link">Beauty</a>
+				<a href="/de/produkt/supersonic-performance-isotonic" class="siteFooter__link">Performance</a>
+				<a href="/de/produkt/supersonic-shaker" class="siteFooter__link">Shaker</a>
+			</div>
+			<div class="siteFooter__links">
+				<a href="/de/about-us" class="siteFooter__link">Über uns</a>
+				<a href="/de/about-us" class="siteFooter__link">Geschichte</a>
+				<a href="https://www.instagram.com/supersonicfood/" target="_blank" class="siteFooter__link siteFooter__link--socialig"></a>
+				<a href="https://www.facebook.com/supersonicfood/" target="_blank" class="siteFooter__link siteFooter__link--socialfb"></a>
+			</div>
+			<div class="siteFooter__links">
+				<a href="https://m.me/supersonicfood" class="siteFooter__link">Kundendienst</a>
+				<a href="https://m.me/supersonicfood" class="siteFooter__link">Kontakt</a>
+				<a href="/de/wysylka" class="siteFooter__link">Sendung</a>
+				<a href="<?php the_field('regulamin_link', 11377); ?>" target="_blank" class="siteFooter__link">Vorschriften</a>
+				<a href="<?php the_field('privacy_policy_link', 11377); ?>" target="_blank" class="siteFooter__link">Datenschutz-Bestimmungen</a>
+			</div>
+		</div>
 		<?php else: ?>
-			<div class="siteFooter__linksWrap">
+		<div class="siteFooter__linksWrap">
 			<div class="siteFooter__links">
 				<a href="/produkt/supersonic-powder" class="siteFooter__link">Produkty</a>
 				<a href="/produkt/supersonic-powder" class="siteFooter__link">Powder</a>

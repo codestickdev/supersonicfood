@@ -7,7 +7,7 @@
             if ($lang == 'en-US') {
                 echo do_shortcode('[contact-form-7 id="11765" title="Newsletter ENG"]');
             }else if ($lang == 'de-DE'){
-                echo do_shortcode('[contact-form-7 id="11485" title="Newsletter"]');
+                echo do_shortcode('[contact-form-7 id="26077" title="Newsletter DE"]');
             }else if ($lang == 'pl-PL'){
                 echo do_shortcode('[contact-form-7 id="11485" title="Newsletter"]');
             }
