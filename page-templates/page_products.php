@@ -34,7 +34,7 @@ get_header(); ?>
                 <div class="text">
                     <?php echo $content; ?>
                 </div>
-                <a href="<?php echo $link; ?>" class="btn btn--bigFont" style="background-color: <?php echo $color; ?>"><span>Sprawdź</span></a>
+                <a href="<?php echo $link; ?>" class="btn btn--bigFont" style="background-color: <?php echo $color; ?>"><span><?php _e('See more', 'codestick'); ?></span></a>
             </div>
             <div class="image">
                 <img src="<?php echo $image; ?>"/>
