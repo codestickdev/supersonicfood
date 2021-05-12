@@ -167,8 +167,8 @@ body.woocommerce-cart{
                                 &:after{
                                     position: absolute;
                                     content: '';
-                                    top: 5px;
-                                    right: -20px;
+                                    top: 0;
+                                    right: -25px;
                                     background-image: url('../images/icons/down-chevron.svg');
                                     background-repeat: no-repeat;
                                     width: 15px;
