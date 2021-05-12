@@ -5588,6 +5588,7 @@ body.woocommerce-account .entry-header {
 @media (max-width: 450px) {
   .homeHeader__content {
     max-width: 320px;
+    margin: 0 auto;
   }
 }
 
