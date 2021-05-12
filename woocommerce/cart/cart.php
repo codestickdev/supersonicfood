@@ -140,7 +140,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                         <div class="coupon-actions">
                             <?php if ( wc_coupons_enabled() ) { ?>
                                 <div class="coupon">
-                                    <div class="coupon-trigger"><?php _e( 'Have coupon?', 'codestick' ); ?></div>
+                                    <div class="coupon-trigger"><span><?php _e( 'Have coupon?', 'codestick' ); ?></span></div>
                                     <div class="coupon__toshow coupon__toshow--toggle">
                                         <label for="coupon_code"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label> <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
                                         <?php do_action( 'woocommerce_cart_coupon' ); ?>

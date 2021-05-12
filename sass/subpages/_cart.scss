@@ -159,18 +159,21 @@ body.woocommerce-cart{
 
                         .coupon-trigger{
                             text-align: left;
-                            position: relative;
                             cursor: pointer;
 
-                            &:after{
-                                position: absolute;
-                                content: '';
-                                top: 5px;
-                                left: 110px;
-                                background-image: url('../images/icons/down-chevron.svg');
-                                background-repeat: no-repeat;
-                                width: 15px;
-                                height: 15px;
+                            span{
+                                position: relative;
+
+                                &:after{
+                                    position: absolute;
+                                    content: '';
+                                    top: 5px;
+                                    right: -20px;
+                                    background-image: url('../images/icons/down-chevron.svg');
+                                    background-repeat: no-repeat;
+                                    width: 15px;
+                                    height: 15px;
+                                }
                             }
                         }
 

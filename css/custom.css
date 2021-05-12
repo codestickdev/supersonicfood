@@ -2752,15 +2752,18 @@ body.woocommerce-cart .entry-content {
 
 .ssCart table.cart td.actions .coupon-actions .coupon .coupon-trigger {
   text-align: left;
-  position: relative;
   cursor: pointer;
 }
 
-.ssCart table.cart td.actions .coupon-actions .coupon .coupon-trigger:after {
+.ssCart table.cart td.actions .coupon-actions .coupon .coupon-trigger span {
+  position: relative;
+}
+
+.ssCart table.cart td.actions .coupon-actions .coupon .coupon-trigger span:after {
   position: absolute;
   content: '';
   top: 5px;
-  left: 110px;
+  right: -20px;
   background-image: url("../images/icons/down-chevron.svg");
   background-repeat: no-repeat;
   width: 15px;
