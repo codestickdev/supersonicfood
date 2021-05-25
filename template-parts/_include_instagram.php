@@ -4,12 +4,12 @@
 	</div>
 	<?php
 	echo do_shortcode('[elfsight_instagram_feed id="1"]');
-	// if($lang == 'pl-PL'){
-	// 	echo do_shortcode('[elfsight_instagram_feed id="1"]');
-	// }elseif($lang == 'de-DE'){
-	// 	echo do_shortcode('[elfsight_instagram_feed id="2"]');
-	// }else{
-	// 	echo do_shortcode('[elfsight_instagram_feed id="3"]');
-	// }
+	if($lang == 'pl-PL'){
+		echo do_shortcode('[elfsight_instagram_feed id="1"]');
+	}elseif($lang == 'de-DE'){
+		echo do_shortcode('[elfsight_instagram_feed id="2"]');
+	}else{
+		echo do_shortcode('[elfsight_instagram_feed id="3"]');
+	}
 	?>
 </section>
