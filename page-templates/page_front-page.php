@@ -38,6 +38,22 @@ get_header(); ?>
         <?php endwhile; ?>
     </section>
     <?php endif; ?>
+    <?php if( current_user_can('editor') || current_user_can('administrator') ):  ?>
+        <?php if( have_rows('logosList') ): ?>
+        <section class="logosList">
+            <div class="logosList__list container-lg">
+                <?php while( have_rows('logosList') ): the_row();
+                    $count = count(get_field('logosList'));
+                    $logo = get_sub_field('logosList_logo');
+                ?>
+                <div class="logosList__logo">
+                    <img src="<?php echo $logo; ?>"/>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </section>
+        <?php endif; ?>
+    <?php endif; ?>
     <?php if( have_rows('halfSections_one') ): ?>
     <?php while( have_rows('halfSections_one') ): the_row(); 
         $title = get_sub_field('halfSections_one_title');
@@ -126,21 +142,6 @@ get_header(); ?>
                 <p class="testimonials__quote"><?php echo $quote; ?></p>
                 <p class="testimonials__author"><?php echo $author; ?></p>
                 <p class="testimonials__position"><?php echo $position; ?></p>
-            </div>
-            <?php endwhile; ?>
-        </div>
-    </section>
-    <?php endif; ?>
-    <?php if( have_rows('logosList') ): ?>
-    <section class="logosList container-lg">
-        <h2 class="ssfood__secHeading"><?php _e('They wrote about us', 'codestick'); ?></h2>
-        <div class="logosList__list">
-            <?php while( have_rows('logosList') ): the_row();
-                $count = count(get_field('logosList'));
-                $logo = get_sub_field('logosList_logo');
-            ?>
-            <div class="logosList__logo" style="width: calc(100% / <?php echo $count; ?>)">
-                <img src="<?php echo $logo; ?>"/>
             </div>
             <?php endwhile; ?>
         </div>

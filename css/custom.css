@@ -5488,21 +5488,25 @@ body.woocommerce-account .entry-header {
 }
 
 .logosList {
-  padding: 60px 0;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #C8C8C8;
-}
-
-.logosList h2 {
-  margin: 0 0 50px;
+  padding: 25px 0;
+  background-color: #f7f6f4;
 }
 
 .logosList__list {
   display: flex;
+  justify-content: center;
 }
 
 .logosList__logo {
+  width: fit-content;
   text-align: center;
+  max-height: 150px;
+}
+
+.logosList__logo img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1199px) {
