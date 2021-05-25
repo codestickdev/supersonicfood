@@ -2367,6 +2367,25 @@ body.single-post nav.post-navigation {
   line-height: 1.7;
 }
 
+.contentPost .postProducts {
+  text-align: center;
+  margin: 30px 0 45px;
+}
+
+.contentPost .postProducts h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.contentPost .postProducts a {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
 .contentPost .postFooter {
   display: flex;
   flex-direction: row;

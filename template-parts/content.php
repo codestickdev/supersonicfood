@@ -19,7 +19,7 @@
 		<div class="postHeading__thumb">
 			<img src="<?php echo get_the_post_thumbnail_url(); ?>"/>
 		</div>
-	</header><!-- .entry-header -->
+	</header>
 
 	<section class="postContent">
 		<?php
@@ -45,7 +45,23 @@
 			)
 		);
 		?>
-	</section><!-- .entry-content -->
+	</section>
+	<section class="postProducts">
+		<?php
+			$lang = get_bloginfo("language");
+			$href = '';
+
+			if($lang == 'en-US'){
+				$href = '/en/our-products/';
+			}else if($lang == 'de-DE'){
+				$href = '/de/unsere-produkte/';
+			}else{
+				$href = '/nasze-produkty/';
+			}
+		?>
+		<h3><?php _e('Learn more about our products!', 'codestick'); ?></h3>
+		<a href="<?php echo home_url($href); ?>" class="btn"><span><?php _e('learn more', 'codestick') ?></span></a>
+	</section>
 	<footer class="postFooter">
 		<?php
 			$previous = get_previous_post();
