@@ -174,6 +174,19 @@
         console.log('ready');
     });
 
+    /* Product video opintion section */
+    $(document).ready(function(){
+        if ($(window).width() < 500) {
+            $('.productTesVid__list').slick({
+                infinite: true,
+                variableWidth: true,
+                centerMode: true,
+                arrows: false,
+                dots: false,
+            });
+        }
+    });
+
     /* PRODUCT MODAL */
 
     var openModalbtn = $('a[href="http://openModal"');
