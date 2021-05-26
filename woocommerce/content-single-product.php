@@ -87,8 +87,22 @@ if (post_password_required()) {
         // do_action('woocommerce_after_single_product_summary');
         ?>
 
+        <?php if( have_rows('logosList', 11377) ): ?>
+        <section id="morecontent" class="logosList">
+            <div class="logosList__list container-lg">
+                <?php while( have_rows('logosList', 11377) ): the_row();
+                    $count = count(get_field('logosList', 11377));
+                    $logo = get_sub_field('logosList_logo');
+                ?>
+                <div class="logosList__logo">
+                    <img src="<?php echo $logo; ?>"/>
+                </div>
+                <?php endwhile; ?>
+            </div>
+        </section>
+        <?php endif; ?>
         <?php if(get_field('product_complexInfo_title')): ?>
-        <section id="morecontent" class="productSpecs">
+        <section class="productSpecs">
             <div class="productSpecs__heading">
                 <h2><?php the_field('product_complexInfo_title'); ?></h2>
             </div>

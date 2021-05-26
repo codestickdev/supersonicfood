@@ -38,21 +38,19 @@ get_header(); ?>
         <?php endwhile; ?>
     </section>
     <?php endif; ?>
-    <?php if( current_user_can('editor') || current_user_can('administrator') ):  ?>
-        <?php if( have_rows('logosList') ): ?>
-        <section class="logosList">
-            <div class="logosList__list container-lg">
-                <?php while( have_rows('logosList') ): the_row();
-                    $count = count(get_field('logosList'));
-                    $logo = get_sub_field('logosList_logo');
-                ?>
-                <div class="logosList__logo">
-                    <img src="<?php echo $logo; ?>"/>
-                </div>
-                <?php endwhile; ?>
+    <?php if( have_rows('logosList', 11377) ): ?>
+    <section class="logosList">
+        <div class="logosList__list container-lg">
+            <?php while( have_rows('logosList', 11377) ): the_row();
+                $count = count(get_field('logosList', 11377));
+                $logo = get_sub_field('logosList_logo');
+            ?>
+            <div class="logosList__logo">
+                <img src="<?php echo $logo; ?>"/>
             </div>
-        </section>
-        <?php endif; ?>
+            <?php endwhile; ?>
+        </div>
+    </section>
     <?php endif; ?>
     <?php if( have_rows('halfSections_one') ): ?>
     <?php while( have_rows('halfSections_one') ): the_row(); 

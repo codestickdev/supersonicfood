@@ -567,6 +567,7 @@ body.postid-21695 .productComponents #openModal:hover {
   line-height: 36px;
   font-weight: 400;
   margin: 0;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -671,7 +672,7 @@ body.postid-21695 .productComponents #openModal:hover {
 }
 
 .productTesVid__video {
-  margin: 0 20px;
+  margin: 0 40px;
 }
 
 .productTesVid__video:first-of-type {
@@ -5500,7 +5501,8 @@ body.woocommerce-account .entry-header {
 .logosList__logo {
   width: fit-content;
   text-align: center;
-  max-height: 150px;
+  max-height: 40px;
+  opacity: .7;
 }
 
 .logosList__logo img {
@@ -5517,13 +5519,15 @@ body.woocommerce-account .entry-header {
 
 @media (max-width: 768px) {
   .logosList__list {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
   }
   .logosList__logo {
     width: 100% !important;
-    max-width: 230px;
-    height: 120px;
+    max-width: 160px;
+    height: 40px;
+    margin: 10px;
   }
   .logosList__logo img {
     max-width: 100%;
