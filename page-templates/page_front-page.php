@@ -38,7 +38,7 @@ get_header(); ?>
         <?php endwhile; ?>
     </section>
     <?php endif; ?>
-    <?php if( have_rows('logosList', 11377) ): ?>
+    <?php if( have_rows('logosList', 11377) && $lang == 'pl-PL' ): ?>
     <section class="logosList">
         <div class="logosList__list container-lg">
             <?php while( have_rows('logosList', 11377) ): the_row();

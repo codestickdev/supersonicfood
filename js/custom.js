@@ -322,4 +322,14 @@
     $('.cn-accept-cookie').on('click', function(){
         $('#cookie-notice').slideDown();
     });
+
+    /* ---- Logo list slider mobile ---- */
+    if($(window).width() < 500){
+        $('.logosList__list').slick({
+            arrows: false,
+            dots: false,
+            centerMode: true,
+            variableWidth: true,
+        });
+    }
 })(jQuery);

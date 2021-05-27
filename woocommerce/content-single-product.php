@@ -87,7 +87,7 @@ if (post_password_required()) {
         // do_action('woocommerce_after_single_product_summary');
         ?>
 
-        <?php if( have_rows('logosList', 11377) ): ?>
+        <?php if( have_rows('logosList', 11377) && $lang == 'pl-PL'  ): ?>
         <section id="morecontent" class="logosList">
             <div class="logosList__list container-lg">
                 <?php while( have_rows('logosList', 11377) ): the_row();

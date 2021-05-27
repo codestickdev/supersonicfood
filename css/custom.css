@@ -5524,7 +5524,7 @@ body.woocommerce-account .entry-header {
     align-items: center;
   }
   .logosList__logo {
-    width: 100% !important;
+    width: 100%;
     max-width: 160px;
     height: 40px;
     margin: 10px;
@@ -5533,6 +5533,21 @@ body.woocommerce-account .entry-header {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
+  }
+}
+
+@media (max-width: 500px) {
+  .logosList__list {
+    padding: 0 !important;
+  }
+  .logosList__logo {
+    max-width: 200px;
+    max-height: 50px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .logosList__logo img {
+    max-height: 50px;
   }
 }
 
