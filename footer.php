@@ -295,9 +295,9 @@
 		<?php endif;?>
 		<?php
 			$cartURL = '';
-			if($lang == 'en_US'){
+			if($lang == 'en-US'){
 				$cartURL = home_url('/cart/');
-			}else if($lang == 'de_DE'){
+			}else if($lang == 'de-DE'){
 				$cartURL = home_url('/korb/');
 			}else{
 				$cartURL = home_url('/koszyk/');
