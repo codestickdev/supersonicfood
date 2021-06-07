@@ -129,7 +129,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [2476, 11732, 20294, 11796, 9696, 2474],
+			'post__in'			=> [2476, 11732, 20294, 11796, 9696, 2474, 29374, 29397],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -141,7 +141,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [21497, 21666, 21695, 21693, 21688, 21657],
+			'post__in'			=> [21497, 21666, 21695, 21693, 21688, 21657, 29371, 29394],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -153,7 +153,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [103, 5942, 17250, 11793, 9695, 1213],
+			'post__in'			=> [103, 5942, 17250, 11793, 9695, 1213, 29368, 29391],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',

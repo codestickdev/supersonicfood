@@ -27,6 +27,36 @@
         }
     }
 }
+.product_tag-calmcacao,
+.product_tag-calmcacao-en,
+.product_tag-calmcacao-de{
+    .productPage{
+        &__content{
+            .free-shipping{
+                color: #2e1c49 !important;
+            }
+            .vpe_container_btn{
+                button{
+                    background-color: #2e1c49 !important;
+
+                    &:hover{
+                        background-color: #452e67 !important;
+                    }
+                }
+            }
+        }
+    }
+    .productComponents{
+        #openModal{
+            background-color: #2e1c49 !important;
+
+            &:hover{
+                background-color: #452e67 !important;
+            }
+        }
+    }
+}
+
 body.postid-17250,
 body.postid-20294,
 body.postid-21695{
