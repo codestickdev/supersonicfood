@@ -1,3 +1,4 @@
+/* Isotonic color */
 .product_tag-isotonic,
 .product_tag-isotonic-en,
 .product_tag-isotonic-de{
@@ -27,6 +28,8 @@
         }
     }
 }
+
+/* Calm Cacao color */
 .product_tag-calmcacao,
 .product_tag-calmcacao-en,
 .product_tag-calmcacao-de{
@@ -57,6 +60,38 @@
     }
 }
 
+/* Brain Coffee color */
+.product_tag-braincoffee,
+.product_tag-braincoffee-en,
+.product_tag-braincoffee-de{
+    .productPage{
+        &__content{
+            .free-shipping{
+                color: #341b15 !important;
+            }
+            .vpe_container_btn{
+                button{
+                    background-color: #341b15 !important;
+
+                    &:hover{
+                        background-color: #422720 !important;
+                    }
+                }
+            }
+        }
+    }
+    .productComponents{
+        #openModal{
+            background-color: #341b15 !important;
+
+            &:hover{
+                background-color: #422720 !important;
+            }
+        }
+    }
+}
+
+/* Performance Isotonic color */
 body.postid-17250,
 body.postid-20294,
 body.postid-21695{
@@ -86,6 +121,8 @@ body.postid-21695{
         }
     }
 }
+
+/* Shaker color */
 .product.product_tag-supersonic-shaker,
 .product.product_tag-shaker-de,
 .product.product_tag-shaker{

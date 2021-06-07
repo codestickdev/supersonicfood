@@ -67,6 +67,7 @@ body h6 {
 
 /*  Subpages
 -----------------*/
+/* Isotonic color */
 .product_tag-isotonic .productPage__content .free-shipping,
 .product_tag-isotonic-en .productPage__content .free-shipping,
 .product_tag-isotonic-de .productPage__content .free-shipping {
@@ -97,6 +98,69 @@ body h6 {
   background-color: #f3aea0 !important;
 }
 
+/* Calm Cacao color */
+.product_tag-calmcacao .productPage__content .free-shipping,
+.product_tag-calmcacao-en .productPage__content .free-shipping,
+.product_tag-calmcacao-de .productPage__content .free-shipping {
+  color: #2e1c49 !important;
+}
+
+.product_tag-calmcacao .productPage__content .vpe_container_btn button,
+.product_tag-calmcacao-en .productPage__content .vpe_container_btn button,
+.product_tag-calmcacao-de .productPage__content .vpe_container_btn button {
+  background-color: #2e1c49 !important;
+}
+
+.product_tag-calmcacao .productPage__content .vpe_container_btn button:hover,
+.product_tag-calmcacao-en .productPage__content .vpe_container_btn button:hover,
+.product_tag-calmcacao-de .productPage__content .vpe_container_btn button:hover {
+  background-color: #452e67 !important;
+}
+
+.product_tag-calmcacao .productComponents #openModal,
+.product_tag-calmcacao-en .productComponents #openModal,
+.product_tag-calmcacao-de .productComponents #openModal {
+  background-color: #2e1c49 !important;
+}
+
+.product_tag-calmcacao .productComponents #openModal:hover,
+.product_tag-calmcacao-en .productComponents #openModal:hover,
+.product_tag-calmcacao-de .productComponents #openModal:hover {
+  background-color: #452e67 !important;
+}
+
+/* Brain Coffee color */
+.product_tag-braincoffee .productPage__content .free-shipping,
+.product_tag-braincoffee-en .productPage__content .free-shipping,
+.product_tag-braincoffee-de .productPage__content .free-shipping {
+  color: #341b15 !important;
+}
+
+.product_tag-braincoffee .productPage__content .vpe_container_btn button,
+.product_tag-braincoffee-en .productPage__content .vpe_container_btn button,
+.product_tag-braincoffee-de .productPage__content .vpe_container_btn button {
+  background-color: #341b15 !important;
+}
+
+.product_tag-braincoffee .productPage__content .vpe_container_btn button:hover,
+.product_tag-braincoffee-en .productPage__content .vpe_container_btn button:hover,
+.product_tag-braincoffee-de .productPage__content .vpe_container_btn button:hover {
+  background-color: #422720 !important;
+}
+
+.product_tag-braincoffee .productComponents #openModal,
+.product_tag-braincoffee-en .productComponents #openModal,
+.product_tag-braincoffee-de .productComponents #openModal {
+  background-color: #341b15 !important;
+}
+
+.product_tag-braincoffee .productComponents #openModal:hover,
+.product_tag-braincoffee-en .productComponents #openModal:hover,
+.product_tag-braincoffee-de .productComponents #openModal:hover {
+  background-color: #422720 !important;
+}
+
+/* Performance Isotonic color */
 body.postid-17250 .productPage__content .free-shipping,
 body.postid-20294 .productPage__content .free-shipping,
 body.postid-21695 .productPage__content .free-shipping {
@@ -127,6 +191,7 @@ body.postid-21695 .productComponents #openModal:hover {
   background-color: #585757 !important;
 }
 
+/* Shaker color */
 .product.product_tag-supersonic-shaker .productPage__content span.form-title,
 .product.product_tag-shaker-de .productPage__content span.form-title,
 .product.product_tag-shaker .productPage__content span.form-title {
