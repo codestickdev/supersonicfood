@@ -516,10 +516,10 @@ if (post_password_required()) {
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th><?php _e('In the daily portion (30 g)', 'codestick'); ?></th>
-                                            <th><?php _e('%NRV* In the daily portion (30 g)', 'codestick'); ?></th>
-                                            <th><?php _e('In 100 g', 'codestick'); ?></th>
-                                            <th><?php _e('%NRV* In 100 g*', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (20 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per daily portion (20 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -530,7 +530,7 @@ if (post_password_required()) {
                                             $rwsw100g = get_sub_field('beauty_components_modal_tables_falvour_table_energetyczna_rwsw100g');
                                         ?>
                                         <tr>
-                                            <td><?php _e('Energy value', 'codestick'); ?></td>
+                                            <td><?php _e('Nutritional value', 'codestick'); ?></td>
                                             <td><?php echo $dziennaporcja; ?></td>
                                             <td><?php echo $rwsdziennaporcja; ?></td>
                                             <td><?php echo $w100g; ?></td>
@@ -550,10 +550,10 @@ if (post_password_required()) {
                                     <thead>
                                         <tr>
                                             <th><?php _e('Active ingredients', 'codestick'); ?></th>
-                                            <th><?php _e('In the daily portion (30 g)', 'codestick'); ?></th>
-                                            <th><?php _e('%NRV* In the daily portion (30 g)', 'codestick'); ?></th>
-                                            <th><?php _e('In 100 g', 'codestick'); ?></th>
-                                            <th><?php _e('%NRV* In 100 g*', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (20 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per daily portion (20 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
                                         </tr>
                                     </thead>
                                     <tbody>
