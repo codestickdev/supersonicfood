@@ -494,7 +494,7 @@ if (post_password_required()) {
                 </div>
                 <?php endwhile; ?>
             </div>
-            <?php else: ?>
+            <?php else if(get_field('components_rodzaj_produktu') == 'beauty'): ?>
             <div class="componentsModal__flavours">
                 <?php while( have_rows('beauty_components_modal_tables') ): the_row(); 
                     $flavour_name = get_sub_field('beauty_components_modal_tables_flavour_name');
@@ -576,6 +576,190 @@ if (post_password_required()) {
                                 </table>
                             </div>
                             <?php if(get_sub_field('beauty_components_modal_tables_falvour_rws_wyjasnienie')): ?>
+                            <div class="rws_wyjasnienie">
+                                <?php echo $rws_wyjasnienie; ?>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            </div>
+            <?php else if(get_field('components_rodzaj_produktu') == 'calmcacao'): ?>
+            <div class="componentsModal__flavours">
+                <?php while( have_rows('calmcacao_components_modal_tables') ): the_row(); 
+                    $flavour_name = get_sub_field('calmcacao_components_modal_tables_flavour_name');
+                    $flavour_desc = get_sub_field('calmcacao_components_modal_tables_falvour_desc');
+                    $rws_wyjasnienie = get_sub_field('calmcacao_components_modal_tables_falvour_rws_wyjasnienie');
+                ?>
+                <div class="componentsModal__flavour">
+                    <div class="heading">
+                        <h2><?php _e('Flavour', 'codestick'); ?>: <?php echo $flavour_name; ?></h2>
+                    </div>
+                    <div class="content">
+                        <div class="content__desc">
+                            <?php echo $flavour_desc; ?>
+                        </div>
+                        <?php if( have_rows('calmcacao_components_modal_tables_falvour_table_energetyczna') ): ?>
+                        <div class="content__wartosciodzywcze">
+                            <div class="componentsModal__tableWrap">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php while( have_rows('calmcacao_components_modal_tables_falvour_table_energetyczna') ): the_row(); 
+                                            $dziennaporcja = get_sub_field('calmcacao_components_modal_tables_falvour_table_energetyczna_portion');
+                                            $rwsdziennaporcja = get_sub_field('calmcacao_components_modal_tables_falvour_table_energetyczna_rwsportion');
+                                            $w100g = get_sub_field('calmcacao_components_modal_tables_falvour_table_energetyczna_w100g');
+                                            $rwsw100g = get_sub_field('calmcacao_components_modal_tables_falvour_table_energetyczna_rwsw100g');
+                                        ?>
+                                        <tr>
+                                            <td><?php _e('Nutritional value', 'codestick'); ?></td>
+                                            <td><?php echo $dziennaporcja; ?></td>
+                                            <td><?php echo $rwsdziennaporcja; ?></td>
+                                            <td><?php echo $w100g; ?></td>
+                                            <td><?php echo $rwsw100g; ?></td>
+                                        </tr>
+                                        <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        <?php if( have_rows('calmcacao_components_modal_tables_falvour_table_aktywne') ): ?>
+                        <div class="content__aktywne">
+                            <h3><?php _e('Active ingredients', 'codestick'); ?>:</h3>
+                            <div class="componentsModal__tableWrap">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th><?php _e('Active ingredients', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php while( have_rows('calmcacao_components_modal_tables_falvour_table_aktywne') ): the_row(); 
+                                            $skladnikaktywny = get_sub_field('calmcacao_components_modal_tables_falvour_table_aktywne_component');
+                                            $dziennaporcja = get_sub_field('calmcacao_componenets_modal_tables_flavour_table_aktywne_portion');
+                                            $rwsdziennaporcja = get_sub_field('calmcacao_components_modal_tables_falvour_table_aktywne_rwsportion');
+                                            $w100g = get_sub_field('calmcacao_components_modal_tables_falvour_table_aktywne_w100g');
+                                            $rwsw100g = get_sub_field('calmcacao_components_modal_tables_falvour_table_aktywne_rwsw100g');
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $skladnikaktywny; ?></td>
+                                            <td><?php echo $dziennaporcja; ?></td>
+                                            <td><?php echo $rwsdziennaporcja; ?></td>
+                                            <td><?php echo $w100g; ?></td>
+                                            <td><?php echo $rwsw100g; ?></td>
+                                        </tr>
+                                        <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <?php if(get_sub_field('calmcacao_components_modal_tables_falvour_rws_wyjasnienie')): ?>
+                            <div class="rws_wyjasnienie">
+                                <?php echo $rws_wyjasnienie; ?>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php endwhile; ?>
+            </div>
+            <?php else if(get_field('components_rodzaj_produktu') == 'braincoffee'): ?>
+            <div class="componentsModal__flavours">
+                <?php while( have_rows('braincoffee_components_modal_tables') ): the_row(); 
+                    $flavour_name = get_sub_field('braincoffee_components_modal_tables_flavour_name');
+                    $flavour_desc = get_sub_field('braincoffee_components_modal_tables_falvour_desc');
+                    $rws_wyjasnienie = get_sub_field('braincoffee_components_modal_tables_falvour_rws_wyjasnienie');
+                ?>
+                <div class="componentsModal__flavour">
+                    <div class="heading">
+                        <h2><?php _e('Flavour', 'codestick'); ?>: <?php echo $flavour_name; ?></h2>
+                    </div>
+                    <div class="content">
+                        <div class="content__desc">
+                            <?php echo $flavour_desc; ?>
+                        </div>
+                        <?php if( have_rows('braincoffee_components_modal_tables_falvour_table_energetyczna') ): ?>
+                        <div class="content__wartosciodzywcze">
+                            <div class="componentsModal__tableWrap">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php while( have_rows('braincoffee_components_modal_tables_falvour_table_energetyczna') ): the_row(); 
+                                            $dziennaporcja = get_sub_field('braincoffee_components_modal_tables_falvour_table_energetyczna_portion');
+                                            $rwsdziennaporcja = get_sub_field('braincoffee_components_modal_tables_falvour_table_energetyczna_rwsportion');
+                                            $w100g = get_sub_field('braincoffee_components_modal_tables_falvour_table_energetyczna_w100g');
+                                            $rwsw100g = get_sub_field('braincoffee_components_modal_tables_falvour_table_energetyczna_rwsw100g');
+                                        ?>
+                                        <tr>
+                                            <td><?php _e('Nutritional value', 'codestick'); ?></td>
+                                            <td><?php echo $dziennaporcja; ?></td>
+                                            <td><?php echo $rwsdziennaporcja; ?></td>
+                                            <td><?php echo $w100g; ?></td>
+                                            <td><?php echo $rwsw100g; ?></td>
+                                        </tr>
+                                        <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        <?php if( have_rows('braincoffee_components_modal_tables_falvour_table_aktywne') ): ?>
+                        <div class="content__aktywne">
+                            <h3><?php _e('Active ingredients', 'codestick'); ?>:</h3>
+                            <div class="componentsModal__tableWrap">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <th><?php _e('Active ingredients', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per 100 g', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php while( have_rows('braincoffee_components_modal_tables_falvour_table_aktywne') ): the_row(); 
+                                            $skladnikaktywny = get_sub_field('braincoffee_components_modal_tables_falvour_table_aktywne_component');
+                                            $dziennaporcja = get_sub_field('braincoffee_componenets_modal_tables_flavour_table_aktywne_portion');
+                                            $rwsdziennaporcja = get_sub_field('braincoffee_components_modal_tables_falvour_table_aktywne_rwsportion');
+                                            $w100g = get_sub_field('braincoffee_components_modal_tables_falvour_table_aktywne_w100g');
+                                            $rwsw100g = get_sub_field('braincoffee_components_modal_tables_falvour_table_aktywne_rwsw100g');
+                                        ?>
+                                        <tr>
+                                            <td><?php echo $skladnikaktywny; ?></td>
+                                            <td><?php echo $dziennaporcja; ?></td>
+                                            <td><?php echo $rwsdziennaporcja; ?></td>
+                                            <td><?php echo $w100g; ?></td>
+                                            <td><?php echo $rwsw100g; ?></td>
+                                        </tr>
+                                        <?php endwhile; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <?php if(get_sub_field('braincoffee_components_modal_tables_falvour_rws_wyjasnienie')): ?>
                             <div class="rws_wyjasnienie">
                                 <?php echo $rws_wyjasnienie; ?>
                             </div>
