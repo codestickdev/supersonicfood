@@ -494,7 +494,7 @@ if (post_password_required()) {
                 </div>
                 <?php endwhile; ?>
             </div>
-            <?php else if(get_field('components_rodzaj_produktu') == 'beauty'): ?>
+            <?php elseif(get_field('components_rodzaj_produktu') == 'beauty'): ?>
             <div class="componentsModal__flavours">
                 <?php while( have_rows('beauty_components_modal_tables') ): the_row(); 
                     $flavour_name = get_sub_field('beauty_components_modal_tables_flavour_name');
@@ -586,7 +586,7 @@ if (post_password_required()) {
                 </div>
                 <?php endwhile; ?>
             </div>
-            <?php else if(get_field('components_rodzaj_produktu') == 'calmcacao'): ?>
+            <?php elseif(get_field('components_rodzaj_produktu') == 'calmcacao'): ?>
             <div class="componentsModal__flavours">
                 <?php while( have_rows('calmcacao_components_modal_tables') ): the_row(); 
                     $flavour_name = get_sub_field('calmcacao_components_modal_tables_flavour_name');
@@ -678,7 +678,7 @@ if (post_password_required()) {
                 </div>
                 <?php endwhile; ?>
             </div>
-            <?php else if(get_field('components_rodzaj_produktu') == 'braincoffee'): ?>
+            <?php elseif(get_field('components_rodzaj_produktu') == 'braincoffee'): ?>
             <div class="componentsModal__flavours">
                 <?php while( have_rows('braincoffee_components_modal_tables') ): the_row(); 
                     $flavour_name = get_sub_field('braincoffee_components_modal_tables_flavour_name');
