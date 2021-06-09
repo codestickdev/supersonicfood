@@ -399,7 +399,9 @@
             },
             "choices": {
                 "powder": "Food Powder",
-                "beauty": "Beauty Isotonic"
+                "beauty": "Beauty Isotonic",
+                "braincoffee": "Brain Coffee",
+                "calmcacao": "Calm Cacao"
             },
             "allow_null": 0,
             "other_choice": 0,
@@ -434,7 +436,6 @@
             "max": 0,
             "layout": "row",
             "button_label": "Dodaj smak",
-            "jpn-tabs": "vertical",
             "sub_fields": [
                 {
                     "key": "field_6024646153029",
@@ -850,7 +851,6 @@
             "max": 0,
             "layout": "row",
             "button_label": "Dodaj smak",
-            "jpn-tabs": "vertical",
             "sub_fields": [
                 {
                     "key": "field_6027dffb47ca9",
@@ -911,7 +911,7 @@
                     "sub_fields": [
                         {
                             "key": "field_6027dffb47cae",
-                            "label": "W dziennej porcji (30g)",
+                            "label": "W dziennej porcji (20 g)",
                             "name": "beauty_components_modal_tables_falvour_table_energetyczna_portion",
                             "type": "text",
                             "instructions": "",
@@ -930,7 +930,7 @@
                         },
                         {
                             "key": "field_6027dffb47caf",
-                            "label": "%RWS* W dziennej porcji (30g)",
+                            "label": "% RWS* w dziennej porcji (20 g)",
                             "name": "beauty_components_modal_tables_falvour_table_energetyczna_rwsportion",
                             "type": "text",
                             "instructions": "",
@@ -968,7 +968,7 @@
                         },
                         {
                             "key": "field_6027dffb47cb1",
-                            "label": "% RWS* w 100g",
+                            "label": "% RWS* w 100 g",
                             "name": "beauty_components_modal_tables_falvour_table_energetyczna_rwsw100g",
                             "type": "text",
                             "instructions": "",
@@ -1107,6 +1107,610 @@
                     "key": "field_6027dffb47cb2",
                     "label": "Wyjaśnienie RWS",
                     "name": "beauty_components_modal_tables_falvour_rws_wyjasnienie",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_60c1314278bb0",
+            "label": "Tabela smaków (Calm Cacao)",
+            "name": "calmcacao_components_modal_tables",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6027e14447cbf",
+                        "operator": "==",
+                        "value": "calmcacao"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Dodaj smak",
+            "jpn-tabs": 0,
+            "sub_fields": [
+                {
+                    "key": "field_60c1314378bb1",
+                    "label": "Nazwa smaku",
+                    "name": "calmcacao_components_modal_tables_flavour_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60c1314378bb2",
+                    "label": "Opis smaku",
+                    "name": "calmcacao_components_modal_tables_falvour_desc",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_60c1314378bb3",
+                    "label": "Wartość energetyczna",
+                    "name": "calmcacao_components_modal_tables_falvour_table_energetyczna",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "",
+                    "button_label": "",
+                    "jpn-tabs": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_60c1314378bb4",
+                            "label": "W dziennej porcji (18 g)",
+                            "name": "calmcacao_components_modal_tables_falvour_table_energetyczna_portion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "10",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "W dziennej porcji (18 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bb5",
+                            "label": "%RWS* w (18 g)",
+                            "name": "calmcacao_components_modal_tables_falvour_table_energetyczna_rwsportion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w (18 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bb6",
+                            "label": "w 100 g",
+                            "name": "calmcacao_components_modal_tables_falvour_table_energetyczna_w100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bb7",
+                            "label": "%RWS* w 100 g",
+                            "name": "calmcacao_components_modal_tables_falvour_table_energetyczna_rwsw100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c1314378bb8",
+                    "label": "Składniki aktywne",
+                    "name": "calmcacao_components_modal_tables_falvour_table_aktywne",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "",
+                    "button_label": "",
+                    "jpn-tabs": "",
+                    "sub_fields": [
+                        {
+                            "key": "field_60c1314378bb9",
+                            "label": "Składnik aktywny",
+                            "name": "calmcacao_components_modal_tables_falvour_table_aktywne_component",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Składnik aktywny",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bba",
+                            "label": "W dziennej porcji (18 g)",
+                            "name": "calmcacao_componenets_modal_tables_flavour_table_aktywne_portion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "W dziennej porcji (18 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bbb",
+                            "label": "%RWS* w (18 g)",
+                            "name": "calmcacao_components_modal_tables_falvour_table_aktywne_rwsportion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w (18 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bbc",
+                            "label": "w 100 g",
+                            "name": "calmcacao_components_modal_tables_falvour_table_aktywne_w100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1314378bbd",
+                            "label": "%RWS* w 100 g",
+                            "name": "calmcacao_components_modal_tables_falvour_table_aktywne_rwsw100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c1314378bbe",
+                    "label": "Wyjaśnienie RWS",
+                    "name": "calmcacao_components_modal_tables_falvour_rws_wyjasnienie",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
+            "key": "field_60c1322478bbf",
+            "label": "Tabela smaków (Brain Coffee)",
+            "name": "braincoffee_components_modal_tables",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6027e14447cbf",
+                        "operator": "==",
+                        "value": "braincoffee"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Dodaj smak",
+            "jpn-tabs": 0,
+            "sub_fields": [
+                {
+                    "key": "field_60c1322478bc0",
+                    "label": "Nazwa smaku",
+                    "name": "braincoffee_components_modal_tables_flavour_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60c1322478bc1",
+                    "label": "Opis smaku",
+                    "name": "braincoffee_components_modal_tables_falvour_desc",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_60c1322478bc2",
+                    "label": "Wartość energetyczna",
+                    "name": "braincoffee_components_modal_tables_falvour_table_energetyczna",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "jpn-tabs": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_60c1322478bc3",
+                            "label": "W dziennej porcji (45 g)",
+                            "name": "braincoffee_components_modal_tables_falvour_table_energetyczna_portion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "10",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "W dziennej porcji (45 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bc4",
+                            "label": "%RWS* w (45 g)",
+                            "name": "braincoffee_components_modal_tables_falvour_table_energetyczna_rwsportion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w (45 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bc5",
+                            "label": "w 100 g",
+                            "name": "braincoffee_components_modal_tables_falvour_table_energetyczna_w100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bc6",
+                            "label": "%RWS* w 100 g",
+                            "name": "braincoffee_components_modal_tables_falvour_table_energetyczna_rwsw100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "20",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c1322478bc7",
+                    "label": "Składniki aktywne",
+                    "name": "braincoffee_components_modal_tables_falvour_table_aktywne",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "",
+                    "jpn-tabs": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_60c1322478bc8",
+                            "label": "Składnik aktywny",
+                            "name": "braincoffee_components_modal_tables_falvour_table_aktywne_component",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "Składnik aktywny",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bc9",
+                            "label": "W dziennej porcji (45 g)",
+                            "name": "braincoffee_componenets_modal_tables_flavour_table_aktywne_portion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "W dziennej porcji (45 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bca",
+                            "label": "%RWS* w (45 g)",
+                            "name": "braincoffee_components_modal_tables_falvour_table_aktywne_rwsportion",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w (45 g)",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bcb",
+                            "label": "w 100 g",
+                            "name": "braincoffee_components_modal_tables_falvour_table_aktywne_w100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60c1322478bcc",
+                            "label": "%RWS* w 100 g",
+                            "name": "braincoffee_components_modal_tables_falvour_table_aktywne_rwsw100g",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "%RWS* w 100 g",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c1322478bcd",
+                    "label": "Wyjaśnienie RWS",
+                    "name": "braincoffee_components_modal_tables_falvour_rws_wyjasnienie",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -1935,5 +2539,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1619042176
+    "modified": 1623276051
 }

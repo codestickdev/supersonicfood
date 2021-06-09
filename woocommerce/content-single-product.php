@@ -608,8 +608,8 @@ if (post_password_required()) {
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
-                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (45 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (45 g)', 'codestick'); ?></th>
                                             <th><?php _e('Per 100 g', 'codestick'); ?></th>
                                             <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
                                         </tr>
@@ -642,8 +642,8 @@ if (post_password_required()) {
                                     <thead>
                                         <tr>
                                             <th><?php _e('Active ingredients', 'codestick'); ?></th>
-                                            <th><?php _e('Per daily portion (18 g)', 'codestick'); ?></th>
-                                            <th><?php _e('% RI* per (18 g)', 'codestick'); ?></th>
+                                            <th><?php _e('Per daily portion (45 g)', 'codestick'); ?></th>
+                                            <th><?php _e('% RI* per (45 g)', 'codestick'); ?></th>
                                             <th><?php _e('Per 100 g', 'codestick'); ?></th>
                                             <th><?php _e('% RI* per 100 g', 'codestick'); ?></th>
                                         </tr>
