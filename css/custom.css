@@ -3250,6 +3250,10 @@ body.woocommerce-checkout .woocommerce-form-login-toggle .woocommerce-info a {
   flex-direction: row;
 }
 
+.ssCheckout .checkout .woocommerce-NoticeGroup-updateOrderReview {
+  display: none !important;
+}
+
 .ssCheckout .checkout .woocommerce-error {
   position: relative;
   padding: 10px 20px 10px 35px !important;
