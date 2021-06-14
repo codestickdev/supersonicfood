@@ -825,8 +825,8 @@ body.postid-21695 .productComponents #openModal:hover {
 }
 
 .testiModal--ready {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .testiModal--active .testiModal__wrap {
