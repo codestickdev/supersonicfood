@@ -233,9 +233,9 @@
     /* Testimonial video modal */
     $(document).ready(function(){
         var thumb = $('.productTesVid__video').find('.thumb');
-        var modal = thumb.parent().find('.testiModal');
 
         thumb.on('click', function(){
+            var modal = $(this).parent().find('.testiModal');
             $('body').addClass('modalActive');
             modal.addClass('testiModal--ready');
             setTimeout(function(){
