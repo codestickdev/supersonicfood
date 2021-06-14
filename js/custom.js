@@ -247,7 +247,7 @@
             var modal = $(".testiModal__wrap");
             if (!modal.is(e.target) && modal.has(e.target).length === 0){
                 modal.parent().removeClass('testiModal--active');
-                var player = modal.find('#player');
+                var player = modal.find('iframe');
                 $(player).each(function(index) {
                     $(this).attr('src', $(this).attr('src'));
                     return false;
