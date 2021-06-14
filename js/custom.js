@@ -247,7 +247,11 @@
             var modal = $(".testiModal__wrap");
             if (!modal.is(e.target) && modal.has(e.target).length === 0){
                 modal.parent().removeClass('testiModal--active');
-                modal.find('#player').get(0).stopVideo();
+                var player = modal.find('#player');
+                $(player).each(function(index) {
+                    $(this).attr('src', $(this).attr('src'));
+                    return false;
+                });
                 setTimeout(function(){
                     modal.removeClass('testiModal--ready');
                 }, 300);
