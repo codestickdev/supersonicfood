@@ -241,9 +241,10 @@
             setTimeout(function(){
                 modal.addClass('testiModal--active');
             }, 300);
-
-            $(document).mouseup(function(e){
-                var modal = $(".testiModal__wrap");
+        });
+        $(document).mouseup(function(e){
+            var modal = $(".testiModal__wrap");
+            if (modal.parent().hasClass('testiModal--active')){
                 if (!modal.is(e.target) && modal.has(e.target).length === 0){
                     modal.parent().removeClass('testiModal--active');
                     var player = modal.find('iframe');
@@ -255,7 +256,7 @@
                         modal.parent().removeClass('testiModal--ready');
                     }, 300);
                 }
-            });
+            }
         });
     });
 
