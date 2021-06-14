@@ -242,15 +242,16 @@
                 modal.addClass('testiModal--active');
             }, 300);
         });
+        $('.stopVideo').click(function() {
+            var thisVideo = $(this).parent().find('iframe');
+            $(thisVideo).attr('src', $(thisVideo).attr('src'));
+        });
         $(document).mouseup(function(e){
             var modal = $(".testiModal__wrap");
             if (modal.parent().hasClass('testiModal--active')){
                 if (!modal.is(e.target) && modal.has(e.target).length === 0){
                     modal.parent().removeClass('testiModal--active');
-                    $('iframe').each(function(index) {
-                        $(this).attr('src', $(this).attr('src'));
-                        return false;
-                    });
+                    $(this).find('.stopVideo').click();
                     setTimeout(function(){
                         modal.parent().removeClass('testiModal--ready');
                     }, 300);

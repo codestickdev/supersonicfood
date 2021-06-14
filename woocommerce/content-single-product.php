@@ -145,6 +145,7 @@ if (post_password_required()) {
                         <div class="testiModal">
                             <div class="testiModal__wrap">
                                 <?php echo $video; ?>
+                                <p class="stopVideo" style="display: none !important">stop</p>
                             </div>
                         </div>
                     </div>
