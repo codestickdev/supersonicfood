@@ -247,8 +247,7 @@
             if (modal.parent().hasClass('testiModal--active')){
                 if (!modal.is(e.target) && modal.has(e.target).length === 0){
                     modal.parent().removeClass('testiModal--active');
-                    var player = modal.find('iframe');
-                    $(player).each(function(index) {
+                    $('iframe').each(function(index) {
                         $(this).attr('src', $(this).attr('src'));
                         return false;
                     });
