@@ -253,7 +253,7 @@
                     return false;
                 });
                 setTimeout(function(){
-                    modal.removeClass('testiModal--ready');
+                    modal.parent().removeClass('testiModal--ready');
                 }, 300);
             }
         });
