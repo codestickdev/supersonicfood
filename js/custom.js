@@ -235,7 +235,7 @@
         var thumb = $('.productTesVid__video').find('.thumb');
 
         thumb.on('click', function(){
-            var id = $(this).parent('attr', 'data-id');
+            var id = $(this).parent().attr('data-id');
             var modal = $('.testiModal[data-id="' + id +'"]');
             $('body').addClass('modalActive');
             modal.addClass('testiModal--ready');
