@@ -744,6 +744,11 @@ body.postid-21695{
             text-align: center;
             text-transform: uppercase;
             margin: 0;
+
+            &.position{
+                font-size: 14px;
+                text-transform: none;
+            }
         }
     }
 }

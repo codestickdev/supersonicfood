@@ -802,6 +802,11 @@ body.postid-21695 .productComponents #openModal:hover {
   margin: 0;
 }
 
+.productTesVid__video p.position {
+  font-size: 14px;
+  text-transform: none;
+}
+
 .testiModal {
   position: fixed;
   left: 0;
