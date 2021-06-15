@@ -2613,6 +2613,25 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_60c927f51d173",
+                    "label": "Branża \/ pozycja",
+                    "name": "productTesVid_video_position",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_60c750f5bb071",
                     "label": "Miniaturka",
                     "name": "productTesVid_video_thumb",
@@ -2674,5 +2693,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623772239
+    "modified": 1623795744
 }

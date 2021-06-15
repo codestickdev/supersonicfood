@@ -134,6 +134,7 @@ if (post_password_required()) {
                 <div class="productTesVid__list">
                     <?php while(have_rows('productTesVid_video')): the_row();
                         $title = get_sub_field('productTesVid_video_title');
+                        $position = get_sub_field('productTesVid_video_position');
                         $thumb = get_sub_field('productTesVid_video_thumb');
                         $video = get_sub_field('productTesVid_video_video');
                     ?>
@@ -142,6 +143,7 @@ if (post_password_required()) {
                             <img src="<?php echo $thumb; ?>"/>
                         </div>
                         <p><?php echo $title; ?></p>
+                        <p class="position"><?php echo $position; ?></p>
                     </div>
                     <?php endwhile; ?>
                 </div>
