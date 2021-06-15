@@ -124,7 +124,7 @@ if (post_password_required()) {
             </div>
         </section>
         <?php endif; ?>
-        <?php if(get_field('productTesVid_title')):  ?>
+        <?php if(current_user_can('editor') || current_user_can('administrator')):  ?>
         <section class="productTesVid">
             <div class="productTesVid__wrap container-lg">
                 <div class="productTesVid__content">
