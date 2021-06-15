@@ -137,16 +137,22 @@ if (post_password_required()) {
                         $thumb = get_sub_field('productTesVid_video_thumb');
                         $video = get_sub_field('productTesVid_video_video');
                     ?>
-                    <div class="productTesVid__video">
+                    <div class="productTesVid__video" data-id="video_0<?php echo get_row_index(); ?>">
                         <div class="thumb">
                             <img src="<?php echo $thumb; ?>"/>
                         </div>
                         <p><?php echo $title; ?></p>
-                        <div class="testiModal">
-                            <div class="testiModal__wrap">
-                                <?php echo $video; ?>
-                                <p class="stopVideo" style="display: none !important">stop</p>
-                            </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+                <div class="productTesVid__modals">
+                    <?php while(have_rows('productTesVid_video')): the_row();
+                        $video = get_sub_field('productTesVid_video_video');
+                    ?>
+                    <div class="testiModal" data-id="video_0<?php echo get_row_index(); ?>">
+                        <div class="testiModal__wrap">
+                            <?php echo $video; ?>
+                            <p class="stopVideo" style="display: none !important">stop</p>
                         </div>
                     </div>
                     <?php endwhile; ?>
