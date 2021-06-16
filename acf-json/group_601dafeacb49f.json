@@ -1729,6 +1729,685 @@
             ]
         },
         {
+            "key": "field_60c9c8b362f10",
+            "label": "Tabela smaków",
+            "name": "componentsModal_tables",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6027e14447cbf",
+                        "operator": "==",
+                        "value": "braincoffee"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Dodaj smak",
+            "jpn-tabs": 0,
+            "sub_fields": [
+                {
+                    "key": "field_60c9c8b362f11",
+                    "label": "Nazwa smaku",
+                    "name": "componentsModal_tables_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60c9c8b362f12",
+                    "label": "Opis smaku",
+                    "name": "componentsModal_tables_desc",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_60c9cb1862f26",
+                    "label": "Wartość energetyczna",
+                    "name": "componentsModal_tables_energetyczna",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60c9cb3262f27",
+                            "label": "Kolumny (nagłówki)",
+                            "name": "componentsModal_tables_energetyczna_headings",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 8,
+                            "layout": "",
+                            "button_label": "Dodaj nagłówek",
+                            "jpn-tabs": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60c9cb5062f28",
+                                    "label": "Nazwa",
+                                    "name": "componentsModal_tables_energetyczna_headings_name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_60c9cb6762f29",
+                            "label": "Kolumny (treść)",
+                            "name": "componentsModal_tables_energetyczna_content",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "",
+                            "button_label": "Dodaj wiersz",
+                            "jpn-tabs": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_60c9cb7c62f2a",
+                                    "label": "Kolumna 1",
+                                    "name": "componentsModal_tables_energetyczna_content_1",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cb8b62f2b",
+                                    "label": "Kolumna 2",
+                                    "name": "componentsModal_tables_energetyczna_content_2",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "2"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbc462f2c",
+                                    "label": "Kolumna 3",
+                                    "name": "componentsModal_tables_energetyczna_content_3",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbc962f2d",
+                                    "label": "Kolumna 4",
+                                    "name": "componentsModal_tables_energetyczna_content_4",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "4"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbce62f2e",
+                                    "label": "Kolumna 5",
+                                    "name": "componentsModal_tables_energetyczna_content_5",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "5"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbd362f2f",
+                                    "label": "Kolumna 6",
+                                    "name": "componentsModal_tables_energetyczna_content_6",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "6"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbd762f30",
+                                    "label": "Kolumna 7",
+                                    "name": "componentsModal_tables_energetyczna_content_7",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "7"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cbdb62f31",
+                                    "label": "Kolumna 8",
+                                    "name": "componentsModal_tables_energetyczna_content_8",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cb3262f27",
+                                                "operator": ">",
+                                                "value": "8"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c9cc0f62f32",
+                    "label": "Składniki aktywne",
+                    "name": "componentsModal_tables_aktywne",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60c9cc0f62f33",
+                            "label": "Kolumny (nagłówki)",
+                            "name": "componentsModal_tables_aktywne_headings",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 1,
+                            "max": 8,
+                            "layout": "table",
+                            "button_label": "Dodaj nagłówek",
+                            "jpn-tabs": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_60c9cc0f62f34",
+                                    "label": "Nazwa",
+                                    "name": "componentsModal_tables_aktywne_headings_name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_60c9cc0f62f35",
+                            "label": "Kolumny (treść)",
+                            "name": "componentsModal_tables_aktywne_content",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Dodaj wiersz",
+                            "jpn-tabs": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_60c9cc0f62f36",
+                                    "label": "Kolumna 1",
+                                    "name": "componentsModal_tables_aktywne_content_1",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f37",
+                                    "label": "Kolumna 2",
+                                    "name": "componentsModal_tables_aktywne_content_2",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "2"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f38",
+                                    "label": "Kolumna 3",
+                                    "name": "componentsModal_tables_aktywne_content_3",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "3"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f39",
+                                    "label": "Kolumna 4",
+                                    "name": "componentsModal_tables_aktywne_content_4",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "4"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f3a",
+                                    "label": "Kolumna 5",
+                                    "name": "componentsModal_tables_aktywne_content_5",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "5"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f3b",
+                                    "label": "Kolumna 6",
+                                    "name": "componentsModal_tables_aktywne_content_6",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "6"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f3c",
+                                    "label": "Kolumna 7",
+                                    "name": "componentsModal_tables_aktywne_content_7",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "7"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_60c9cc0f62f3d",
+                                    "label": "Kolumna 8",
+                                    "name": "componentsModal_tables_aktywne_content_8",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_60c9cc0f62f33",
+                                                "operator": ">",
+                                                "value": "8"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60c9c8b362f1e",
+                    "label": "Wyjaśnienie RWS",
+                    "name": "componentsModal_tables_rws_wyjasnienie",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        },
+        {
             "key": "field_60246c0c52e14",
             "label": "KONIEC",
             "name": "",
@@ -2693,5 +3372,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623795744
+    "modified": 1623843491
 }
