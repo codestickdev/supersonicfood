@@ -1729,21 +1729,46 @@
             ]
         },
         {
+            "key": "field_60246c0c52e14",
+            "label": "KONIEC",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_60c9e6a45df83",
+            "label": "Tabela smaków",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_60c9c8b362f10",
             "label": "Tabela smaków",
             "name": "componentsModal_tables",
             "type": "repeater",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6027e14447cbf",
-                        "operator": "==",
-                        "value": "braincoffee"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -1825,9 +1850,9 @@
                             "collapsed": "",
                             "min": 1,
                             "max": 8,
-                            "layout": "",
+                            "layout": "table",
                             "button_label": "Dodaj nagłówek",
-                            "jpn-tabs": "",
+                            "jpn-tabs": 0,
                             "sub_fields": [
                                 {
                                     "key": "field_60c9cb5062f28",
@@ -1877,15 +1902,7 @@
                                     "type": "text",
                                     "instructions": "",
                                     "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_60c9cb3262f27",
-                                                "operator": ">",
-                                                "value": "1"
-                                            }
-                                        ]
-                                    ],
+                                    "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -1909,7 +1926,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "2"
+                                                "value": "1"
                                             }
                                         ]
                                     ],
@@ -1936,7 +1953,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "3"
+                                                "value": "2"
                                             }
                                         ]
                                     ],
@@ -1963,7 +1980,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "4"
+                                                "value": "3"
                                             }
                                         ]
                                     ],
@@ -1990,7 +2007,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "5"
+                                                "value": "4"
                                             }
                                         ]
                                     ],
@@ -2017,7 +2034,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "6"
+                                                "value": "5"
                                             }
                                         ]
                                     ],
@@ -2044,7 +2061,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "7"
+                                                "value": "6"
                                             }
                                         ]
                                     ],
@@ -2071,7 +2088,7 @@
                                             {
                                                 "field": "field_60c9cb3262f27",
                                                 "operator": ">",
-                                                "value": "8"
+                                                "value": "7"
                                             }
                                         ]
                                     ],
@@ -2173,15 +2190,7 @@
                                     "type": "text",
                                     "instructions": "",
                                     "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_60c9cc0f62f33",
-                                                "operator": ">",
-                                                "value": "1"
-                                            }
-                                        ]
-                                    ],
+                                    "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -2205,7 +2214,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "2"
+                                                "value": "1"
                                             }
                                         ]
                                     ],
@@ -2232,7 +2241,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "3"
+                                                "value": "2"
                                             }
                                         ]
                                     ],
@@ -2259,7 +2268,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "4"
+                                                "value": "3"
                                             }
                                         ]
                                     ],
@@ -2286,7 +2295,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "5"
+                                                "value": "4"
                                             }
                                         ]
                                     ],
@@ -2313,7 +2322,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "6"
+                                                "value": "5"
                                             }
                                         ]
                                     ],
@@ -2340,7 +2349,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "7"
+                                                "value": "6"
                                             }
                                         ]
                                     ],
@@ -2367,7 +2376,7 @@
                                             {
                                                 "field": "field_60c9cc0f62f33",
                                                 "operator": ">",
-                                                "value": "8"
+                                                "value": "7"
                                             }
                                         ]
                                     ],
@@ -2406,23 +2415,6 @@
                     "delay": 0
                 }
             ]
-        },
-        {
-            "key": "field_60246c0c52e14",
-            "label": "KONIEC",
-            "name": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 1
         },
         {
             "key": "field_601ebe091bc04",
@@ -3372,5 +3364,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623843491
+    "modified": 1623846305
 }
