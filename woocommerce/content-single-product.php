@@ -616,17 +616,17 @@ if (post_password_required()) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <?php while(have_rows('componentsModal_tables_energetyczna_content')): the_row();
-                                                $energetyczna_table_content_1 = get_sub_field('componentsModal_tables_energetyczna_content_1');
-                                                $energetyczna_table_content_2 = get_sub_field('componentsModal_tables_energetyczna_content_2');
-                                                $energetyczna_table_content_3 = get_sub_field('componentsModal_tables_energetyczna_content_3');
-                                                $energetyczna_table_content_4 = get_sub_field('componentsModal_tables_energetyczna_content_4');
-                                                $energetyczna_table_content_5 = get_sub_field('componentsModal_tables_energetyczna_content_5');
-                                                $energetyczna_table_content_6 = get_sub_field('componentsModal_tables_energetyczna_content_6');
-                                                $energetyczna_table_content_7 = get_sub_field('componentsModal_tables_energetyczna_content_7');
-                                                $energetyczna_table_content_8 = get_sub_field('componentsModal_tables_energetyczna_content_8');
-                                            ?>
+                                        <?php while(have_rows('componentsModal_tables_energetyczna_content')): the_row();
+                                            $energetyczna_table_content_1 = get_sub_field('componentsModal_tables_energetyczna_content_1');
+                                            $energetyczna_table_content_2 = get_sub_field('componentsModal_tables_energetyczna_content_2');
+                                            $energetyczna_table_content_3 = get_sub_field('componentsModal_tables_energetyczna_content_3');
+                                            $energetyczna_table_content_4 = get_sub_field('componentsModal_tables_energetyczna_content_4');
+                                            $energetyczna_table_content_5 = get_sub_field('componentsModal_tables_energetyczna_content_5');
+                                            $energetyczna_table_content_6 = get_sub_field('componentsModal_tables_energetyczna_content_6');
+                                            $energetyczna_table_content_7 = get_sub_field('componentsModal_tables_energetyczna_content_7');
+                                            $energetyczna_table_content_8 = get_sub_field('componentsModal_tables_energetyczna_content_8');
+                                        ?>
+                                            <tr>
                                             <?php if($energetyczna_table_content_1): ?>
                                                 <td><?php echo $energetyczna_table_content_1; ?></td>
                                             <?php endif; ?>
@@ -651,8 +651,8 @@ if (post_password_required()) {
                                             <?php if($energetyczna_table_content_8): ?>
                                                 <td><?php echo $energetyczna_table_content_8; ?></td>
                                             <?php endif; ?>
-                                            <?php endwhile; ?>
-                                        </tr>
+                                            </tr>
+                                        <?php endwhile; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -676,17 +676,17 @@ if (post_password_required()) {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <?php while(have_rows($aktywne_table_content)): the_row();
-                                                $aktywne_table_content_1 = get_sub_field('componentsModal_tables_aktywne_content_1');
-                                                $aktywne_table_content_2 = get_sub_field('componentsModal_tables_aktywne_content_2');
-                                                $aktywne_table_content_3 = get_sub_field('componentsModal_tables_aktywne_content_3');
-                                                $aktywne_table_content_4 = get_sub_field('componentsModal_tables_aktywne_content_4');
-                                                $aktywne_table_content_5 = get_sub_field('componentsModal_tables_aktywne_content_5');
-                                                $aktywne_table_content_6 = get_sub_field('componentsModal_tables_aktywne_content_6');
-                                                $aktywne_table_content_7 = get_sub_field('componentsModal_tables_aktywne_content_7');
-                                                $aktywne_table_content_8 = get_sub_field('componentsModal_tables_aktywne_content_8');
-                                            ?>
+                                        <?php while(have_rows($aktywne_table_content)): the_row();
+                                            $aktywne_table_content_1 = get_sub_field('componentsModal_tables_aktywne_content_1');
+                                            $aktywne_table_content_2 = get_sub_field('componentsModal_tables_aktywne_content_2');
+                                            $aktywne_table_content_3 = get_sub_field('componentsModal_tables_aktywne_content_3');
+                                            $aktywne_table_content_4 = get_sub_field('componentsModal_tables_aktywne_content_4');
+                                            $aktywne_table_content_5 = get_sub_field('componentsModal_tables_aktywne_content_5');
+                                            $aktywne_table_content_6 = get_sub_field('componentsModal_tables_aktywne_content_6');
+                                            $aktywne_table_content_7 = get_sub_field('componentsModal_tables_aktywne_content_7');
+                                            $aktywne_table_content_8 = get_sub_field('componentsModal_tables_aktywne_content_8');
+                                        ?>
+                                            <tr>
                                             <?php if($aktywne_table_content_1): ?>
                                                 <td><?php echo $aktywne_table_content_1; ?></td>
                                             <?php endif; ?>
@@ -711,8 +711,8 @@ if (post_password_required()) {
                                             <?php if($aktywne_table_content_8): ?>
                                                 <td><?php echo $aktywne_table_content_8; ?></td>
                                             <?php endif; ?>
-                                            <?php endwhile; ?>
-                                        </tr>
+                                            </tr>
+                                        <?php endwhile; ?>
                                     </tbody>
                                 </table>
                             </div>
