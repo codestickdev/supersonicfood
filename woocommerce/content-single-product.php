@@ -618,66 +618,6 @@ if (post_password_required()) {
                                     <tbody>
                                         <tr>
                                             <?php while(have_rows('componentsModal_tables_energetyczna_content')): the_row();
-                                                $aktywne_table_content_1 = get_sub_field('componentsModal_tables_aktywne_content_1');
-                                                $aktywne_table_content_2 = get_sub_field('componentsModal_tables_aktywne_content_2');
-                                                $aktywne_table_content_3 = get_sub_field('componentsModal_tables_aktywne_content_3');
-                                                $aktywne_table_content_4 = get_sub_field('componentsModal_tables_aktywne_content_4');
-                                                $aktywne_table_content_5 = get_sub_field('componentsModal_tables_aktywne_content_5');
-                                                $aktywne_table_content_6 = get_sub_field('componentsModal_tables_aktywne_content_6');
-                                                $aktywne_table_content_7 = get_sub_field('componentsModal_tables_aktywne_content_7');
-                                                $aktywne_table_content_8 = get_sub_field('componentsModal_tables_aktywne_content_8');
-                                            ?>
-                                            <?php if($aktywne_table_content_1): ?>
-                                                <td><?php echo $aktywne_table_content_1; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_2): ?>
-                                                <td><?php echo $aktywne_table_content_2; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_3): ?>
-                                                <td><?php echo $aktywne_table_content_3; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_4): ?>
-                                                <td><?php echo $aktywne_table_content_4; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_5): ?>
-                                                <td><?php echo $aktywne_table_content_5; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_6): ?>
-                                                <td><?php echo $aktywne_table_content_6; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_7): ?>
-                                                <td><?php echo $aktywne_table_content_7; ?></td>
-                                            <?php endif; ?>
-                                            <?php if($aktywne_table_content_8): ?>
-                                                <td><?php echo $aktywne_table_content_8; ?></td>
-                                            <?php endif; ?>
-                                            <?php endwhile; ?>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <?php endwhile; endif; ?>
-                        <?php if($aktywne_table):
-                            $aktywne_table_headings = $aktywne_table['componentsModal_tables_aktywne_headings'];
-                            $aktywne_table_content = $aktywne_table['componentsModal_tables_aktywne_content'];
-                        ?>
-                        <div class="content__aktywne">
-                            <h3><?php _e('Active ingredients', 'codestick'); ?>:</h3>
-                            <div class="componentsModal__tableWrap">
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <?php while(have_rows($aktywne_table_headings)): the_row();
-                                                $aktywne_table_headings_name = get_sub_field('componentsModal_tables_aktywne_headings_name')
-                                            ?>
-                                                <th><?php echo $aktywne_table_headings_name; ?></th>
-                                            <?php endwhile; ?>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <?php while(have_rows($energetyczna_table_content)): the_row();
                                                 $energetyczna_table_content_1 = get_sub_field('componentsModal_tables_energetyczna_content_1');
                                                 $energetyczna_table_content_2 = get_sub_field('componentsModal_tables_energetyczna_content_2');
                                                 $energetyczna_table_content_3 = get_sub_field('componentsModal_tables_energetyczna_content_3');
@@ -710,6 +650,66 @@ if (post_password_required()) {
                                             <?php endif; ?>
                                             <?php if($energetyczna_table_content_8): ?>
                                                 <td><?php echo $energetyczna_table_content_8; ?></td>
+                                            <?php endif; ?>
+                                            <?php endwhile; ?>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <?php endwhile; endif; ?>
+                        <?php if($aktywne_table):
+                            $aktywne_table_headings = $aktywne_table['componentsModal_tables_aktywne_headings'];
+                            $aktywne_table_content = $aktywne_table['componentsModal_tables_aktywne_content'];
+                        ?>
+                        <div class="content__aktywne">
+                            <h3><?php _e('Active ingredients', 'codestick'); ?>:</h3>
+                            <div class="componentsModal__tableWrap">
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <?php while(have_rows($aktywne_table_headings)): the_row();
+                                                $aktywne_table_headings_name = get_sub_field('componentsModal_tables_aktywne_headings_name')
+                                            ?>
+                                                <th><?php echo $aktywne_table_headings_name; ?></th>
+                                            <?php endwhile; ?>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <?php while(have_rows($aktywne_table_content)): the_row();
+                                                $aktywne_table_content_1 = get_sub_field('componentsModal_tables_aktywne_content_1');
+                                                $aktywne_table_content_2 = get_sub_field('componentsModal_tables_aktywne_content_2');
+                                                $aktywne_table_content_3 = get_sub_field('componentsModal_tables_aktywne_content_3');
+                                                $aktywne_table_content_4 = get_sub_field('componentsModal_tables_aktywne_content_4');
+                                                $aktywne_table_content_5 = get_sub_field('componentsModal_tables_aktywne_content_5');
+                                                $aktywne_table_content_6 = get_sub_field('componentsModal_tables_aktywne_content_6');
+                                                $aktywne_table_content_7 = get_sub_field('componentsModal_tables_aktywne_content_7');
+                                                $aktywne_table_content_8 = get_sub_field('componentsModal_tables_aktywne_content_8');
+                                            ?>
+                                            <?php if($aktywne_table_content_1): ?>
+                                                <td><?php echo $aktywne_table_content_1; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_2): ?>
+                                                <td><?php echo $aktywne_table_content_2; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_3): ?>
+                                                <td><?php echo $aktywne_table_content_3; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_4): ?>
+                                                <td><?php echo $aktywne_table_content_4; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_5): ?>
+                                                <td><?php echo $aktywne_table_content_5; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_6): ?>
+                                                <td><?php echo $aktywne_table_content_6; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_7): ?>
+                                                <td><?php echo $aktywne_table_content_7; ?></td>
+                                            <?php endif; ?>
+                                            <?php if($aktywne_table_content_8): ?>
+                                                <td><?php echo $aktywne_table_content_8; ?></td>
                                             <?php endif; ?>
                                             <?php endwhile; ?>
                                         </tr>
