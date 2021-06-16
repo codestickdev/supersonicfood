@@ -608,7 +608,7 @@ if (post_password_required()) {
                                 <table border="1">
                                     <thead>
                                         <tr>
-                                            <?php while(have_rows('componentsModal_tables_energetyczna_heading')): the_row();
+                                            <?php while(have_rows('componentsModal_tables_energetyczna_headings')): the_row();
                                                 $energetyczna_table_headings_name = get_sub_field('componentsModal_tables_energetyczna_headings_name')
                                             ?>
                                                 <th><?php echo $energetyczna_table_headings_name; ?></th>
