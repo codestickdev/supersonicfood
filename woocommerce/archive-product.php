@@ -22,8 +22,8 @@ $lang = get_bloginfo("language");
 $productsEN = array(
     'posts_per_page' 	=> -1,
     'post_type' 		=> 'product',
-    'orderby'			=> 'post__in',
-    'post__in'			=> [2476, 11732, 20294, 11796, 9696, 2474, 29374, 29397],
+    'orderby'			=> 'menu_order',
+    'post__not_in'		=> [2488],
     'meta_query' => array(
         array(
             'key' => 'product_main_visible',
@@ -34,8 +34,8 @@ $productsEN = array(
 $productsDE = array(
     'posts_per_page' 	=> -1,
     'post_type' 		=> 'product',
-    'orderby'			=> 'post__in',
-    'post__in'			=> [21497, 21666, 21695, 29371, 29394, 21693, 21688, 21657],
+    'orderby'			=> 'menu_order',
+    'post__not_in'		=> [21664],
     'meta_query' => array(
         array(
             'key' => 'product_main_visible',
@@ -43,7 +43,6 @@ $productsDE = array(
         )
     ),
 );
-$orderPL = [103, 5942, 17250, 29368, 29391, 11793, 9695, 1213];
 $productsPL = array(
     'posts_per_page' 	=> -1,
     'post_type' 		=> 'product',
