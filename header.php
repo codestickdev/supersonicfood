@@ -26,7 +26,8 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/design.css">
+	
 	<?php wp_head(); ?>
 
 	<!-- Google Tag Manager (noscript) -->

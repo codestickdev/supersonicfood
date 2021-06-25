@@ -1,0 +1,78 @@
+.button.wecb_emptycart {
+	width: 30% !important;
+}
+
+.siteHeader__menu .menu li a {
+z-index: 99;
+pointer-events: all;
+}
+.wpml-ls-legacy-list-horizontal .wpml-ls-item{
+	z-index: 99;
+	pointer-events: all;
+}
+.user__account {
+	z-index: 99;
+	pointer-events: all;
+}
+.ssCart table.cart td.actions .coupon-actions button{
+	width: 100% !important;
+}
+
+#button-update-cart {
+	width: 30% !important;
+	margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+	#button-update-cart {
+		width: 100% !important;
+	}
+	.button.wecb_emptycart {
+		width: 100% !important;
+	}
+	.calorie_calculator_result {
+		margin-top:50px;
+	}
+	.coupon__toshow.coupon__toshow--toggle {
+		display: block !important;
+	}
+	.cart-collaterals .cart_totals .shop_table tr.cart-discount .woocommerce-remove-coupon {
+		margin-left: 10px;
+	}
+}
+.homeBoxes__icon{
+	max-width: 49px !important;
+	height: 42px !important;
+}
+#footer-image {
+	max-width: 170px;
+	margin-top: 20px;
+}
+@media (min-width: 767px) and (max-width: 980px) {
+	#button-update-cart {
+		width: 33% !important;
+		
+	}
+	.button.wecb_emptycart {
+		width: 33% !important;
+	}
+	.woocommerce-Price-amount.amount {
+		margin-right: 20px !important;
+	}
+}
+.siteHeader__menu {
+	z-index: 99;
+	pointer-events: all;
+	cursor: pointer;
+}
+@media (max-width: 1450px){
+	.mobileMenu {
+		display: block;
+	}
+}
+#register-form {
+	height: 300px;
+}
+#register-button {
+	margin-top: 36px;
+}

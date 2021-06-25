@@ -16,7 +16,9 @@
     };
 
     function smoothScrollingTo(target) {
-        $('html,body').animate({ scrollTop: $(target).offset().top -50 }, 500);
+        if (target.length > 0) {
+            $('html,body').animate({ scrollTop: $(target).offset().top -50 }, 500);
+        }
     }
     $('a[href*=\\#]').on('click', function (event) {
         event.preventDefault();
