@@ -967,22 +967,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_60764f3baac6f",
-            "label": "Polityka i regulamin",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
             "key": "field_60764f46aac70",
             "label": "Polityka prywatności",
             "name": "privacy_policy_link",
@@ -1040,5 +1024,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1618366765
+    "modified": 1624659673
 }

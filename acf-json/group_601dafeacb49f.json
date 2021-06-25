@@ -86,6 +86,67 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_60d6564416942",
+            "label": "USP",
+            "name": "product_list_usp",
+            "type": "repeater",
+            "instructions": "Pozycje wyświetlane na liście produktów w podstronie sklep.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "jpn-tabs": 0,
+            "sub_fields": [
+                {
+                    "key": "field_60d6566516943",
+                    "label": "Tekst",
+                    "name": "product_list_usp_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_60d65aff3cb80",
+            "label": "Przycisk",
+            "name": "cta_btn_title",
+            "type": "text",
+            "instructions": "Tekst przycisku - lista produktów na podstronie sklepu",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "jpn-tabs": 0,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_601db02d51eda",
             "label": "Galeria zdjęć",
             "name": "product_main_gallery",
@@ -3364,5 +3425,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623846305
+    "modified": 1624660981
 }

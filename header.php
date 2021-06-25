@@ -141,7 +141,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [21497, 21666, 21695, 21693, 21688, 21657, 29371, 29394],
+			'post__in'			=> [21497, 21666, 21695, 29371, 29394, 21693, 21688, 21657],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -153,7 +153,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [103, 5942, 17250, 11793, 9695, 1213, 29368, 29391],
+			'post__in'			=> [103, 5942, 17250, 29368, 29391, 11793, 9695, 1213],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -163,10 +163,13 @@ foreach ($cart_items as $cart_item => $item){
 		);
 		if($lang == 'en-US'){
 			$query = new WP_Query($productsEN);
+			$shopURL = home_url('/en/shop');
 		}else if ($lang == 'de-DE'){
 			$query = new WP_Query($productsDE);
+			$shopURL = home_url('/de/geschaeft/');
 		}else{
 			$query = new WP_Query($productsPL);
+			$shopURL = home_url('/sklep');
 		}
 	?>
 	<?php if ($query->have_posts()) : ?>
@@ -174,11 +177,18 @@ foreach ($cart_items as $cart_item => $item){
 		<div class="menuDropdown__list">
     	<?php while ($query->have_posts()) : $query->the_post(); ?>
 			<a class="menuDropdown__product" href="<?php the_permalink(); ?>" productID="<?php the_ID(); ?>">
-				<img src="<?php the_field('product_main_image'); ?>"/>
+				<div class="thumb">
+					<img src="<?php the_field('product_main_image'); ?>"/>
+				</div>
 				<p><?php the_title(); ?></p>
 			</a>
     	<?php endwhile; ?>
 		</div>
+		<?php if( current_user_can('editor') || current_user_can('administrator') ): ?>
+		<div class="menuDropdown__more">
+			<a href="<?php echo $shopURL; ?>"><?php _e('See all products', 'codestick'); ?> </a>
+		</div>
+		<?php endif; ?>
 	</div>
     <?php wp_reset_postdata(); ?>
 	<?php endif; ?>

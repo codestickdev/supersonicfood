@@ -493,3 +493,10 @@ function payment_gateway_disable_based_on_language( $available_gateways ) {
     }
    return $available_gateways;
 }
+
+add_action('template_redirect', 'remove_shop_breadcrumbs' );
+function remove_shop_breadcrumbs(){
+    if (is_shop()){
+        remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+    }
+}
