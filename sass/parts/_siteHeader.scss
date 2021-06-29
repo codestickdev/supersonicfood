@@ -339,6 +339,32 @@ body{
                 &:before{
                     left: 0;
                 }
+
+                span{
+                    &:after{
+                        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(106%) contrast(107%);
+                    }
+                }
+            }
+
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+
+                &:after{
+                    content: '';
+                    background-image: url('/wp-content/themes/supersonicfood/images/icons/arrow_right_dropdown_ico.svg');
+                    background-repeat: no-repeat;
+                    background-size: 13px;
+                    width: 13px;
+                    height: 15px;
+                    position: relative;
+                    display: inline-block;
+                    margin-left: 6px;
+                    transition: ease .3s;
+                }
             }
         }
     }

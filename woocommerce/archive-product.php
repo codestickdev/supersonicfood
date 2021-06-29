@@ -134,7 +134,7 @@ if($lang == 'en-US'){
             <?php endwhile; ?>
         </div>
         <div class="shopProducts__heading">
-            <h2>Accessories</h2>
+            <h2><?php _e('Accessories', 'codestick'); ?></h2>
         </div>
         <div class="shopProducts__wrap">
             <?php while ($queryAccessories->have_posts()) : $queryAccessories->the_post();

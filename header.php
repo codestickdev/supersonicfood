@@ -187,7 +187,7 @@ foreach ($cart_items as $cart_item => $item){
 		</div>
 		<?php if( current_user_can('editor') || current_user_can('administrator') ): ?>
 		<div class="menuDropdown__more">
-			<a href="<?php echo $shopURL; ?>"><?php _e('See all products', 'codestick'); ?> </a>
+			<a href="<?php echo $shopURL; ?>"><span><?php _e('See all products', 'codestick'); ?></span></a>
 		</div>
 		<?php endif; ?>
 	</div>

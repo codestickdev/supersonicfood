@@ -6405,6 +6405,30 @@ body.admin-bar .siteHeader--float {
   left: 0;
 }
 
+.menuDropdown__more a:hover span:after {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(18deg) brightness(106%) contrast(107%);
+}
+
+.menuDropdown__more a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.menuDropdown__more a span:after {
+  content: '';
+  background-image: url("/wp-content/themes/supersonicfood/images/icons/arrow_right_dropdown_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 13px;
+  width: 13px;
+  height: 15px;
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+  transition: ease .3s;
+}
+
 @media (max-width: 1700px) {
   .menuDropdown__product {
     max-width: 150px;
