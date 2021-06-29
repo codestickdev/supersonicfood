@@ -43,6 +43,30 @@
             "mime_types": ""
         },
         {
+            "key": "field_60db304ccfe32",
+            "label": "Zdjęcie (mobile)",
+            "name": "productspage_heading_image_mobile",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_6064595d092bc",
             "label": "Tekst",
             "name": "productspage_heading_text",
@@ -238,5 +262,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624659668
+    "modified": 1624977591
 }

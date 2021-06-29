@@ -55,6 +55,42 @@ $productsPL = array(
         )
     ),
 );
+
+$productsFood = array(
+    'posts_per_page'    => -1,
+    'post_type'         => 'product',
+    'orderby'           => 'menu_order',
+    'meta_query'        => array(
+        'relation'  => 'AND',
+        array(
+            'key'   => 'product_shopPage_visibility',
+            'value' => '1',
+        ),
+        array(
+            'key'   => 'product_shopPage_category',
+            'value' => 'food',
+        )
+    ),
+);
+$productsAccessories = array(
+    'posts_per_page'    => -1,
+    'post_type'         => 'product',
+    'meta_query'        => array(
+        'relation'  => 'AND',
+        array(
+            'key'   => 'product_shopPage_visibility',
+            'value' => '1',
+        ),
+        array(
+            'key'   => 'product_shopPage_category',
+            'value' => 'accessories',
+        )
+    ),
+);
+$queryFood = new WP_Query($productsFood);
+$queryAccessories = new WP_Query($productsAccessories);
+
+
 if($lang == 'en-US'){
     $query = new WP_Query($productsEN);
 }else if ($lang == 'de-DE'){
@@ -70,8 +106,38 @@ if($lang == 'en-US'){
         </div>
     </section>
     <section class="shopProdcuts container-lg">
+        <div class="shopProducts__heading">
+            <h2>Food and Drink</h2>
+        </div>
         <div class="shopProducts__wrap">
-            <?php while ($query->have_posts()) : $query->the_post();
+            <?php while ($queryFood->have_posts()) : $queryFood->the_post();
+                $post_id = get_the_ID();
+                $getTitle = get_the_title();
+                $title = str_replace('SUPERSONIC', '', $getTitle);
+            ?>
+            <article class="productTile<?php if(strpos($title, 'Powder') !== false): ?> productTile--powder<?php endif; ?>" productid="<?php echo $post_id; ?>" >
+                <a href="<?php the_permalink(); ?>" class="productTile__thumb">
+                    <img src="<?php the_field('product_main_image'); ?>"/>
+                </a>
+                <div class="content">
+                    <a href="<?php the_permalink(); ?>" class="productTile__title"><?php echo $title; ?></a>
+                    <div class="content__usp">
+                        <?php while(have_rows('product_list_usp')): the_row();
+                            $pos = get_sub_field('product_list_usp_text');
+                        ?>
+                        <div class="pos">- <?php echo $pos; ?></div>
+                        <?php endwhile; ?>
+                    </div>
+                    <a href="<?php the_permalink(); ?>" class="btn btn--bigFont"><span><?php if(get_field('cta_btn_title')){ the_field('cta_btn_title'); }else{ _e('View product', 'codestick'); }; ?></span></a>
+                </div>
+            </article>
+            <?php endwhile; ?>
+        </div>
+        <div class="shopProducts__heading">
+            <h2>Accessories</h2>
+        </div>
+        <div class="shopProducts__wrap">
+            <?php while ($queryAccessories->have_posts()) : $queryAccessories->the_post();
                 $post_id = get_the_ID();
                 $getTitle = get_the_title();
                 $title = str_replace('SUPERSONIC', '', $getTitle);

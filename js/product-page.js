@@ -88,10 +88,12 @@ jQuery(document).ready(function($){
     }
 
     function amountScrolled() {
-        if($(window).scrollTop() >= $('.variations_form.cart').offset().top + $('.variations_form.cart').outerHeight() - window.innerHeight + 80) {
-            $('.mobile-shop-info').addClass('scrolled');
-        } else {
-            $('.mobile-shop-info').removeClass('scrolled');
+        if ($(".variations_form.cart").length > 0) {
+            if($(window).scrollTop() >= $('.variations_form.cart').offset().top + $('.variations_form.cart').outerHeight() - window.innerHeight + 80) {
+                $('.mobile-shop-info').addClass('scrolled');
+            } else {
+                $('.mobile-shop-info').removeClass('scrolled');
+            }
         }
     }
 

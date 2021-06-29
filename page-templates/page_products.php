@@ -9,10 +9,10 @@ get_header(); ?>
     <section class="productsHeader" style="background-image: url('<?php the_field('productspage_heading_image_desktop'); ?>');">
         <div class="productsHeader__content">
             <div class="wrap">
-            <h1><?php the_field('productspage_heading_text'); ?></h1>
-            <div class="content">
-                <?php the_field('productspage_heading_content'); ?>
-            </div>
+                <h1><?php the_field('productspage_heading_text'); ?></h1>
+                <div class="content">
+                    <?php the_field('productspage_heading_content'); ?>
+                </div>
             </div>
         </div>
         <div class="productsHeader__image">
