@@ -169,7 +169,7 @@
 <footer id="colophon" class="siteFooter">
 	<div class="siteFooter__top">
 		<div class="siteFooter__logo">
-			<img src="/wp-content/themes/supersonicfood/images/supersonic_logo.svg" />
+			<img src="/wp-content/themes/supersonicfood/images/logo_footer.png" />
 		</div>
 		<?php $lang = get_bloginfo("language"); ?>
 		<?php if($lang == 'en-US'): ?>
