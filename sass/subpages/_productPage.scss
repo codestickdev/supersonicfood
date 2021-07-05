@@ -35,6 +35,9 @@
 .product_tag-braincoffee-de{
     .productPage{
         &__content{
+            .flavourSelect{
+                display: none !important;
+            }
             .free-shipping{
                 color: #2e1c49 !important;
             }
@@ -66,6 +69,9 @@
 .product_tag-calmcacao-de{
     .productPage{
         &__content{
+            .flavourSelect{
+                display: none !important;
+            }
             .free-shipping{
                 color: #341b15 !important;
             }
@@ -117,6 +123,32 @@ body.postid-21695{
 
             &:hover{
                 background-color: #585757 !important;
+            }
+        }
+    }
+}
+
+/* Omega 3-6-9 */
+.product.product_tag-omega-369,
+.product.product_tag-omega-369-de,
+.product.product_tag-omega-369-en{
+    .productPage{
+        &__content{
+            .flavourSelect{
+                display: none !important;
+            }
+        }
+    }
+}
+
+/* Keto Omega 3-6-9 + MCT */
+.product.product_tag-keto-omega,
+.product.product_tag-keto-omega-de,
+.product.product_tag-keto-omega-en{
+    .productPage{
+        &__content{
+            .flavourSelect{
+                display: none !important;
             }
         }
     }
@@ -315,7 +347,7 @@ body.postid-21695{
             color: #000;
             text-transform: uppercase;
             text-decoration: underline;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
 
             &:hover{
                 opacity: .8;

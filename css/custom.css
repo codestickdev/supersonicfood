@@ -99,6 +99,12 @@ body h6 {
 }
 
 /* Brain Coffee color */
+.product_tag-braincoffee .productPage__content .flavourSelect,
+.product_tag-braincoffee-en .productPage__content .flavourSelect,
+.product_tag-braincoffee-de .productPage__content .flavourSelect {
+  display: none !important;
+}
+
 .product_tag-braincoffee .productPage__content .free-shipping,
 .product_tag-braincoffee-en .productPage__content .free-shipping,
 .product_tag-braincoffee-de .productPage__content .free-shipping {
@@ -130,6 +136,12 @@ body h6 {
 }
 
 /* Calm Cacao color */
+.product_tag-calmcacao .productPage__content .flavourSelect,
+.product_tag-calmcacao-en .productPage__content .flavourSelect,
+.product_tag-calmcacao-de .productPage__content .flavourSelect {
+  display: none !important;
+}
+
 .product_tag-calmcacao .productPage__content .free-shipping,
 .product_tag-calmcacao-en .productPage__content .free-shipping,
 .product_tag-calmcacao-de .productPage__content .free-shipping {
@@ -189,6 +201,20 @@ body.postid-17250 .productComponents #openModal:hover,
 body.postid-20294 .productComponents #openModal:hover,
 body.postid-21695 .productComponents #openModal:hover {
   background-color: #585757 !important;
+}
+
+/* Omega 3-6-9 */
+.product.product_tag-omega-369 .productPage__content .flavourSelect,
+.product.product_tag-omega-369-de .productPage__content .flavourSelect,
+.product.product_tag-omega-369-en .productPage__content .flavourSelect {
+  display: none !important;
+}
+
+/* Keto Omega 3-6-9 + MCT */
+.product.product_tag-keto-omega .productPage__content .flavourSelect,
+.product.product_tag-keto-omega-de .productPage__content .flavourSelect,
+.product.product_tag-keto-omega-en .productPage__content .flavourSelect {
+  display: none !important;
 }
 
 /* Shaker color */
@@ -392,7 +418,7 @@ body.postid-21695 .productComponents #openModal:hover {
   color: #000;
   text-transform: uppercase;
   text-decoration: underline;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .productPage__content .contentHref:hover {
