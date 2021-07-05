@@ -210,11 +210,23 @@ body.postid-21695 .productComponents #openModal:hover {
   display: none !important;
 }
 
+.product.product_tag-omega-369 .productPage .productSpecs__icon,
+.product.product_tag-omega-369-de .productPage .productSpecs__icon,
+.product.product_tag-omega-369-en .productPage .productSpecs__icon {
+  width: calc(100% / 3);
+}
+
 /* Keto Omega 3-6-9 + MCT */
 .product.product_tag-keto-omega .productPage__content .flavourSelect,
 .product.product_tag-keto-omega-de .productPage__content .flavourSelect,
 .product.product_tag-keto-omega-en .productPage__content .flavourSelect {
   display: none !important;
+}
+
+.product.product_tag-keto-omega .productPage .productSpecs__icon,
+.product.product_tag-keto-omega-de .productPage .productSpecs__icon,
+.product.product_tag-keto-omega-en .productPage .productSpecs__icon {
+  width: calc(100% / 3);
 }
 
 /* Shaker color */

@@ -138,6 +138,11 @@ body.postid-21695{
                 display: none !important;
             }
         }
+        .productSpecs{
+            &__icon{
+                width: calc(100% / 3);
+            }
+        }
     }
 }
 
@@ -149,6 +154,11 @@ body.postid-21695{
         &__content{
             .flavourSelect{
                 display: none !important;
+            }
+        }
+        .productSpecs{
+            &__icon{
+                width: calc(100% / 3);
             }
         }
     }
