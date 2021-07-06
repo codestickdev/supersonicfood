@@ -3,6 +3,7 @@
 		<h2 class="ssfood__secHeading" style="margin: 100px 0 50px"><?php _e('Follow us on Instagram @supersonicfood', 'codestick'); ?></h2>
 	</div>
 	<?php
+	$lang = get_bloginfo('language');
 	if($lang == 'pl-PL'){
 		echo do_shortcode('[elfsight_instagram_feed id="1"]');
 	}elseif($lang == 'de-DE'){
