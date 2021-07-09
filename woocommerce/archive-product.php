@@ -115,7 +115,7 @@ if($lang == 'en-US'){
                 $getTitle = get_the_title();
                 $title = str_replace('SUPERSONIC', '', $getTitle);
             ?>
-            <article class="productTile<?php if(strpos($title, 'Powder') !== false): ?> productTile--powder<?php endif; ?>" productid="<?php echo $post_id; ?>" >
+            <article class="productTile" productid="<?php echo $post_id; ?>" >
                 <a href="<?php the_permalink(); ?>" class="productTile__thumb">
                     <img src="<?php the_field('product_main_image'); ?>"/>
                 </a>
@@ -125,7 +125,7 @@ if($lang == 'en-US'){
                         <?php while(have_rows('product_list_usp')): the_row();
                             $pos = get_sub_field('product_list_usp_text');
                         ?>
-                        <div class="pos">- <?php echo $pos; ?></div>
+                        <div class="pos"><?php echo $pos; ?></div>
                         <?php endwhile; ?>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="btn btn--bigFont"><span><?php if(get_field('cta_btn_title')){ the_field('cta_btn_title'); }else{ _e('View product', 'codestick'); }; ?></span></a>
@@ -152,7 +152,7 @@ if($lang == 'en-US'){
                         <?php while(have_rows('product_list_usp')): the_row();
                             $pos = get_sub_field('product_list_usp_text');
                         ?>
-                        <div class="pos">- <?php echo $pos; ?></div>
+                        <div class="pos"><?php echo $pos; ?></div>
                         <?php endwhile; ?>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="btn btn--bigFont"><span><?php if(get_field('cta_btn_title')){ the_field('cta_btn_title'); }else{ _e('View product', 'codestick'); }; ?></span></a>
