@@ -8,6 +8,8 @@
     }
     &__logo{
         width: fit-content;
+        max-width: -moz-fit-content;
+        max-width: -webki-fit-content;
         text-align: center;
         max-height: 40px;
         opacity: .7;

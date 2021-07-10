@@ -43,6 +43,16 @@
         }
     }
 }
+@media (max-width: 767px){
+    .shopHeading{
+        min-height: 0;
+        margin: 0 0 30px;
+
+        &__wrap{
+            display: none;
+        }
+    }
+}
 
 .shopProducts{
     &__heading{
@@ -62,6 +72,29 @@
         justify-content: center;
         flex-wrap: wrap;
         margin: 0 0 30px;
+    }
+}
+@media (max-width: 1629px){
+    .shopProducts{
+        &__heading{
+            max-width: 960px;
+        }
+    }
+}
+@media (max-width: 1199px){
+    .shopProducts{
+        &__heading{
+            max-width: 900px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .shopProducts{
+        &__heading{
+            h2{
+                text-align: center;
+            }
+        }
     }
 }
 

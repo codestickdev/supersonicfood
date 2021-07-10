@@ -506,6 +506,8 @@ body.single-post{
         }
         a{
             max-width: fit-content;
+            max-width: -moz-fit-content;
+            max-width: -webki-fit-content;
             margin: 0 auto;
         }
     }

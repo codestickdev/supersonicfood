@@ -84,6 +84,8 @@
             text-align: center;
             color: #fff !important;
             max-width: fit-content;
+            max-width: -moz-fit-content;
+            max-width: -webki-fit-content;
             padding: 4px 8px 2px;
             background: #6BC385;
         }
@@ -106,6 +108,8 @@
         }
         .btn{
             max-width: fit-content;
+            max-width: -moz-fit-content;
+            max-width: -webki-fit-content;
             height: 40px;
         }
     }
@@ -141,6 +145,8 @@
         }
         &__products{
             width: fit-content;
+            width: -moz-fit-content;
+            width: -webki-fit-content;
             min-width: auto;
             flex-wrap: nowrap;
         }
