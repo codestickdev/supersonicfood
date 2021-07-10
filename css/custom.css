@@ -480,7 +480,7 @@ body.postid-21695 .productComponents #openModal:hover {
   line-height: 30px;
   border: 0;
   min-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   cursor: pointer;
   transition: ease .3s;
 }
@@ -772,7 +772,7 @@ body.postid-21695 .productComponents #openModal:hover {
   display: flex;
   justify-content: space-between;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto;
 }
 
@@ -989,7 +989,7 @@ body.postid-21695 .productComponents #openModal:hover {
 
 .productComponents .btn {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 50px auto;
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -1332,7 +1332,7 @@ body.postid-21695 .productComponents #openModal:hover {
   display: flex;
   flex-direction: row;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto 10px;
 }
 
@@ -1417,7 +1417,7 @@ body.postid-21695 .productComponents #openModal:hover {
   display: flex;
   flex-direction: row;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto;
   padding: 30px 20px;
   border-bottom: 1px solid #DBDBDB;
@@ -2531,7 +2531,7 @@ body.single-post nav.post-navigation {
 
 .contentPost .postProducts a {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto;
 }
 
@@ -2713,7 +2713,7 @@ body.woocommerce-cart .entry-content {
 .ssCart table.cart td.product-price ins {
   display: block;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   background: #44c680;
   padding: 0 3px;
 }
@@ -2832,7 +2832,7 @@ body.woocommerce-cart .entry-content {
 
 .ssCart table.cart td.actions .coupon-actions button[name="update_cart"] {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
 }
 
 .ssCart table.cart td.actions .coupon-actions button[name="update_cart"]:disabled {
@@ -2846,7 +2846,7 @@ body.woocommerce-cart .entry-content {
   justify-content: center;
   width: 100%;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   height: 36px;
   background-color: #44c680;
   color: #fff;
@@ -3034,7 +3034,7 @@ body.woocommerce-cart .entry-content {
   }
   .ssCart table.shop_table tr td.actions .coupon-actions .coupon .coupon-trigger {
     max-width: fit-content;
-    max-width: -webki-fit-content;
+    max-width: -webkit-fit-content;
     margin: 0 auto;
   }
   .ssCart table.shop_table tr td.actions .coupon-actions .coupon__toshow {
@@ -5086,7 +5086,7 @@ body.woocommerce-account .entry-header {
 
 .pageProducts .productsInfo__section .content .btn {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto;
 }
 
@@ -5430,7 +5430,7 @@ body.woocommerce-account .entry-header {
 .homeHeader__content a {
   margin-top: 40px;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
 }
 
 .homeHeader__mobilebg {
@@ -5714,7 +5714,7 @@ body.woocommerce-account .entry-header {
 
 .homeInfoTile .btn {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 15px auto 0;
 }
 
@@ -5859,7 +5859,7 @@ body.woocommerce-account .entry-header {
 
 .logosList__logo {
   width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   text-align: center;
   max-height: 40px;
   opacity: .7;
@@ -6068,7 +6068,7 @@ body.woocommerce-account .entry-header {
   font-weight: 400;
   margin: 0 auto 15px;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   padding: 3px 10px 0;
   background: #44c680;
 }
@@ -6270,7 +6270,7 @@ body.admin-bar .siteHeader--float {
   right: 0;
   margin: 5px auto 0;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   text-align: center;
 }
 
@@ -6416,7 +6416,7 @@ body.admin-bar .siteHeader--float {
 .menuDropdown__list {
   display: flex;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   margin: 0 auto 30px;
 }
 
@@ -6932,7 +6932,7 @@ body.admin-bar .mobileMenu {
   text-align: center;
   color: #fff !important;
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   padding: 4px 8px 2px;
   background: #6BC385;
 }
@@ -6957,7 +6957,7 @@ body.admin-bar .mobileMenu {
 
 .modalAdded__continue .btn {
   max-width: fit-content;
-  max-width: -webki-fit-content;
+  max-width: -webkit-fit-content;
   height: 40px;
 }
 
@@ -6988,7 +6988,7 @@ body.admin-bar .mobileMenu {
   }
   .modalAdded__products {
     width: fit-content;
-    width: -webki-fit-content;
+    width: -webkit-fit-content;
     min-width: auto;
     flex-wrap: nowrap;
   }
