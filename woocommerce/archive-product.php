@@ -57,7 +57,7 @@ $queryAccessories = new WP_Query($productsAccessories);
 <div class="shopPage">
     <section class="shopHeading">
         <div class="shopHeading__wrap">
-            <h1><?php _e('Zobacz wszystkie nasze produkty', 'codestick'); ?></h1>
+            <h1><?php _e('See all our products', 'codestick'); ?></h1>
         </div>
     </section>
     <section class="shopProdcuts container-lg">
