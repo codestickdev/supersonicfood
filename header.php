@@ -154,7 +154,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [103, 5942, 17250, 29368, 29391, 11793, 9695, 1213],
+			'post__in'			=> [103, 5942, 17250, 29368, 29391, 34100, 34108],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
@@ -185,11 +185,9 @@ foreach ($cart_items as $cart_item => $item){
 			</a>
     	<?php endwhile; ?>
 		</div>
-		<?php if( current_user_can('editor') || current_user_can('administrator') ): ?>
 		<div class="menuDropdown__more">
 			<a href="<?php echo $shopURL; ?>"><span><?php _e('See all products', 'codestick'); ?></span></a>
 		</div>
-		<?php endif; ?>
 	</div>
     <?php wp_reset_postdata(); ?>
 	<?php endif; ?>

@@ -19,43 +19,6 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $lang = get_bloginfo("language");
-$productsEN = array(
-    'posts_per_page' 	=> -1,
-    'post_type' 		=> 'product',
-    'orderby'			=> 'menu_order',
-    'post__not_in'		=> [2488],
-    'meta_query' => array(
-        array(
-            'key' => 'product_main_visible',
-            'value' => '1',
-        )
-    ),
-);
-$productsDE = array(
-    'posts_per_page' 	=> -1,
-    'post_type' 		=> 'product',
-    'orderby'			=> 'menu_order',
-    'post__not_in'		=> [21664],
-    'meta_query' => array(
-        array(
-            'key' => 'product_main_visible',
-            'value' => '1',
-        )
-    ),
-);
-$productsPL = array(
-    'posts_per_page' 	=> -1,
-    'post_type' 		=> 'product',
-    'orderby'			=> 'menu_order',
-    'post__not_in'		=> [1215],
-    'meta_query' => array(
-        array(
-            'key' => 'product_main_visible',
-            'value' => '1',
-        )
-    ),
-);
-
 $productsFood = array(
     'posts_per_page'    => -1,
     'post_type'         => 'product',
@@ -89,20 +52,12 @@ $productsAccessories = array(
 );
 $queryFood = new WP_Query($productsFood);
 $queryAccessories = new WP_Query($productsAccessories);
+?>
 
-
-if($lang == 'en-US'){
-    $query = new WP_Query($productsEN);
-}else if ($lang == 'de-DE'){
-    $query = new WP_Query($productsDE);
-}else{
-    $query = new WP_Query($productsPL);
-} ?>
 <div class="shopPage">
     <section class="shopHeading">
         <div class="shopHeading__wrap">
-            <h1>Supersonic Food</h1>
-            <p>Zobacz nasze wszystkie produkty</p>
+            <h1><?php _e('Zobacz wszystkie nasze produkty', 'codestick'); ?></h1>
         </div>
     </section>
     <section class="shopProdcuts container-lg">
