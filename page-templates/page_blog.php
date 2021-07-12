@@ -34,7 +34,7 @@ get_header(); ?>
     <section class="blogNav container-lg">
         <div class="blogNav__wrap">
             <div class="blogNav__side">
-                <h3>Najpopularniejsze artykuły:</h3>
+                <h3><?php _e('Popular articles', 'codestick'); ?>:</h3>
                 <ul>
                 <?php foreach( $popularPosts as $post ): ?>
                     <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
@@ -43,7 +43,7 @@ get_header(); ?>
                 </ul>
             </div>
             <div class="blogNav__side">
-                <h3>Najnowsze artykuły:</h3>
+                <h3><?php _e('Recent articles', 'codestick'); ?>:</h3>
                 <ul>
                 <?php while( $newestquery->have_posts() ) : $newestquery->the_post(); ?>
                     <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
