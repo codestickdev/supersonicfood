@@ -90,6 +90,20 @@
         }
     }
 }
+@media (max-width: 600px){
+    .blogNav{
+        &__side{
+            ul{
+                li{
+                    a{
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 .blogHeading{
     margin: 70px 0;

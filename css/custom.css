@@ -2105,6 +2105,13 @@ body.postid-21695 .productComponents #openModal:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .blogNav__side ul li a {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 .blogHeading {
   margin: 70px 0;
 }
