@@ -75,6 +75,7 @@
         slidesToShow: 1,
         variableWidth: true,
         centerMode: true,
+        dots: true,
       });
     }
   });

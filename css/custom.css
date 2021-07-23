@@ -98,6 +98,13 @@ body h6 {
   background-color: #f3aea0 !important;
 }
 
+.product_tag-isotonic .productTesVid__video .thumb,
+.product_tag-isotonic-en .productTesVid__video .thumb,
+.product_tag-isotonic-de .productTesVid__video .thumb {
+  border-color: #e5998a !important;
+  box-shadow: 0 0 30px #e5998a99 !important;
+}
+
 /* Brain Coffee color */
 .product_tag-braincoffee .productPage__content .flavourSelect,
 .product_tag-braincoffee-en .productPage__content .flavourSelect,
@@ -133,6 +140,13 @@ body h6 {
 .product_tag-braincoffee-en .productComponents #openModal:hover,
 .product_tag-braincoffee-de .productComponents #openModal:hover {
   background-color: #452e67 !important;
+}
+
+.product_tag-braincoffee .productTesVid__video .thumb,
+.product_tag-braincoffee-en .productTesVid__video .thumb,
+.product_tag-braincoffee-de .productTesVid__video .thumb {
+  border-color: #2e1c49 !important;
+  box-shadow: 0 0 30px #2e1c4999 !important;
 }
 
 /* Calm Cacao color */
@@ -172,6 +186,13 @@ body h6 {
   background-color: #422720 !important;
 }
 
+.product_tag-calmcacao .productTesVid__video .thumb,
+.product_tag-calmcacao-en .productTesVid__video .thumb,
+.product_tag-calmcacao-de .productTesVid__video .thumb {
+  border-color: #341b15 !important;
+  box-shadow: 0 0 30px #341b1599 !important;
+}
+
 /* Performance Isotonic color */
 body.postid-17250 .productPage__content .free-shipping,
 body.postid-20294 .productPage__content .free-shipping,
@@ -201,6 +222,13 @@ body.postid-17250 .productComponents #openModal:hover,
 body.postid-20294 .productComponents #openModal:hover,
 body.postid-21695 .productComponents #openModal:hover {
   background-color: #585757 !important;
+}
+
+body.postid-17250 .productTesVid__video .thumb,
+body.postid-20294 .productTesVid__video .thumb,
+body.postid-21695 .productTesVid__video .thumb {
+  border-color: #464646 !important;
+  box-shadow: 0 0 30px #46464699 !important;
 }
 
 /* Omega 3-6-9 */
@@ -5304,10 +5332,13 @@ body.woocommerce-account .entry-header {
     padding: 20px 0 50px;
   }
   .pageProducts .productsList__product {
-    opacity: .4;
+    opacity: .3;
   }
   .pageProducts .productsList__product.slick-current {
     opacity: 1;
+  }
+  .pageProducts .productsList .slick-dots {
+    bottom: -45px;
   }
   .pageProducts .productsInfo__section {
     flex-direction: column-reverse !important;
@@ -5329,7 +5360,7 @@ body.woocommerce-account .entry-header {
 
 @media (max-width: 767px) {
   .pageProducts .productsList {
-    padding: 20px 0 0;
+    padding: 20px 0 10px;
   }
   .pageProducts .productsInfo {
     margin: 50px auto;

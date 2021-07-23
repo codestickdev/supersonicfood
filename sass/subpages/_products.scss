@@ -246,11 +246,14 @@
             padding: 20px 0 50px;
 
             &__product{
-                opacity: .4;
+                opacity: .3;
 
                 &.slick-current{
                     opacity: 1;
                 }
+            }
+            .slick-dots{
+                bottom: -45px;
             }
         }
         .productsInfo{
@@ -280,7 +283,7 @@
 @media (max-width: 767px){
     .pageProducts{
         .productsList{
-            padding: 20px 0 0;
+            padding: 20px 0 10px;
         }
         .productsInfo{
             margin: 50px auto;

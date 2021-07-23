@@ -27,6 +27,14 @@
             }
         }
     }
+    .productTesVid{
+        &__video{
+            .thumb{
+                border-color: #e5998a !important;
+                box-shadow: 0 0 30px #e5998a99 !important;
+            }
+        }
+    }
 }
 
 /* Brain Coffee color */
@@ -58,6 +66,14 @@
 
             &:hover{
                 background-color: #452e67 !important;
+            }
+        }
+    }
+    .productTesVid{
+        &__video{
+            .thumb{
+                border-color: #2e1c49 !important;
+                box-shadow: 0 0 30px #2e1c4999 !important;
             }
         }
     }
@@ -95,6 +111,14 @@
             }
         }
     }
+    .productTesVid{
+        &__video{
+            .thumb{
+                border-color: #341b15 !important;
+                box-shadow: 0 0 30px #341b1599 !important;
+            }
+        }
+    }
 }
 
 /* Performance Isotonic color */
@@ -123,6 +147,14 @@ body.postid-21695{
 
             &:hover{
                 background-color: #585757 !important;
+            }
+        }
+    }
+    .productTesVid{
+        &__video{
+            .thumb{
+                border-color: #464646 !important;
+                box-shadow: 0 0 30px #46464699 !important;
             }
         }
     }
