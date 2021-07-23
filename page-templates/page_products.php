@@ -19,6 +19,26 @@ get_header(); ?>
             <img src="<?php the_field('productspage_heading_image_mobile'); ?>"/>
         </div>
     </section>
+
+    <?php
+    $list = get_field('productspage_productslist');
+    if($list && current_user_can('administrator')): ?>
+    <section class="productsList">
+        <div class="productsList__list">
+        <?php foreach($list as $post): 
+        setup_postdata($post); ?>
+            <a href="<?php the_permalink(); ?>" class="productsList__product">
+                <div class="thumb">
+                    <img src="<?php the_field('product_main_image'); ?>"/>
+                </div>
+                <p><?php the_title(); ?></p>
+            </a>
+        <?php endforeach; ?>
+        </div>
+    </section>
+    <?php wp_reset_postdata(); ?>
+    <?php endif; ?>
+
     <section class="productsInfo">
         <?php while(have_rows('productspage_products')): the_row();
             $position = get_sub_field('productspage_products_position');

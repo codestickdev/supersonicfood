@@ -105,6 +105,51 @@
             "delay": 0
         },
         {
+            "key": "field_60fa9455a8ae0",
+            "label": "Sekcja produktowa",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60fa9465a8ae1",
+            "label": "Lista produktów",
+            "name": "productspage_productslist",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
             "key": "field_60645a00da379",
             "label": "Produkty",
             "name": "",
@@ -262,5 +307,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624977591
+    "modified": 1627034772
 }
