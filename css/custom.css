@@ -5329,7 +5329,7 @@ body.woocommerce-account .entry-header {
 
 @media (max-width: 767px) {
   .pageProducts .productsList {
-    padding: 50px 0 0;
+    padding: 20px 0 0;
   }
   .pageProducts .productsInfo {
     margin: 50px auto;
