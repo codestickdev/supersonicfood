@@ -5301,13 +5301,7 @@ body.woocommerce-account .entry-header {
     text-align: center;
   }
   .pageProducts .productsList {
-    padding: 50px 0 0;
-  }
-  .pageProducts .productsList__product {
-    opacity: .4;
-  }
-  .pageProducts .productsList__product.slick-current {
-    opacity: 1;
+    padding: 20px 0 50px;
   }
   .pageProducts .productsInfo__section {
     flex-direction: column-reverse !important;
@@ -5328,6 +5322,15 @@ body.woocommerce-account .entry-header {
 }
 
 @media (max-width: 767px) {
+  .pageProducts .productsList {
+    padding: 50px 0 0;
+  }
+  .pageProducts .productsList__product {
+    opacity: .4;
+  }
+  .pageProducts .productsList__product.slick-current {
+    opacity: 1;
+  }
   .pageProducts .productsInfo {
     margin: 50px auto;
   }
