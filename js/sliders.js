@@ -70,7 +70,7 @@
     });
 
     /* Our products */
-    if($(window).width() < 767){
+    if($(window).width() < 991){
       $('.productsList__list').slick({
         slidesToShow: 1,
         variableWidth: true,
