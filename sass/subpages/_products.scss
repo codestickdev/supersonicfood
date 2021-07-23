@@ -244,6 +244,14 @@
         }
         .productsList{
             padding: 20px 0 50px;
+
+            &__product{
+                opacity: .4;
+
+                &.slick-current{
+                    opacity: 1;
+                }
+            }
         }
         .productsInfo{
             &__section{
@@ -273,14 +281,6 @@
     .pageProducts{
         .productsList{
             padding: 50px 0 0;
-            
-            &__product{
-                opacity: .4;
-
-                &.slick-current{
-                    opacity: 1;
-                }
-            }
         }
         .productsInfo{
             margin: 50px auto;
