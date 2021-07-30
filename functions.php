@@ -137,6 +137,23 @@ function supersonicfood_widgets_init() {
 }
 add_action( 'widgets_init', 'supersonicfood_widgets_init' );
 
+/*
+ *	Versioning styles
+ */
+function wpmix_get_version() {
+	$theme_data = wp_get_theme();
+	return $theme_data->Version;
+}
+$theme_version = wpmix_get_version();
+global $theme_version;
+
+function wpmix_get_random() {
+	$randomizr = '-' . rand(100,999);
+	return $randomizr;
+}
+$random_number = wpmix_get_random();
+global $random_number;
+
 /**
  * Enqueue scripts and styles.
  */
@@ -157,7 +174,8 @@ add_action( 'wp_enqueue_scripts', 'supersonicfood_scripts' );
  * Custom files
  */
 function theme_styles(){
-	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css' );
+    global $theme_version, $random_number;
+	wp_enqueue_style( 'custom', get_template_directory_uri() . '/css/custom.css', false, $theme_version . $random_number);
 	wp_enqueue_style( 'slick-theme', get_template_directory_uri() . '/plugins/slick/slick-theme.css' );
 	wp_enqueue_style( 'slick', get_template_directory_uri() . '/plugins/slick/slick.css' );
 }
