@@ -28,6 +28,10 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/design.css">
 	
+	<script type="text/javascript">
+		var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+	</script>
+
 	<?php wp_head(); ?>
 
 	<!-- Google Tag Manager (noscript) -->
@@ -36,6 +40,15 @@
 	<!-- End Google Tag Manager (noscript) -->
 </head>
 <?php
+$user_id = get_current_user_id();
+
+if(is_user_logged_in()){
+	$userCountry = get_user_meta($user_id, 'lang_country', true);
+}else{
+	$userCountry = $_COOKIE['user_country'];
+}
+
+
 $cart_items = WC()->cart->get_cart();
 $productQuantity = 0;
 
@@ -81,6 +94,19 @@ foreach ($cart_items as $cart_item => $item){
 		</div>
 		<div class="siteHeader__actions">
 			<div class="language">
+				<?php if(current_user_can('administrator')): ?>
+				<div class="language__select selectLang" data-lang="<?php echo $userCountry; ?>">
+						<img class="default" src="<?php echo get_template_directory_uri() . '/images/icons/lang_select_ico.svg'; ?>"/>
+						<?php while(have_rows('langSelector', 11377)): the_row();
+							$flag = get_sub_field('langSelector_flag');
+							$iso = get_sub_field('langSelector_code');
+						?>
+							<div class="lang" data-iso="<?php echo $iso; ?>">
+								<img src="<?php echo $flag; ?>"/>
+							</div>
+						<?php endwhile; ?>
+				</div>
+				<?php endif; ?>
 				<?php if(!is_cart() && !is_checkout()): ?>
 				<?php echo do_shortcode('[wpml_language_switcher type="custom" native=0][/wpml_language_switcher]'); ?>
 				<?php endif; ?>
@@ -102,6 +128,25 @@ foreach ($cart_items as $cart_item => $item){
 			</div>
 		</div>
 	</header><!-- #masthead -->
+
+	<div class="langSelector" data-lang="<?php echo get_user_meta($user_id, 'lang_country', true); ?>">
+		<div class="langSelector__wrap">
+			<div class="langSelector__back"><?php _e('Back', 'codestick'); ?></div>
+			<?php while(have_rows('langSelector', 11377)): the_row();
+				$flag = get_sub_field('langSelector_flag');
+				$iso = get_sub_field('langSelector_code');
+				$name = get_sub_field('langSelector_name');
+				$lang = get_sub_field('langSelector_lang');
+			?>
+			<div class="langSelector__country" data-lang="<?php echo $lang; ?>" data-iso="<?php echo $iso; ?>">
+				<div class="image">
+					<img src="<?php echo $flag; ?>"/>
+				</div>
+				<p class="name"><?php echo $name; ?></p>
+			</div>
+			<?php endwhile; ?>
+		</div>
+	</div>
 
 	<div class="cartModalWrap">
 		<?php include get_template_directory() . '/woocommerce/cart/cartModal.php'; ?>

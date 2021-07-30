@@ -500,3 +500,69 @@ function remove_shop_breadcrumbs(){
         remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
     }
 }
+
+
+/*
+ *  User extra fields - lang
+ */
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+
+function extra_user_profile_fields( $user ) { ?>
+    <h3>Kraj użytkownika</h3>
+    <table class="form-table">
+    <tr>
+        <th><label for="lang_country">Kraj</label></th>
+        <td>
+            <input type="text" name="lang_country" id="lang_country" value="<?php echo esc_attr( get_the_author_meta( 'lang_country', $user->ID ) ); ?>" class="regular-text" /><br />
+            <span class="description">Kraj został wybrany przez użytkownika</span>
+        </td>
+    </tr>
+    </table>
+<?php }
+
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+
+function save_extra_user_profile_fields( $user_id ) {
+    if ( empty( $_POST['_wpnonce'] ) || ! wp_verify_nonce( $_POST['_wpnonce'], 'update-user_' . $user_id ) ) {
+        return;
+    }
+    
+    if ( !current_user_can( 'edit_user', $user_id ) ) { 
+        return false; 
+    }
+    update_user_meta( $user_id, 'lang_country', $_POST['lang_country'] );
+}
+
+add_action('wp_ajax_nopriv_user_lang_change', 'user_lang_change');
+add_action('wp_ajax_user_lang_change', 'user_lang_change');
+function user_lang_change(){
+    $lang = $_POST['lang'];
+
+    if(is_user_logged_in()){
+        $user_id = get_current_user_id();
+        update_user_meta($user_id, 'lang_country', $lang);
+        if($lang != get_user_meta($user_id, 'lang_country', true)){
+            echo 'error';
+        }else{
+            echo 'done';
+        }
+    }else{
+        $expiry = strtotime('+7 day');
+	    setcookie('user_country', $lang, $expiry);
+        echo 'done cookie';
+    }
+    wp_die();
+};
+
+add_action('wp_ajax_get_user_country', 'get_user_country');
+add_action('wp_ajax_nopriv_get_user_country', 'get_user_country');
+function get_user_country(){
+    if($_COOKIE['user_country'] == ''){
+        echo 'country not set';
+    }else{
+        echo $_COOKIE['user_country'];
+    }
+	wp_die();
+}

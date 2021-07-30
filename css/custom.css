@@ -6365,6 +6365,10 @@ body.admin-bar .siteHeader--float {
   top: 32px;
 }
 
+body.admin-bar .wpml-ls {
+  display: none !important;
+}
+
 .siteHeader {
   display: flex;
   flex-direction: row;
@@ -6469,6 +6473,60 @@ body.admin-bar .siteHeader--float {
 
 .siteHeader__actions .language {
   margin-right: 10px;
+}
+
+.siteHeader__actions .language__select {
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+.siteHeader__actions .language__select:hover {
+  opacity: .7;
+}
+
+.siteHeader__actions .language__select img {
+  max-width: 18px;
+  width: 100%;
+}
+
+@keyframes pulseOpactiy {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.siteHeader__actions .language__select img.default.loading {
+  animation-name: pulseOpactiy;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.siteHeader__actions .language__select .lang {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.siteHeader__actions .language__select .lang.active {
+  display: flex;
+}
+
+.siteHeader__actions .language__select .lang img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .siteHeader__actions .language ul {
@@ -7301,6 +7359,135 @@ body.modalActive {
 
 .woocommerce-info {
   display: none !important;
+}
+
+/*  Lang selector
+-------------- */
+body.admin-bar .langSelector {
+  top: 32px;
+}
+
+.langSelector {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007d;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.langSelector--ready {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.langSelector--active .langSelector__wrap {
+  right: 0;
+}
+
+.langSelector__wrap {
+  max-width: 400px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  padding: 30px 45px;
+  transition: ease 1s;
+}
+
+.langSelector__wrap:before {
+  content: '';
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.langSelector__wrap.loading:before {
+  opacity: .6;
+  pointer-events: all;
+}
+
+.langSelector__back {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 0 30px;
+  transition: ease .3s;
+}
+
+.langSelector__back:hover {
+  opacity: .7;
+}
+
+.langSelector__back:before {
+  content: '';
+  background-image: url("/wp-content/themes/supersonicfood/images/icons/down-chevron.svg");
+  background-size: 10px;
+  width: 10px;
+  height: 10px;
+  transform: rotate(90deg);
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.langSelector__country {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 15px;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+.langSelector__country:hover {
+  opacity: .7;
+}
+
+.langSelector__country:last-of-type {
+  margin: 0;
+}
+
+.langSelector__country .image {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.langSelector__country .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.langSelector__country .name {
+  font-size: 14px;
+  line-height: 1;
+  color: #000;
+  text-align: left;
+  margin: 0;
+}
+
+.langSelector__country--active .name {
+  font-weight: 600;
 }
 
 /*  Container

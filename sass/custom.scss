@@ -145,6 +145,137 @@ body{
   display: none !important;
 }
 
+/*  Lang selector
+-------------- */
+body.admin-bar{
+  .langSelector{
+    top: 32px;
+  }
+}
+.langSelector{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007d;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+
+  &--ready{
+    opacity: 1;
+    pointer-events: all;
+  }
+  &--active{
+    .langSelector__wrap{
+      right: 0;
+    }
+  }
+
+  &__wrap{
+    max-width: 400px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    padding: 30px 45px;
+    transition: ease 1s;
+
+
+    &:before{
+      content: '';
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 9;
+      opacity: 0;
+      pointer-events: none;
+      transition: ease .3s;
+    }
+    &.loading{
+      &:before{
+        opacity: .6;
+        pointer-events: all;
+      }
+    }
+  }
+  &__back{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 0 30px;
+    transition: ease .3s;
+    
+    &:hover{
+      opacity: .7;
+    }
+
+    &:before{
+      content: '';
+      background-image: url('/wp-content/themes/supersonicfood/images/icons/down-chevron.svg');
+      background-size: 10px;
+      width: 10px;
+      height: 10px;
+      transform: rotate(90deg);
+      position: relative;
+      display: inline-block;
+      margin-right: 8px;
+    }
+  }
+  &__country{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 15px;
+    cursor: pointer;
+    transition: ease .3s;
+
+    &:hover{
+      opacity: .7;
+    }
+
+    &:last-of-type{
+      margin: 0;
+    }
+
+    .image{
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      border-radius: 100%;
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .name{
+      font-size: 14px;
+      line-height: 1;
+      color: #000;
+      text-align: left;
+      margin: 0;
+    }
+    &--active{
+      .name{
+        font-weight: 600;
+      }
+    }
+  }
+} 
+
 /*  Container
 -------------- */
 
