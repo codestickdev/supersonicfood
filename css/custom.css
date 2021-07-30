@@ -6633,14 +6633,30 @@ body.admin-bar .wpml-ls {
   .siteHeader__menu #site-navigation {
     display: none !important;
   }
-  .siteHeader__actions .language {
-    display: none;
+  .siteHeader__actions .language__select p {
+    font-size: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .siteHeader {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 550px) {
   .siteHeader__logo a img {
     max-width: 130px;
+  }
+}
+
+@media (max-width: 400px) {
+  .siteHeader__actions .language {
+    margin-right: 5px;
+  }
+  .siteHeader__actions .user__account {
+    margin-right: 5px;
   }
 }
 
@@ -7526,6 +7542,19 @@ body.admin-bar .langSelector {
 
 .langSelector__country--active .name {
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .langSelector__wrap {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 575px) {
+  .langSelector__wrap {
+    max-width: 200px;
+    padding: 30px;
+  }
 }
 
 /*  Container

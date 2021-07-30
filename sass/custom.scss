@@ -294,7 +294,22 @@ body.admin-bar{
       }
     }
   }
-} 
+}
+@media (max-width: 767px){
+  .langSelector{
+    &__wrap{
+      max-width: 250px;
+    }
+  }
+}
+@media (max-width: 575px){
+  .langSelector{
+    &__wrap{
+      max-width: 200px;
+      padding: 30px;
+    }
+  }
+}
 
 /*  Container
 -------------- */

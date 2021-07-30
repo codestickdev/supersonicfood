@@ -289,9 +289,19 @@ body{
         }
         &__actions{
             .language{
-                display: none;
+                &__select{
+                    p{
+                        font-size: 0;
+                        margin: 0;
+                    }
+                }
             }
         }
+    }
+}
+@media (max-width: 767px){
+    .siteHeader{
+        padding: 0 15px;
     }
 }
 @media (max-width: 550px){
@@ -305,6 +315,21 @@ body{
         }
     }
 }
+@media (max-width: 400px){
+    .siteHeader{
+        &__actions{
+            .language{
+                margin-right: 5px;
+            }
+            .user{
+                &__account{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 782px){
     body{
         &.admin-bar{
