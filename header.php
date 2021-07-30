@@ -66,6 +66,16 @@ foreach ($cart_items as $cart_item => $item){
 ?>
 <body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>">
 <?php wp_body_open(); ?>
+<div class="langData" style="display: none !important">
+		<div class="langData__lang" data-iso="default" data-flag="<?php echo get_template_directory_uri() . '/images/icons/europe_flag.png'; ?>"></div>
+	<?php while(have_rows('langSelector', 11377)): the_row();	
+		$flag = get_sub_field('langSelector_flag');
+		$name = get_sub_field('langSelector_name');
+		$iso = get_sub_field('langSelector_code');
+	?>
+		<div class="langData__lang" data-iso="<?php echo $iso; ?>" data-flag="<?php echo $flag; ?>" data-name="<?php echo $name; ?>"></div>
+	<?php endwhile; ?>
+</div>
 <?php $lang = get_bloginfo("language"); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'supersonicfood' ); ?></a>
@@ -95,16 +105,8 @@ foreach ($cart_items as $cart_item => $item){
 		<div class="siteHeader__actions">
 			<div class="language">
 				<?php if(current_user_can('administrator')): ?>
-				<div class="language__select selectLang" data-lang="<?php echo $userCountry; ?>">
-						<img class="default" src="<?php echo get_template_directory_uri() . '/images/icons/lang_select_ico.svg'; ?>"/>
-						<?php while(have_rows('langSelector', 11377)): the_row();
-							$flag = get_sub_field('langSelector_flag');
-							$iso = get_sub_field('langSelector_code');
-						?>
-							<div class="lang" data-iso="<?php echo $iso; ?>">
-								<img src="<?php echo $flag; ?>"/>
-							</div>
-						<?php endwhile; ?>
+				<div class="language__select" data-lang="<?php echo $userCountry; ?>">
+					<p><?php _e('Country', 'codestick'); ?>: <span class="selectLang"></span></p>
 				</div>
 				<?php endif; ?>
 				<?php if(!is_cart() && !is_checkout()): ?>

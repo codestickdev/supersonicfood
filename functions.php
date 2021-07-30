@@ -558,6 +558,7 @@ function save_extra_user_profile_fields( $user_id ) {
 add_action('wp_ajax_nopriv_user_lang_change', 'user_lang_change');
 add_action('wp_ajax_user_lang_change', 'user_lang_change');
 function user_lang_change(){
+    global $sitepress;
     $lang = $_POST['lang'];
 
     if(is_user_logged_in()){
@@ -566,6 +567,16 @@ function user_lang_change(){
         if($lang != get_user_meta($user_id, 'lang_country', true)){
             echo 'error';
         }else{
+            if($lang == 'pl'){
+                $sitepress->switch_lang('pl', true);
+                define('CURRENT_LANGUAGE_CODE', 'pl');
+            }else if($lang == 'au' || $lang == 'de'){
+                $sitepress->switch_lang('de', true);
+                define('CURRENT_LANGUAGE_CODE', 'de');
+            }else{
+                $sitepress->switch_lang('en', true);
+                define('CURRENT_LANGUAGE_CODE', 'en');
+            }
             echo 'done';
         }
     }else{
@@ -579,10 +590,12 @@ function user_lang_change(){
 add_action('wp_ajax_get_user_country', 'get_user_country');
 add_action('wp_ajax_nopriv_get_user_country', 'get_user_country');
 function get_user_country(){
-    if($_COOKIE['user_country'] == ''){
-        echo 'country not set';
-    }else{
-        echo $_COOKIE['user_country'];
+    if(!is_user_logged_in()){
+        if($_COOKIE['user_country'] == ''){
+            echo 'country not set';
+        }else{
+            echo $_COOKIE['user_country'];
+        }
     }
 	wp_die();
 }

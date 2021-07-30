@@ -438,29 +438,39 @@
         });
     });
     $(document).ready(function(){
-        var currentLang;
-        $.ajax({
-            type: 'POST',
-            url: ajaxurl,
-            data: {
-                action: 'get_user_country',
-            },
-            beforeSend: function(data){
-                $('.language__select').find('.default').addClass('loading');
-            },
-            success: function(data){
-                if(data == 'country not set'){
-                    currentLang = $('.langSelector').attr('data-lang');
-                    // $('.language__select').find('.default').removeClass('loading');
-                    $('.language__select').find('.default').remove();
-                }else{
-                    currentLang = data;
-                    console.log(currentLang);
-                    $('.language__select').find('.default').remove();
-                }
-                $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
-                $('.lang[data-iso="' + currentLang + '"]').addClass('active');
-            },
-        });
+        if(!$('body').hasClass('logged-in')){
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'get_user_country',
+                },
+                // beforeSend: function(data){
+                //     $('.language__select').find('.default').addClass('loading');
+                // },
+                success: function(data){
+                    if(data !== 'logged'){
+                        console.log(data);
+                        if(data == 'country not set'){
+                            currentLang = 'default';
+                        }else{
+                            currentLang = data;
+                        }
+                        var flag = $('.langData').find('.langData__lang[data-iso="' + currentLang + '"]').attr('data-flag');
+                        $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
+                        $('.selectLang').append('<img src="' + flag + '"/>');
+                    }
+                },
+            });
+        }else{
+            var selectedLang = $('.language__select').attr('data-lang');
+            if(selectedLang == ''){
+                var flag = $('.langData').find('.langData__lang[data-iso="default"]').attr('data-flag');
+                $('.selectLang').append('<img src="' + flag + '"/>');
+            }else{
+                var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                $('.selectLang').append('<img src="' + flag + '"/>');
+            }
+        }
     });
 })(jQuery);

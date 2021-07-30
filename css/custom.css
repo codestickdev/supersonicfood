@@ -6476,16 +6476,9 @@ body.admin-bar .wpml-ls {
 }
 
 .siteHeader__actions .language__select {
-  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: ease .3s;
-  cursor: pointer;
-}
-
-.siteHeader__actions .language__select:hover {
-  opacity: .7;
 }
 
 .siteHeader__actions .language__select img {
@@ -6511,19 +6504,42 @@ body.admin-bar .wpml-ls {
   animation-iteration-count: infinite;
 }
 
-.siteHeader__actions .language__select .lang {
-  display: none;
+.siteHeader__actions .language__select p {
+  display: flex;
+  align-items: center;
+  margin: 0 10px 0 0;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.siteHeader__actions .language__select p .selectLang {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  border: 1px solid #000;
+  margin-left: 8px;
+  overflow: hidden;
+  transition: ease .3s;
+  cursor: pointer;
+}
+
+.siteHeader__actions .language__select p .selectLang:hover {
+  opacity: .7;
+}
+
+.siteHeader__actions .language__select p .selectLang.notSelected {
+  text-decoration: underline;
+}
+
+.siteHeader__actions .language__select p .selectLang .flag {
+  display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
-  overflow: hidden;
+  width: 20px;
+  height: 20px;
 }
 
-.siteHeader__actions .language__select .lang.active {
-  display: flex;
-}
-
-.siteHeader__actions .language__select .lang img {
+.siteHeader__actions .language__select p .selectLang .flag img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -7415,9 +7431,31 @@ body.admin-bar .langSelector {
   transition: ease .3s;
 }
 
+.langSelector__wrap:after {
+  content: '';
+  background-image: url("https://supersonicfood.com/wp-includes/images/spinner-2x.gif");
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
 .langSelector__wrap.loading:before {
   opacity: .6;
   pointer-events: all;
+}
+
+.langSelector__wrap.loading:after {
+  opacity: 1;
 }
 
 .langSelector__back {
