@@ -451,7 +451,8 @@
             success: function(data){
                 if(data == 'country not set'){
                     currentLang = $('.langSelector').attr('data-lang');
-                    $('.language__select').find('.default').removeClass('loading');
+                    // $('.language__select').find('.default').removeClass('loading');
+                    $('.language__select').find('.default').remove();
                 }else{
                     currentLang = data;
                     console.log(currentLang);
