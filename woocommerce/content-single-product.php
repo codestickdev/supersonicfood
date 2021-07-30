@@ -87,7 +87,7 @@ if (post_password_required()) {
         // do_action('woocommerce_after_single_product_summary');
         ?>
 
-        <?php if( have_rows('logosList', 11377) && $lang == 'pl-PL'  ): ?>
+        <?php if( have_rows('logosList', 11377)): ?>
         <section id="morecontent" class="logosList">
             <div class="logosList__list container-lg">
                 <?php while( have_rows('logosList', 11377) ): the_row();
@@ -184,6 +184,20 @@ if (post_password_required()) {
             <a id="openModal" class="btn"><span><?php _e('See full Ingredients list', 'codestick') ?></span></a>
         </section>
         <?php endif; ?>
+
+        <?php if(get_field('product_otherProduct_title') && has_term('keto-omega', 'product_tag')): ?>
+        <section class="halfSection <?php if (get_field('product_otherProduct_position') == 'left'): ?>halfSection--leftContent<?php else: ?>halfSection--rightContent<?php endif; ?>">
+            <div class="halfSection__content" style="background-color: #F7F6F4">
+                <h2><?php the_field('product_otherProduct_title'); ?></h2>
+                <p><?php the_field('product_otherProduct_content'); ?></p>
+                <a href="<?php the_field('product_otherProduct_btnurl'); ?>" class="btn" style="background-color: <?php the_field('product_otherProduct_btncolor'); ?>"><span><?php the_field('product_otherProduct_btntext'); ?></span></a>
+            </div>
+            <div class="halfSection__image">
+                <img src="<?php the_field('product_otherProduct_image'); ?>"/>
+            </div>
+        </section>
+        <?php endif; ?>
+
         <?php if(get_field('product_expert_title')): ?>
         <section class="productExpert">
             <div class="productExpert__content">
@@ -201,6 +215,20 @@ if (post_password_required()) {
             </div>
         </section>
         <?php endif; ?>
+
+        <?php if(get_field('product_otherProduct_title') && has_term( 'braincoffee', 'product_tag')): ?>
+        <section class="halfSection <?php if (get_field('product_otherProduct_position') == 'left'): ?>halfSection--leftContent<?php else: ?>halfSection--rightContent<?php endif; ?>">
+            <div class="halfSection__content" style="background-color: #F7F6F4">
+                <h2><?php the_field('product_otherProduct_title'); ?></h2>
+                <p><?php the_field('product_otherProduct_content'); ?></p>
+                <a href="<?php the_field('product_otherProduct_btnurl'); ?>" class="btn" style="background-color: <?php the_field('product_otherProduct_btncolor'); ?>"><span><?php the_field('product_otherProduct_btntext'); ?></span></a>
+            </div>
+            <div class="halfSection__image">
+                <img src="<?php the_field('product_otherProduct_image'); ?>"/>
+            </div>
+        </section>
+        <?php endif; ?>
+
         <?php if(get_field('product_nutritional_sec_title')): ?>
         <section class="productNutritional">
             <div class="productNutritional__heading">

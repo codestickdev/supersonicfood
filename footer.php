@@ -248,6 +248,9 @@
 			<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/delivery/inpost.png" /></div>
 			<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/delivery/dpd.png" /></div>
 			<div class="siteFooter__logosLogo siteFooter__logosLogo--divider"></div>
+			<?php if($lang == 'de-DE'): ?>
+				<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/payment/paypal.webp" /></div>
+			<?php endif; ?>
 			<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/payment/payu.png" /></div>
 			<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/payment/visa.png" /></div>
 			<div class="siteFooter__logosLogo"><img src="/wp-content/themes/supersonicfood/images/payment/mastercard.png" /></div>

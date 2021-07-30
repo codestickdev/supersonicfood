@@ -21,8 +21,7 @@ get_header(); ?>
     </section>
 
     <?php
-    $list = get_field('productspage_productslist');
-    if($list && current_user_can('administrator')): ?>
+    $list = get_field('productspage_productslist'); ?>
     <section class="productsList">
         <div class="productsList__list">
         <?php foreach($list as $post): 
@@ -37,7 +36,6 @@ get_header(); ?>
         </div>
     </section>
     <?php wp_reset_postdata(); ?>
-    <?php endif; ?>
 
     <section class="productsInfo">
         <?php while(have_rows('productspage_products')): the_row();

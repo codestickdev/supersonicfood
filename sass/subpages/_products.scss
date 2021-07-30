@@ -54,7 +54,7 @@
             align-items: flex-start;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: 1215px;
+            max-width: 1415px;
             margin: 0 auto;
         }
         &__product{
@@ -164,6 +164,15 @@
         .productsHeader{
             &__content{
                 width: 40%;
+            }
+        }
+    }
+}
+@media (max-width: 1400px){
+    .pageProducts{
+        .productsList{
+            &__list{
+                max-width: 810px;
             }
         }
     }
