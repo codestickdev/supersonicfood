@@ -289,6 +289,8 @@ body{
         }
         &__actions{
             .language{
+                display: none;
+
                 &__select{
                     p{
                         font-size: 0;

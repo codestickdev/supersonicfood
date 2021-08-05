@@ -6640,6 +6640,9 @@ body.admin-bar .wpml-ls {
   .siteHeader__menu #site-navigation {
     display: none !important;
   }
+  .siteHeader__actions .language {
+    display: none;
+  }
   .siteHeader__actions .language__select p {
     font-size: 0;
     margin: 0;
