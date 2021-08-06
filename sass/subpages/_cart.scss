@@ -117,7 +117,7 @@ body.woocommerce-cart{
                 ins{
                     display: block;
                     max-width: fit-content;
-                    max-width: -moz-fit-content;
+                    max-width: -moz-max-content;
                     max-width: -webkit-fit-content;
                     background: #44c680;
                     padding: 0 3px;
@@ -230,7 +230,7 @@ body.woocommerce-cart{
                         }
                         &[name="update_cart"]{
                             max-width: fit-content;
-                            max-width: -moz-fit-content;
+                            max-width: -moz-max-content;
                             max-width: -webkit-fit-content;
 
                             &:disabled{
@@ -246,7 +246,7 @@ body.woocommerce-cart{
                     justify-content: center;
                     width: 100%;
                     max-width: fit-content;
-                    max-width: -moz-fit-content;
+                    max-width: -moz-max-content;
                     max-width: -webkit-fit-content;
                     height: 36px;
                     background-color: #44c680;
@@ -456,7 +456,7 @@ body.woocommerce-cart{
 
                                 .coupon-trigger{
                                     max-width: fit-content;
-                                    max-width: -moz-fit-content;
+                                    max-width: -moz-max-content;
                                     max-width: -webkit-fit-content;
                                     margin: 0 auto;
                                 }

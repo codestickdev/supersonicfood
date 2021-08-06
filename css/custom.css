@@ -508,6 +508,7 @@ body.postid-21695 .productTesVid__video .thumb {
   line-height: 30px;
   border: 0;
   min-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   cursor: pointer;
   transition: ease .3s;
@@ -800,6 +801,7 @@ body.postid-21695 .productTesVid__video .thumb {
   display: flex;
   justify-content: space-between;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto;
 }
@@ -1017,6 +1019,7 @@ body.postid-21695 .productTesVid__video .thumb {
 
 .productComponents .btn {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 50px auto;
   cursor: pointer;
@@ -1361,6 +1364,7 @@ body.postid-21695 .productTesVid__video .thumb {
   display: flex;
   flex-direction: row;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto 10px;
 }
@@ -1446,6 +1450,7 @@ body.postid-21695 .productTesVid__video .thumb {
   display: flex;
   flex-direction: row;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto;
   padding: 30px 20px;
@@ -2648,6 +2653,7 @@ body.single-post nav.post-navigation {
 
 .contentPost .postProducts a {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto;
 }
@@ -2830,6 +2836,7 @@ body.woocommerce-cart .entry-content {
 .ssCart table.cart td.product-price ins {
   display: block;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   background: #44c680;
   padding: 0 3px;
@@ -2949,6 +2956,7 @@ body.woocommerce-cart .entry-content {
 
 .ssCart table.cart td.actions .coupon-actions button[name="update_cart"] {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
 }
 
@@ -2963,6 +2971,7 @@ body.woocommerce-cart .entry-content {
   justify-content: center;
   width: 100%;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   height: 36px;
   background-color: #44c680;
@@ -3151,6 +3160,7 @@ body.woocommerce-cart .entry-content {
   }
   .ssCart table.shop_table tr td.actions .coupon-actions .coupon .coupon-trigger {
     max-width: fit-content;
+    max-width: -moz-max-content;
     max-width: -webkit-fit-content;
     margin: 0 auto;
   }
@@ -5554,6 +5564,7 @@ body.woocommerce-account .entry-header {
 
 .productTile .btn {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto;
 }
@@ -5615,6 +5626,7 @@ body.woocommerce-account .entry-header {
 .homeHeader__content a {
   margin-top: 40px;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
 }
 
@@ -5899,6 +5911,7 @@ body.woocommerce-account .entry-header {
 
 .homeInfoTile .btn {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 15px auto 0;
 }
@@ -6044,6 +6057,7 @@ body.woocommerce-account .entry-header {
 
 .logosList__logo {
   width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   text-align: center;
   max-height: 40px;
@@ -6253,6 +6267,7 @@ body.woocommerce-account .entry-header {
   font-weight: 400;
   margin: 0 auto 15px;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   padding: 3px 10px 0;
   background: #44c680;
@@ -6459,6 +6474,7 @@ body.admin-bar .wpml-ls {
   right: 0;
   margin: 5px auto 0;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   text-align: center;
 }
@@ -6694,6 +6710,7 @@ body.admin-bar .wpml-ls {
 .menuDropdown__list {
   display: flex;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto 30px;
 }
@@ -7210,6 +7227,7 @@ body.admin-bar .mobileMenu {
   text-align: center;
   color: #fff !important;
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   padding: 4px 8px 2px;
   background: #6BC385;
@@ -7235,6 +7253,7 @@ body.admin-bar .mobileMenu {
 
 .modalAdded__continue .btn {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   height: 40px;
 }
@@ -7266,6 +7285,7 @@ body.admin-bar .mobileMenu {
   }
   .modalAdded__products {
     width: fit-content;
+    width: -moz-max-content;
     width: -webkit-fit-content;
     min-width: auto;
     flex-wrap: nowrap;

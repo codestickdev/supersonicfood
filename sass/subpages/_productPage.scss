@@ -436,7 +436,7 @@ body.postid-21695{
                         line-height: 30px;
                         border: 0;
                         min-width: fit-content;
-                        max-width: -moz-fit-content;
+                        max-width: -moz-max-content;
                         max-width: -webkit-fit-content;
                         cursor: pointer;
                         transition: ease .3s;
@@ -756,7 +756,7 @@ body.postid-21695{
         display: flex;
         justify-content: space-between;
         max-width: fit-content;
-        max-width: -moz-fit-content;
+        max-width: -moz-max-content;
         max-width: -webkit-fit-content;
         margin: 0 auto;
     }
@@ -975,7 +975,7 @@ body.postid-21695{
     }
     .btn{
         max-width: fit-content;
-        max-width: -moz-fit-content;
+        max-width: -moz-max-content;
         max-width: -webkit-fit-content;
         margin: 50px auto;
         cursor: pointer;
@@ -1316,7 +1316,7 @@ body.postid-21695{
             display: flex;
             flex-direction: row;
             max-width: fit-content;
-            max-width: -moz-fit-content;
+            max-width: -moz-max-content;
             max-width: -webkit-fit-content;
             margin: 0 auto 10px;
 
@@ -1441,7 +1441,7 @@ body.postid-21695{
         display: flex;
         flex-direction: row;
         max-width: fit-content;
-        max-width: -moz-fit-content;
+        max-width: -moz-max-content;
         max-width: -webkit-fit-content;
         margin: 0 auto;
         padding: 30px 20px;
