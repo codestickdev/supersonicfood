@@ -5261,6 +5261,7 @@ body.woocommerce-account .entry-header {
 
 .pageProducts .productsInfo__section .content .btn {
   max-width: fit-content;
+  max-width: -moz-max-content;
   max-width: -webkit-fit-content;
   margin: 0 auto;
 }
