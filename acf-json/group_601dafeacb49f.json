@@ -3518,6 +3518,68 @@
                     "height": ""
                 }
             ]
+        },
+        {
+            "key": "field_61116468ca846",
+            "label": "Media",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_611164afca847",
+            "label": "Media",
+            "name": "logosList",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "jpn-tabs": 0,
+            "sub_fields": [
+                {
+                    "key": "field_611164bfca848",
+                    "label": "Logo",
+                    "name": "logosList_logo",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -3539,5 +3601,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1624978868
+    "modified": 1628529896
 }

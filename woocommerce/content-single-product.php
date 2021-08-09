@@ -87,11 +87,11 @@ if (post_password_required()) {
         // do_action('woocommerce_after_single_product_summary');
         ?>
 
-        <?php if( have_rows('logosList', 11377)): ?>
+        <?php if( have_rows('logosList')): ?>
         <section id="morecontent" class="logosList">
             <div class="logosList__list container-lg">
-                <?php while( have_rows('logosList', 11377) ): the_row();
-                    $count = count(get_field('logosList', 11377));
+                <?php while( have_rows('logosList') ): the_row();
+                    $count = count(get_field('logosList'));
                     $logo = get_sub_field('logosList_logo');
                 ?>
                 <div class="logosList__logo">
