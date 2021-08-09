@@ -105,11 +105,9 @@ foreach ($cart_items as $cart_item => $item){
 		<div class="siteHeader__actions">
 			<div class="language">
 				<?php if(!is_cart() && !is_checkout()): ?>
-					<?php if(current_user_can('administrator')): ?>
 					<div class="language__select" data-lang="<?php echo $userCountry; ?>">
 						<p><?php _e('Country', 'codestick'); ?>: <span class="selectLang"></span></p>
 					</div>
-					<?php endif; ?>
 					<?php echo do_shortcode('[wpml_language_switcher type="custom" native=0][/wpml_language_switcher]'); ?>
 				<?php endif; ?>
 			</div>
