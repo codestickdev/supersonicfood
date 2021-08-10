@@ -438,39 +438,56 @@
         });
     });
     $(document).ready(function(){
-        if(!$('body').hasClass('logged-in')){
+        var lang = $('body').attr('lang');
+        if( ! $('body').hasClass('logged-in') ){
             $.ajax({
                 type: 'POST',
                 url: ajaxurl,
                 data: {
                     action: 'get_user_country',
+                    lang: lang,
                 },
                 // beforeSend: function(data){
                 //     $('.language__select').find('.default').addClass('loading');
                 // },
                 success: function(data){
-                    if(data !== 'logged'){
-                        console.log(data);
-                        if(data == 'country not set'){
-                            currentLang = 'default';
-                        }else{
-                            currentLang = data;
-                        }
-                        var flag = $('.langData').find('.langData__lang[data-iso="' + currentLang + '"]').attr('data-flag');
-                        $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
-                        $('.selectLang').append('<img src="' + flag + '"/>');
+                    console.log(data);
+                    if(data == 'country not set'){
+                        currentLang = 'default';
+                    }else{
+                        currentLang = data;
                     }
+                    var flag = $('.langData').find('.langData__lang[data-iso="' + currentLang + '"]').attr('data-flag');
+                    $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
+                    $('.selectLang').append('<img src="' + flag + '"/>');
                 },
             });
         }else{
             var selectedLang = $('.language__select').attr('data-lang');
             if(selectedLang == ''){
                 var flag = $('.langData').find('.langData__lang[data-iso="default"]').attr('data-flag');
-                $('.selectLang').append('<img src="' + flag + '"/>');
             }else{
-                var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
-                $('.selectLang').append('<img src="' + flag + '"/>');
+                if(lang == 'en-US'){
+                    if(selectedLang == 'de' || selectedLang == 'au' || selectedLang == 'pl'){
+                        var flag = $('.langData').find('.langData__lang[data-iso="default"]').attr('data-flag');
+                    }else{
+                        var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                    }
+                }else if(lang == 'de-DE'){
+                    if(selectedLang !== 'de' || $selectedLang !== 'au'){
+                        var flag = $('.langData').find('.langData__lang[data-iso="de"]').attr('data-flag');
+                    }else{
+                        var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                    }
+                }else if(lang == 'pl-PL'){
+                    if(selectedLang !== 'pl'){
+                        var flag = $('.langData').find('.langData__lang[data-iso="pl"]').attr('data-flag');
+                    }else{
+                        var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                    }
+                }
             }
+            $('.selectLang').append('<img src="' + flag + '"/>');
         }
     });
 })(jQuery);

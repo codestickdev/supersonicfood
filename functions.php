@@ -590,11 +590,31 @@ function user_lang_change(){
 add_action('wp_ajax_get_user_country', 'get_user_country');
 add_action('wp_ajax_nopriv_get_user_country', 'get_user_country');
 function get_user_country(){
+    $lang = $_POST['lang'];
+    $userCountry = $_COOKIE['user_country'];
     if(!is_user_logged_in()){
-        if($_COOKIE['user_country'] == ''){
+        if($userCountry == ''){
             echo 'country not set';
         }else{
-            echo $_COOKIE['user_country'];
+            if($lang == 'en-US'){
+                if($userCountry == 'de' || $userCountry == 'au' || $userCountry == 'pl'){
+                    echo 'default';
+                }else{
+                    echo $userCountry;
+                }
+            }else if($lang == 'de-DE'){
+                if($userCountry !== 'de' || $userCountry !== 'au'){
+                    echo 'de';
+                }else{
+                    echo $userCountry;
+                }
+            }else if($lang == 'pl-PL'){
+                if($userCountry !== 'pl'){
+                    echo 'pl';
+                }else{
+                    echo $userCountry;
+                }
+            }
         }
     }
 	wp_die();

@@ -1,9 +1,9 @@
 <?php
-/*
-*   Template name: Strona główna
-*/
-
+    /*
+     *   Template name: Strona główna
+     */
 get_header(); ?>
+
 <?php $lang=get_bloginfo("language"); ?>
 <main class="ssfood ssfood--frontpage">
     <section class="homeHeader" style="background-image: url('<?php the_field('home_header_image_desktop'); ?>')">
