@@ -140,7 +140,7 @@ foreach ($cart_items as $cart_item => $item){
 	<div class="langSelector" data-lang="<?php echo get_user_meta($user_id, 'lang_country', true); ?>">
 		<div class="langSelector__wrap">
 			<div class="langSelector__back"><?php _e('Back', 'codestick'); ?></div>
-			<?php while(have_rows('langSelector', 11377)): the_row();
+			<?php while(have_rows('langSelector', icl_object_id(11377, 'page', true))): the_row();
 				$flag = get_sub_field('langSelector_flag');
 				$iso = get_sub_field('langSelector_code');
 				$name = get_sub_field('langSelector_name');
