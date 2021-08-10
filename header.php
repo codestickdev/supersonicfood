@@ -68,7 +68,7 @@ foreach ($cart_items as $cart_item => $item){
 <?php wp_body_open(); ?>
 <div class="langData" style="display: none !important">
 		<div class="langData__lang" data-iso="default" data-flag="<?php echo get_template_directory_uri() . '/images/icons/europe_flag.png'; ?>"></div>
-	<?php while(have_rows('langSelector', 11377)): the_row();	
+	<?php while(have_rows('langSelector', icl_object_id(11377, 'page', true))): the_row();	
 		$flag = get_sub_field('langSelector_flag');
 		$name = get_sub_field('langSelector_name');
 		$iso = get_sub_field('langSelector_code');
