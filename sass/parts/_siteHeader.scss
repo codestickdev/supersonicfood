@@ -5,9 +5,6 @@ body{
                 top: 32px;
             }
         }
-        .wpml-ls{
-            display: none !important;
-        }
     }
 }
 .siteHeader{
@@ -114,6 +111,10 @@ body{
         .language{
             margin-right: 10px;
 
+            .wpml-ls{
+                display: none !important;
+            }
+            
             &__select{
                 display: flex;
                 align-items: center;

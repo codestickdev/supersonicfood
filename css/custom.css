@@ -6388,10 +6388,6 @@ body.admin-bar .siteHeader--float {
   top: 32px;
 }
 
-body.admin-bar .wpml-ls {
-  display: none !important;
-}
-
 .siteHeader {
   display: flex;
   flex-direction: row;
@@ -6497,6 +6493,10 @@ body.admin-bar .wpml-ls {
 
 .siteHeader__actions .language {
   margin-right: 10px;
+}
+
+.siteHeader__actions .language .wpml-ls {
+  display: none !important;
 }
 
 .siteHeader__actions .language__select {
