@@ -300,6 +300,16 @@ body.admin-bar{
     &__wrap{
       max-width: 250px;
     }
+    &__back{
+      margin: 0 0 20px;
+    }
+    &__country{
+      margin: 0 0 10px;
+
+      .name{
+        font-size: 12px;
+      }
+    }
   }
 }
 @media (max-width: 575px){
