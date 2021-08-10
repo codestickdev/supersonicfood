@@ -6657,9 +6657,6 @@ body.admin-bar .siteHeader--float {
   .siteHeader__menu #site-navigation {
     display: none !important;
   }
-  .siteHeader__actions .language {
-    display: none;
-  }
   .siteHeader__actions .language__select p {
     font-size: 0;
     margin: 0;
@@ -6884,6 +6881,10 @@ body.admin-bar .mobileMenu {
 .mobileMenu__menu .menu li {
   border-top: 1px solid #D5D5D5;
   padding: 15px 0;
+}
+
+.mobileMenu__menu .menu li:first-of-type {
+  border-top: 0;
 }
 
 .mobileMenu__menu .menu li a {

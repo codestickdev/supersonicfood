@@ -161,11 +161,6 @@ foreach ($cart_items as $cart_item => $item){
 	</div>
 	
 	<div class="mobileMenu">
-		<div class="mobileMenu__actions">
-			<?php if(!is_cart() && !is_checkout()): ?>
-			<?php echo do_shortcode('[wpml_language_switcher type="custom" native=0][/wpml_language_switcher]'); ?>
-			<?php endif; ?>
-		</div>
 		<div class="mobileMenu__menu">
 			<?php
 				wp_nav_menu(

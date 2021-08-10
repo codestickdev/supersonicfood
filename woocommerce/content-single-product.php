@@ -87,12 +87,12 @@ if (post_password_required()) {
         // do_action('woocommerce_after_single_product_summary');
         ?>
 
-        <?php if( have_rows('logosList')): ?>
+        <?php if( have_rows('mediaListProduct', icl_object_id(11377, 'page', true))): ?>
         <section id="morecontent" class="logosList">
             <div class="logosList__list container-lg">
-                <?php while( have_rows('logosList') ): the_row();
-                    $count = count(get_field('logosList'));
-                    $logo = get_sub_field('logosList_logo');
+                <?php while( have_rows('mediaListProduct', icl_object_id(11377, 'page', true)) ): the_row();
+                    $count = count(get_field('mediaListProduct', icl_object_id(11377, 'page', true)));
+                    $logo = get_sub_field('mediaListProduct_logo');
                 ?>
                 <div class="logosList__logo">
                     <img src="<?php echo $logo; ?>"/>

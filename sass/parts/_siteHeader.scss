@@ -290,8 +290,6 @@ body{
         }
         &__actions{
             .language{
-                display: none;
-
                 &__select{
                     p{
                         font-size: 0;
@@ -545,6 +543,10 @@ body.admin-bar{
             li{
                 border-top: 1px solid #D5D5D5;
                 padding: 15px 0;
+
+                &:first-of-type{
+                    border-top: 0;
+                }
 
                 a{
                     font-size: 14px;
