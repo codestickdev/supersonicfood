@@ -113,6 +113,75 @@
             "mime_types": ""
         },
         {
+            "key": "field_6114e6a2357fe",
+            "label": "Rating",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6114e6ad357ff",
+            "label": "Ocena produktu",
+            "name": "productRating",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0.5": "0,5",
+                "1": "1",
+                "1.5": "1,5",
+                "2": "2",
+                "2.5": "2,5",
+                "3": "3",
+                "3.5": "3,5",
+                "4": "4",
+                "4.5": "4,5",
+                "5": "5"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6114e737f55a5",
+            "label": "Liczba ocen",
+            "name": "productRating_count",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
             "key": "field_60d86c7b274a7",
             "label": "Podstrona sklep",
             "name": "",
@@ -3601,5 +3670,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1628529896
+    "modified": 1628759901
 }

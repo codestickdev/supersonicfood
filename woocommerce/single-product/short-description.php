@@ -28,6 +28,26 @@ if ( ! $short_description ) {
 }
 $lang = get_bloginfo("language");
 ?>
+
+<?php if(get_field('productRating')): ?>
+	<div class="ratingStars">
+		<div class="ratingStars__stars" data-rate="<?php the_field('productRating'); ?>">
+			<i class="star star--none far fa-star"></i>
+			<i class="star star--none far fa-star"></i>
+			<i class="star star--none far fa-star"></i>
+			<i class="star star--none far fa-star"></i>
+			<i class="star star--none far fa-star"></i>
+			<i class="star star--none fas fa-star-half"></i>
+		</div>
+		<div class="ratingStars__count">(<?php the_field('productRating_count'); ?>)</div>
+	</div>
+	<div class="ratingModal">
+		<div class="ratingModal__wrap">
+			<p><?php _e('Rating based on the results of NPS survey conducted among all the SUPERSONIC clients.', 'codestick'); ?></p>
+		</div>
+	</div>
+<?php endif; ?>
+
 <div class="woocommerce-product-details__short-description">
 	<?php echo $short_description; // WPCS: XSS ok. ?>
 </div>

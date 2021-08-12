@@ -1,18 +1,27 @@
-/* Isotonic color */
-.product_tag-isotonic,
-.product_tag-isotonic-en,
-.product_tag-isotonic-de{
+@mixin contentColor($maincolor, $maincolor-hover, $maincolor-shadow, $flavour: false) {
     .productPage{
         &__content{
+            @if $flavour {
+                .flavourSelect{
+                    display: none !important;
+                }
+            }
+            .ratingStars{
+                &__stars{
+                    .star{
+                        color: $maincolor !important;
+                    }
+                }
+            }
             .free-shipping{
-                color: #E5998A !important;
+                color: $maincolor !important;
             }
             .vpe_container_btn{
                 button{
-                    background-color: #E5998A !important;
+                    background-color: $maincolor !important;
 
                     &:hover{
-                        background-color: #f3aea0 !important;
+                        background-color: $maincolor-hover !important;
                     }
                 }
             }
@@ -20,144 +29,49 @@
     }
     .productComponents{
         #openModal{
-            background-color: #e5998a !important;
+            background-color: $maincolor !important;
 
             &:hover{
-                background-color: #f3aea0 !important;
+                background-color: $maincolor-hover !important;
             }
         }
     }
     .productTesVid{
         &__video{
             .thumb{
-                border-color: #e5998a !important;
-                box-shadow: 0 0 30px #e5998a99 !important;
+                border-color: $maincolor !important;
+                box-shadow: 0 0 30px $maincolor-shadow !important;
             }
         }
     }
+}
+
+/* Isotonic color */
+.product_tag-isotonic,
+.product_tag-isotonic-en,
+.product_tag-isotonic-de{
+    @include contentColor(#E5998A, #f3aea0, #e5998a99, $flavour: false);
 }
 
 /* Brain Coffee color */
 .product_tag-braincoffee,
 .product_tag-braincoffee-en,
 .product_tag-braincoffee-de{
-    .productPage{
-        &__content{
-            .flavourSelect{
-                display: none !important;
-            }
-            .free-shipping{
-                color: #2e1c49 !important;
-            }
-            .vpe_container_btn{
-                button{
-                    background-color: #2e1c49 !important;
-
-                    &:hover{
-                        background-color: #452e67 !important;
-                    }
-                }
-            }
-        }
-    }
-    .productComponents{
-        #openModal{
-            background-color: #2e1c49 !important;
-
-            &:hover{
-                background-color: #452e67 !important;
-            }
-        }
-    }
-    .productTesVid{
-        &__video{
-            .thumb{
-                border-color: #2e1c49 !important;
-                box-shadow: 0 0 30px #2e1c4999 !important;
-            }
-        }
-    }
+    @include contentColor(#2e1c49, #452e67, #2e1c4999, $flavour: true);
 }
 
 /* Calm Cacao color */
 .product_tag-calmcacao,
 .product_tag-calmcacao-en,
 .product_tag-calmcacao-de{
-    .productPage{
-        &__content{
-            .flavourSelect{
-                display: none !important;
-            }
-            .free-shipping{
-                color: #341b15 !important;
-            }
-            .vpe_container_btn{
-                button{
-                    background-color: #341b15 !important;
-
-                    &:hover{
-                        background-color: #422720 !important;
-                    }
-                }
-            }
-        }
-    }
-    .productComponents{
-        #openModal{
-            background-color: #341b15 !important;
-
-            &:hover{
-                background-color: #422720 !important;
-            }
-        }
-    }
-    .productTesVid{
-        &__video{
-            .thumb{
-                border-color: #341b15 !important;
-                box-shadow: 0 0 30px #341b1599 !important;
-            }
-        }
-    }
+    @include contentColor(#341b15, #422720, #341b1599, $flavour: true);
 }
 
 /* Performance Isotonic color */
 body.postid-17250,
 body.postid-20294,
 body.postid-21695{
-    .productPage{
-        &__content{
-            .free-shipping{
-                color: #464646 !important;
-            }
-            .vpe_container_btn{
-                button{
-                    background-color: #464646 !important;
-
-                    &:hover{
-                        background-color: #585757 !important;
-                    }
-                }
-            }
-        }
-    }
-    .productComponents{
-        #openModal{
-            background-color: #464646 !important;
-
-            &:hover{
-                background-color: #585757 !important;
-            }
-        }
-    }
-    .productTesVid{
-        &__video{
-            .thumb{
-                border-color: #464646 !important;
-                box-shadow: 0 0 30px #46464699 !important;
-            }
-        }
-    }
+    @include contentColor(#464646, #585757, #46464699, $flavour: false);
 }
 
 /* Omega 3-6-9 */
@@ -292,7 +206,88 @@ body.postid-21695{
             line-height: 36px;
             font-weight: 400;
             color: #000;
+            margin: 0 0 10px;
+        }
+        .ratingStars{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             margin: 0 0 20px;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+
+            &--ready{
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            &__stars{
+                margin-right: 5px;
+
+                .star{
+                    color: #44c680;
+
+                    &--none{
+                        display: none;
+                    }
+                }
+            }
+            &__count{
+                font-size: 14px;
+                line-height: 1;
+                color: #000;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        .ratingModal{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000059;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: ease .3s;
+
+            &--ready{
+                opacity: 1;
+                pointer-events: all;
+            }
+            &--active{
+                .ratingModal__wrap{
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+
+            &__wrap{
+                max-width: 400px;
+                padding: 20px;
+                background-color: #fff;
+                opacity: 0;
+                pointer-events: none;
+                transition: ease .3s;
+
+                p{
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #000;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
         }
         .woocommerce-product-details__short-description{
             p{
@@ -539,7 +534,7 @@ body.postid-21695{
         .free-shipping{
             margin: 0 0 0 20px;
             font-size: 14px;
-            color: #44C680;
+            color: #44c680;
         }
         .vpe_container_btn{
             button{

@@ -68,6 +68,12 @@ body h6 {
 /*  Subpages
 -----------------*/
 /* Isotonic color */
+.product_tag-isotonic .productPage__content .ratingStars__stars .star,
+.product_tag-isotonic-en .productPage__content .ratingStars__stars .star,
+.product_tag-isotonic-de .productPage__content .ratingStars__stars .star {
+  color: #E5998A !important;
+}
+
 .product_tag-isotonic .productPage__content .free-shipping,
 .product_tag-isotonic-en .productPage__content .free-shipping,
 .product_tag-isotonic-de .productPage__content .free-shipping {
@@ -89,7 +95,7 @@ body h6 {
 .product_tag-isotonic .productComponents #openModal,
 .product_tag-isotonic-en .productComponents #openModal,
 .product_tag-isotonic-de .productComponents #openModal {
-  background-color: #e5998a !important;
+  background-color: #E5998A !important;
 }
 
 .product_tag-isotonic .productComponents #openModal:hover,
@@ -101,7 +107,7 @@ body h6 {
 .product_tag-isotonic .productTesVid__video .thumb,
 .product_tag-isotonic-en .productTesVid__video .thumb,
 .product_tag-isotonic-de .productTesVid__video .thumb {
-  border-color: #e5998a !important;
+  border-color: #E5998A !important;
   box-shadow: 0 0 30px #e5998a99 !important;
 }
 
@@ -110,6 +116,12 @@ body h6 {
 .product_tag-braincoffee-en .productPage__content .flavourSelect,
 .product_tag-braincoffee-de .productPage__content .flavourSelect {
   display: none !important;
+}
+
+.product_tag-braincoffee .productPage__content .ratingStars__stars .star,
+.product_tag-braincoffee-en .productPage__content .ratingStars__stars .star,
+.product_tag-braincoffee-de .productPage__content .ratingStars__stars .star {
+  color: #2e1c49 !important;
 }
 
 .product_tag-braincoffee .productPage__content .free-shipping,
@@ -156,6 +168,12 @@ body h6 {
   display: none !important;
 }
 
+.product_tag-calmcacao .productPage__content .ratingStars__stars .star,
+.product_tag-calmcacao-en .productPage__content .ratingStars__stars .star,
+.product_tag-calmcacao-de .productPage__content .ratingStars__stars .star {
+  color: #341b15 !important;
+}
+
 .product_tag-calmcacao .productPage__content .free-shipping,
 .product_tag-calmcacao-en .productPage__content .free-shipping,
 .product_tag-calmcacao-de .productPage__content .free-shipping {
@@ -194,6 +212,12 @@ body h6 {
 }
 
 /* Performance Isotonic color */
+body.postid-17250 .productPage__content .ratingStars__stars .star,
+body.postid-20294 .productPage__content .ratingStars__stars .star,
+body.postid-21695 .productPage__content .ratingStars__stars .star {
+  color: #464646 !important;
+}
+
 body.postid-17250 .productPage__content .free-shipping,
 body.postid-20294 .productPage__content .free-shipping,
 body.postid-21695 .productPage__content .free-shipping {
@@ -355,7 +379,90 @@ body.postid-21695 .productTesVid__video .thumb {
   line-height: 36px;
   font-weight: 400;
   color: #000;
+  margin: 0 0 10px;
+}
+
+.productPage__content .ratingStars {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   margin: 0 0 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.productPage__content .ratingStars:hover {
+  opacity: .7;
+}
+
+.productPage__content .ratingStars--ready {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.productPage__content .ratingStars__stars {
+  margin-right: 5px;
+}
+
+.productPage__content .ratingStars__stars .star {
+  color: #44c680;
+}
+
+.productPage__content .ratingStars__stars .star--none {
+  display: none;
+}
+
+.productPage__content .ratingStars__count {
+  font-size: 14px;
+  line-height: 1;
+  color: #000;
+  font-weight: 500;
+  margin: 0;
+}
+
+.productPage__content .ratingModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000059;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.productPage__content .ratingModal--ready {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.productPage__content .ratingModal--active .ratingModal__wrap {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.productPage__content .ratingModal__wrap {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease .3s;
+}
+
+.productPage__content .ratingModal__wrap p {
+  font-size: 14px;
+  line-height: 19px;
+  color: #000;
+  text-align: center;
+  margin: 0;
 }
 
 .productPage__content .woocommerce-product-details__short-description p {
@@ -606,7 +713,7 @@ body.postid-21695 .productTesVid__video .thumb {
 .productPage__content .free-shipping {
   margin: 0 0 0 20px;
   font-size: 14px;
-  color: #44C680;
+  color: #44c680;
 }
 
 .productPage__content .vpe_container_btn button {

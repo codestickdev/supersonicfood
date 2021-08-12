@@ -141,5 +141,40 @@ jQuery(document).ready(function($){
     });
     $('.mobile-shop-info').on('click', function(){
         $('.vpe_single_add_to_cart_button').click();
-    })
+    });
+
+    /*
+     *  Product rating
+     */
+    $(document).ready(function(){
+        var rate = $('.ratingStars__stars').attr('data-rate');
+        if(rate.indexOf('.') !== -1){
+            var rateFull = rate.replace('.5', '');
+            $('.ratingStars__stars').find('.fa-star:lt(' + rateFull + ')').removeClass('star--none');
+            $('.ratingStars__stars').find('.fa-star-half').removeClass('star--none');
+        }else{
+            $('.ratingStars__stars').find('.fa-star:lt(' + rate + ')').removeClass('star--none');
+        }
+        $('.ratingStars').addClass('ratingStars--ready');
+
+        $('.ratingStars').on('click', function(){
+            $('body').addClass('modalActive');
+            $('.ratingModal').addClass('ratingModal--ready');
+            setTimeout(function(){
+                $('.ratingModal').addClass('ratingModal--active');
+            }, 300);
+        });
+        $(document).mouseup(function(e){
+            var modal = $(".ratingModal__wrap");
+            if (!modal.is(e.target) && modal.has(e.target).length === 0){
+                if($(modal).parent().hasClass('ratingModal--active')){
+                    modal.parent().removeClass('ratingModal--active');
+                    setTimeout(function(){
+                        modal.parent().removeClass('ratingModal--ready');
+                    }, 300);
+                    $('body').removeClass('modalActive');
+                }
+            }
+        });
+    });
 });
