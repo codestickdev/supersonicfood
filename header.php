@@ -25,9 +25,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
 	<link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/css/design.css">
 	
+	<script src="https://kit.fontawesome.com/a1019066cc.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
 	</script>

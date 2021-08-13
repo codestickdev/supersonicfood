@@ -32,11 +32,12 @@ $lang = get_bloginfo("language");
 <?php if(get_field('productRating')): ?>
 	<div class="ratingStars">
 		<div class="ratingStars__stars" data-rate="<?php the_field('productRating'); ?>">
-			<i class="star star--none far fa-star"></i>
-			<i class="star star--none far fa-star"></i>
-			<i class="star star--none far fa-star"></i>
-			<i class="star star--none far fa-star"></i>
-			<i class="star star--none far fa-star"></i>
+			<i class="star star--none fas fa-star"></i>
+			<i class="star star--none fas fa-star"></i>
+			<i class="star star--none fas fa-star"></i>
+			<i class="star star--none fas fa-star"></i>
+			<i class="star star--none fas fa-star"></i>
+			<i class="star far fa-star"></i>
 			<i class="star star--none fas fa-star-half"></i>
 		</div>
 		<div class="ratingStars__count">(<?php the_field('productRating_count'); ?>)</div>

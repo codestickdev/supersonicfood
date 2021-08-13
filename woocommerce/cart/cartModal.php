@@ -18,6 +18,7 @@
                     $items = WC()->cart->get_cart();
                     $cart_items = WC()->cart->get_cart();
                     $productQuantityEN = 0;
+                    $productQuantityDE = 0;
                     $productQuantityPL = 0;
 
                     foreach ($cart_items as $cart_item => $item){
@@ -28,7 +29,7 @@
                             $productQuantityEN += $getDataQuantity;
                         }
                         if($productDataID == 21497){
-                            $productQuantityPL += $getDataQuantity;
+                            $productQuantityDE += $getDataQuantity;
                         }
                         if($productDataID == 103){
                             $productQuantityPL += $getDataQuantity;
@@ -68,39 +69,45 @@
                                 <?php if ($lang == 'en-US') : ?>
                                     <p class="quantity">Quantity: <span><?php echo $getQuantity; ?></span></p>
                                     <p class="price">Price: <?php echo $price; ?></p>
-                                    <?php if($productID !== 2476 && $productID !== 2488 && $productID !== 2474): ?>
-                                        <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Remove this product</a></p>
-                                    <?php endif; ?>
-                                    <?php if($productID == 2476): ?>
-                                        <?php if($productQuantityEN > 1): ?>
-                                            <?php if($getQuantity > 1): ?>
-                                                <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Remove this product</a></p>
+                                    <?php if($disableThis == 'true'): ?>
+                                        <?php if($productID !== 2476 && $productID !== 2488 && $productID !== 2474): ?>
+                                            <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Remove this product</a></p>
+                                        <?php endif; ?>
+                                        <?php if($productID == 2476): ?>
+                                            <?php if($productQuantityEN > 1): ?>
+                                                <?php if($getQuantity > 1): ?>
+                                                    <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Remove this product</a></p>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     <?php endif; ?>
                                 <?php elseif($lang == 'de-DE') : ?>
                                     <p class="quantity">Menge: <span><?php echo $getQuantity; ?></span></p>
                                     <p class="price">Kosten: <?php echo $price; ?></p>
-                                    <?php if($productID !== 21497 && $productID !== 21657 && $productID !== 21664): ?>
-                                        <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
-                                    <?php endif; ?>
-                                    <?php if($productID == 21497): ?>
-                                        <?php if($productQuantityPL > 1): ?>
-                                            <?php if($getQuantity > 1): ?>
-                                                <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
+                                    <?php if($disableThis == 'true'): ?>
+                                        <?php if($productID !== 21497 && $productID !== 21657 && $productID !== 21664): ?>
+                                            <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
+                                        <?php endif; ?>
+                                        <?php if($productID == 21497): ?>
+                                            <?php if($productQuantityDE > 1): ?>
+                                                <?php if($getQuantity > 1): ?>
+                                                    <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Entfernen Sie das Produkt</a></p>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     <?php endif; ?>
                                 <?php else: ?>
                                     <p class="quantity">Ilość: <span><?php echo $getQuantity; ?></span></p>
                                     <p class="price">Koszt: <?php echo $price; ?></p>
-                                    <?php if($productID !== 103 && $productID !== 1215 && $productID !== 1213): ?>
-                                        <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Usuń produkt</a></p>
-                                    <?php endif; ?>
-                                    <?php if($productID == 103): ?>
-                                        <?php if($productQuantityPL > 1): ?>
-                                            <?php if($getQuantity > 1): ?>
-                                                <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Usuń produkt</a></p>
+                                    <?php if($disableThis == 'true'): ?>
+                                        <?php if($productID !== 103 && $productID !== 1215 && $productID !== 1213): ?>
+                                            <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Usuń produkt</a></p>
+                                        <?php endif; ?>
+                                        <?php if($productID == 103): ?>
+                                            <?php if($productQuantityPL > 1): ?>
+                                                <?php if($getQuantity > 1): ?>
+                                                    <p class="delete"><a href="<?php echo $_removeURL . '&cartModal=success'; ?>">Usuń produkt</a></p>
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         <?php endif; ?>
                                     <?php endif; ?>
