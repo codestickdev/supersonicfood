@@ -148,12 +148,20 @@ jQuery(document).ready(function($){
      */
     $(document).ready(function(){
         var rate = $('.ratingStars__stars').attr('data-rate');
+        var range = parseFloat(5);
         if(rate.indexOf('.') !== -1){
-            var rateFull = rate.replace('.5', '');
+            var rateFull = parseFloat(rate.replace('.5', ''));
+            var empty = range - rateFull - 1;
             $('.ratingStars__stars').find('.fa-star:lt(' + rateFull + ')').removeClass('star--none');
-            $('.ratingStars__stars').find('.fa-star-half').removeClass('star--none');
+            $('.ratingStars__stars').find('.fa-star-half-alt').removeClass('star--none');
+
+            if(empty > 0){
+                $('.ratingStars__stars').find('.star--empty:lt(' + empty + ')').removeClass('star--none');
+            }
         }else{
+            var empty = range - rate;
             $('.ratingStars__stars').find('.fa-star:lt(' + rate + ')').removeClass('star--none');
+            $('.ratingStars__stars').find('.star--empty:lt(' + empty + ')').removeClass('star--none');
         }
         $('.ratingStars').addClass('ratingStars--ready');
 
