@@ -37,7 +37,7 @@ $lang = get_bloginfo("language");
 			<i class="star star--none fas fa-star"></i>
 			<i class="star star--none fas fa-star"></i>
 			<i class="star star--none fas fa-star"></i>
-			<i class="star far fa-star"></i>
+			
 			<i class="star star--none fas fa-star-half"></i>
 		</div>
 		<div class="ratingStars__count">(<?php the_field('productRating_count'); ?>)</div>
