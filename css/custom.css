@@ -5700,6 +5700,115 @@ body.woocommerce-account .entry-header {
   }
 }
 
+.contactHeader {
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+  max-height: 550px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+.contactHeader__content {
+  width: 50%;
+}
+
+.contactHeader__content .wrap {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contactHeader__content .wrap .content h1,
+.contactHeader__content .wrap .content h2,
+.contactHeader__content .wrap .content h3,
+.contactHeader__content .wrap .content h4,
+.contactHeader__content .wrap .content h5,
+.contactHeader__content .wrap .content h6 {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 15px;
+}
+
+.contactHeader__content .wrap .content p {
+  font-size: 14px;
+}
+
+.contactHeader__image {
+  width: 50%;
+  height: inherit;
+}
+
+.contactHeader__image img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 1500px) {
+  .contactHeader__content {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .contactHeader__content h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .contactHeader {
+    flex-direction: column-reverse;
+    height: auto;
+    max-height: none;
+    background-image: unset !important;
+  }
+  .contactHeader__image {
+    width: 100%;
+    max-width: none;
+    position: relative;
+  }
+  .contactHeader__image:after {
+    content: '';
+    width: 100%;
+    height: 150px;
+    background: white;
+    background: linear-gradient(0deg, white 20%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .contactHeader__image img {
+    display: block;
+  }
+  .contactHeader__content {
+    width: 100%;
+    max-width: none;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+  }
+  .contactHeader__content .wrap h1 {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  .contactHeader__content .wrap .content {
+    text-align: center;
+  }
+}
+
+.contactContent {
+  padding: 30px 0;
+}
+
 /*  Sections
 -----------------*/
 .homeHeader {

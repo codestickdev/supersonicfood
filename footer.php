@@ -175,11 +175,7 @@
 		<?php if($lang == 'en-US'): ?>
 		<div class="siteFooter__linksWrap">
 			<div class="siteFooter__links">
-				<a href="/en/produkt/supersonic-powder/" class="siteFooter__link">Products</a>
-				<a href="/en/produkt/supersonic-powder/" class="siteFooter__link">Powder</a>
-				<a href="/en/produkt/izotonik" class="siteFooter__link">Beauty</a>
-				<a href="/en/produkt/supersonic-performance-isotonic" class="siteFooter__link">Performance</a>
-				<a href="/en/produkt/supersonic-shaker/" class="siteFooter__link">Shaker</a>
+				<a href="/en/our-products/" class="siteFooter__link">Our Products</a>
 			</div>
 			<div class="siteFooter__links">
 				<a href="/en/about-us/" class="siteFooter__link">About us</a>
@@ -198,11 +194,7 @@
 		<?php elseif($lang == 'de-DE'): ?>
 		<div class="siteFooter__linksWrap">
 			<div class="siteFooter__links">
-				<a href="/de/produkt/supersonic-powder" class="siteFooter__link">Produkte</a>
-				<a href="/de/produkt/supersonic-powder" class="siteFooter__link">Powder</a>
-				<a href="/de/produkt/izotonik" class="siteFooter__link">Beauty</a>
-				<a href="/de/produkt/supersonic-performance-isotonic" class="siteFooter__link">Performance</a>
-				<a href="/de/produkt/supersonic-shaker" class="siteFooter__link">Shaker</a>
+				<a href="/de/unsere-produkte/" class="siteFooter__link">Unsere Produkte</a>
 			</div>
 			<div class="siteFooter__links">
 				<a href="/de/about-us" class="siteFooter__link">Über uns</a>
@@ -221,11 +213,7 @@
 		<?php else: ?>
 		<div class="siteFooter__linksWrap">
 			<div class="siteFooter__links">
-				<a href="/produkt/supersonic-powder" class="siteFooter__link">Produkty</a>
-				<a href="/produkt/supersonic-powder" class="siteFooter__link">Powder</a>
-				<a href="/produkt/izotonik" class="siteFooter__link">Beauty</a>
-				<a href="/produkt/supersonic-performance-isotonic" class="siteFooter__link">Performance</a>
-				<a href="/produkt/supersonic-shaker" class="siteFooter__link">Shaker</a>
+				<a href="/nasze-produkty/" class="siteFooter__link">Nasze Produkty</a>
 			</div>
 			<div class="siteFooter__links">
 				<a href="/about-us" class="siteFooter__link">O nas</a>
