@@ -249,8 +249,9 @@ body.woocommerce-cart{
                     max-width: -moz-max-content;
                     max-width: -webkit-fit-content;
                     height: 36px;
-                    background-color: #44c680;
-                    color: #fff;
+                    background-color: #fff;
+                    color: #000;
+                    text-decoration: underline !important;
                     border: 0;
                     border-radius: 50px;
                     text-transform: uppercase;

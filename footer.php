@@ -185,7 +185,7 @@
 			</div>
 			<div class="siteFooter__links">
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Customer service</a>
-				<a href="https://m.me/supersonicfood" topaste="/en/contact-us/" class="siteFooter__link">Contact</a>
+				<a href="/en/contact-us/" class="siteFooter__link">Contact</a>
 				<a href="/en/shipping/" class="siteFooter__link">Shipping</a>
 				<a href="<?php the_field('regulamin_link', 11701); ?>" target="_blank" class="siteFooter__link">Terms and Conditions</a>
 				<a href="<?php the_field('privacy_policy_link', 11701); ?>" target="_blank" class="siteFooter__link">Privacy policy</a>
@@ -204,7 +204,7 @@
 			</div>
 			<div class="siteFooter__links">
 				<a href="https://m.me/supersonicfood" class="siteFooter__link">Kundendienst</a>
-				<a href="https://m.me/supersonicfood" topaste="/de/kontakt/" class="siteFooter__link">Kontakt</a>
+				<a href="/de/kontakt/" class="siteFooter__link">Kontakt</a>
 				<a href="/de/wysylka" class="siteFooter__link">Sendung</a>
 				<a href="<?php the_field('regulamin_link', 11377); ?>" target="_blank" class="siteFooter__link">Vorschriften</a>
 				<a href="<?php the_field('privacy_policy_link', 11377); ?>" target="_blank" class="siteFooter__link">Datenschutz-Bestimmungen</a>

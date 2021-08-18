@@ -453,7 +453,13 @@
                 success: function(data){
                     console.log(data);
                     if(data == 'country not set'){
-                        currentLang = 'default';
+                        if(lang == 'pl-PL'){
+                            currentLang = 'pl';
+                        }else if(lang == 'de-DE'){
+                            currentLang = 'de';
+                        }else{
+                            currentLang = 'default';
+                        }
                     }else{
                         currentLang = data;
                     }
