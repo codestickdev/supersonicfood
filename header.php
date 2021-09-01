@@ -180,7 +180,7 @@ foreach ($cart_items as $cart_item => $item){
 			'posts_per_page' 	=> -1,
 			'post_type' 		=> 'product',
 			'orderby'			=> 'post__in',
-			'post__in'			=> [2476, 11732, 20294, 29374, 29397, 11796, 9696, 2474],
+			'post__in'			=> [2476, 11732, 20294, 29374, 29397, 34104, 34112],
 			'meta_query' => array(
 				array(
 				  'key' => 'product_main_visible',
