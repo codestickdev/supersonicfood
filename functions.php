@@ -619,3 +619,36 @@ function get_user_country(){
     }
 	wp_die();
 }
+
+// Product variation extra field
+// Auto select variation
+add_action( 'woocommerce_product_after_variable_attributes', 'variation_settings_fields', 10, 3 );
+add_action( 'woocommerce_save_product_variation', 'save_variation_settings_fields', 10, 2 );
+add_filter( 'woocommerce_available_variation', 'load_variation_settings_fields' );
+
+function variation_settings_fields( $loop, $variation_data, $variation ) {
+    woocommerce_wp_checkbox(
+        array(
+            'id'            => "default_variant{$loop}",
+            'name'          => "default_variant[{$loop}]",
+            'value'         => get_post_meta( $variation->ID, 'default_variant', true ),
+            'label'         => __( 'Wariant domyślnie zaznaczony na stronie produktu', 'woocommerce' ),
+            'desc_tip'      => true,
+            'description'   => __( 'Zaznaczenie tej opcji powoduje automatyczne zaznaczenie wybranego wariantu na stronie produktu.', 'woocommerce' ),
+        )
+    );
+}
+
+function save_variation_settings_fields( $variation_id, $loop ) {
+    $text_field = $_POST['default_variant'][ $loop ];
+
+    if ( ! empty( $text_field ) ) {
+        update_post_meta( $variation_id, 'default_variant', esc_attr( $text_field ));
+    }
+}
+
+function load_variation_settings_fields( $variation ) {     
+    $variation['default_variant'] = get_post_meta( $variation[ 'variation_id' ], 'default_variant', true );
+
+    return $variation;
+}

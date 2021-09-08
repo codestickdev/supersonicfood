@@ -185,4 +185,11 @@ jQuery(document).ready(function($){
             }
         });
     });
+
+    // Product variant auto select
+    $(document).ready(function(){
+        setTimeout(function(){
+            $('.variant-selected').find('button.plus').trigger('click');
+        }, 1000);
+    });
 });
