@@ -464,6 +464,7 @@
                         currentLang = data;
                     }
                     var flag = $('.langData').find('.langData__lang[data-iso="' + currentLang + '"]').attr('data-flag');
+                    $('body').attr('country', currentLang);
                     $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
                     $('.selectLang').append('<img src="' + flag + '"/>');
                 },
@@ -472,24 +473,31 @@
             var selectedLang = $('.language__select').attr('data-lang');
             if(selectedLang == ''){
                 var flag = $('.langData').find('.langData__lang[data-iso="default"]').attr('data-flag');
+                $('body').attr('country', 'notselected');
             }else{
                 if(lang == 'en-US'){
                     if(selectedLang == 'de' || selectedLang == 'au' || selectedLang == 'pl'){
                         var flag = $('.langData').find('.langData__lang[data-iso="default"]').attr('data-flag');
+                        $('body').attr('country', 'default');
                     }else{
                         var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                        $('body').attr('country', selectedLang);
                     }
                 }else if(lang == 'de-DE'){
                     if(selectedLang !== 'de' || $selectedLang !== 'au'){
                         var flag = $('.langData').find('.langData__lang[data-iso="de"]').attr('data-flag');
+                        $('body').attr('country', 'de');
                     }else{
                         var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                        $('body').attr('country', selectedLang);
                     }
                 }else if(lang == 'pl-PL'){
                     if(selectedLang !== 'pl'){
                         var flag = $('.langData').find('.langData__lang[data-iso="pl"]').attr('data-flag');
+                        $('body').attr('country', 'de');
                     }else{
                         var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
+                        $('body').attr('country', selectedLang);
                     }
                 }
             }
