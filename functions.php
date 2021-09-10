@@ -652,3 +652,6 @@ function load_variation_settings_fields( $variation ) {
 
     return $variation;
 }
+
+// Product taxes - same price for all countries
+add_filter( 'woocommerce_adjust_non_base_location_prices', '__return_false' );
