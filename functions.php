@@ -670,7 +670,7 @@ function custom_cart_totals_order_total_html( $value ){
 
         if ( get_option( 'woocommerce_tax_total_display' ) == 'itemized' ) {
             foreach ( $cart_tax_totals as $code => $tax ) {
-                $tax_string_array[] = sprintf( '%s %s', $tax->formatted_amount, $tax->label );
+                $tax_string_array[] = sprintf( '%s', $tax->formatted_amount);
             }
         } elseif ( ! empty( $cart_tax_totals ) ) {
             $tax_string_array[] = sprintf( '%s %s', wc_price( WC()->cart->get_taxes_total( true, true ) ), WC()->countries->tax_or_vat() );
