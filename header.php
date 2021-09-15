@@ -35,11 +35,6 @@
 	</script>
 
 	<?php wp_head(); ?>
-
-	<!-- Google Tag Manager (noscript) -->
-	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGD9FV2"
-	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-	<!-- End Google Tag Manager (noscript) -->
 </head>
 <?php
 $user_id = get_current_user_id();
@@ -68,6 +63,12 @@ foreach ($cart_items as $cart_item => $item){
 ?>
 <body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>">
 <?php wp_body_open(); ?>
+
+	<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NGD9FV2"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	
 <div class="langData" style="display: none !important">
 		<div class="langData__lang" data-iso="default" data-flag="<?php echo get_template_directory_uri() . '/images/icons/europe_flag.png'; ?>"></div>
 	<?php while(have_rows('langSelector', icl_object_id(11377, 'page', true))): the_row();	
