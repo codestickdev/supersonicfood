@@ -17,6 +17,14 @@
         adaptiveHeight: true,
         focusOnSelect: false,
         draggable: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              dots: true,
+            }
+          }
+        ]      
     });
     $('.productGallery__thumbs').slick({
         slidesToShow: 4,

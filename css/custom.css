@@ -758,7 +758,7 @@ body.postid-21695 .productTesVid__video .thumb {
 @media (max-width: 1024px) {
   .productPage__main {
     flex-direction: column;
-    padding: 70px 20px 50px;
+    padding: 20px 20px 50px;
   }
   .productPage__main--left {
     flex-direction: column;
@@ -767,6 +767,16 @@ body.postid-21695 .productTesVid__video .thumb {
     width: 100%;
     max-width: 720px;
     margin: 0 auto 30px;
+  }
+  .productPage .productGallery__main {
+    margin-bottom: 0 !important;
+    padding-bottom: 30px;
+  }
+  .productPage .productGallery__main .slick-dots {
+    bottom: 0;
+  }
+  .productPage .productGallery__thumbs {
+    display: none;
   }
   .productPage__content {
     width: 100%;

@@ -584,7 +584,7 @@ body.postid-21695{
     .productPage{
         &__main{
             flex-direction: column;
-            padding: 70px 20px 50px;
+            padding: 20px 20px 50px;
 
             &--left{
                 flex-direction: column;
@@ -594,6 +594,24 @@ body.postid-21695{
             width: 100%;
             max-width: 720px;
             margin: 0 auto 30px;
+
+            &__main{
+                margin-bottom: 0 !important;
+                padding-bottom: 30px;
+
+                .slick-dots{
+                    bottom: 0;
+                    
+                    li{
+                        button{
+
+                        }
+                    }
+                }
+            }
+            &__thumbs{
+                display: none;
+            }
         }
         &__content{
             width: 100%;
