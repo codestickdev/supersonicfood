@@ -67,8 +67,10 @@ $queryAccessories = new WP_Query($productsAccessories);
         <div class="shopProducts__wrap">
             <?php while ($queryFood->have_posts()) : $queryFood->the_post();
                 $post_id = get_the_ID();
+                $product = wc_get_product($post_id);
                 $getTitle = get_the_title();
                 $title = str_replace('SUPERSONIC', '', $getTitle);
+                $price = $product->get_price();
             ?>
             <article class="productTile" productid="<?php echo $post_id; ?>" >
                 <a href="<?php the_permalink(); ?>" class="productTile__thumb">
@@ -76,6 +78,7 @@ $queryAccessories = new WP_Query($productsAccessories);
                 </a>
                 <div class="content">
                     <a href="<?php the_permalink(); ?>" class="productTile__title"><?php echo $title; ?></a>
+                    <p class="productTile__price"><?php echo wc_price($price); ?></p>
                     <div class="content__usp">
                         <?php while(have_rows('product_list_usp')): the_row();
                             $pos = get_sub_field('product_list_usp_text');

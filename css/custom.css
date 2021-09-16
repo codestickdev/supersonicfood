@@ -5662,13 +5662,22 @@ body.woocommerce-account .entry-header {
   font-weight: 600;
   color: #000 !important;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0;
   padding: 0 0 10px;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .productTile__title:hover {
   opacity: .7;
+}
+
+.productTile__price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #616161;
+  text-align: center;
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .productTile .btn {
