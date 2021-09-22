@@ -77,7 +77,6 @@
         if($('body').hasClass('post-type-archive-product')){
             if($('.shopProdcuts').length){
                 var country = $('body').attr('country');
-
                 var items = [];
 
                 $('.productTile').each(function(){
@@ -86,19 +85,53 @@
 
                     items.push({ item_name: name, item_id: id, item_brand: 'SUPERSONIC' });
                 });
-                console.log(items);
-
 
                 dataLayer.push({ ecommerce: null });
                 dataLayer.push({
-                event: "view_item_list",
-                ecommerce: {
-                    items: items
-                },
-                countrySF: country,
+                    event: "view_item_list",
+                    ecommerce: {
+                        items: items
+                    },
+                    countrySF: country,
                 });
             }
         }
+    });
+
+    /*
+     *  View product event
+     */
+    $(document).ready(function(){
+        var country = $('body').attr('country');
+
+        var items = [];
+
+        if($('#vpe_table').length){
+            var name = $('.product_title.entry-title').text();
+            var id = $('.product.type-product').attr('id').replace('product-', '');
+
+            $('tr.vpe_row').each(function(){
+                var variant_name = $(this).find('.variation_title').text();
+                var price = $(this).find('input.variant-qty-input').attr('data-reg-price');
+
+                items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: variant_name });
+            });
+        }else{
+            var name = $('.product_title.entry-title').text();
+            var id = $('.product.type-product').attr('id').replace('product-', '');
+            var price = $('.productPrice').attr('data-price');
+
+            items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: false });
+        }
+
+        dataLayer.push({ ecommerce: null });
+        dataLayer.push({
+            event: "view_item",
+            ecommerce: {
+                items: items,
+            },
+            countrySF: country,
+        });
     });
 }(jQuery))
 
