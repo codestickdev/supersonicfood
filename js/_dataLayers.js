@@ -50,22 +50,24 @@
      *  Page view
      */
     $(document).ready(function(){
-        var utm_source = getUrlParameter('utm_source');
-        var utm_medium = getUrlParameter('utm_medium');
-        var utm_campaign = getUrlParameter('utm_campaign');
-        var utm_content = getUrlParameter('utm_content');
-        var utm_term = getUrlParameter('utm_term');
-        var me_ad_id = getUrlParameter('me_ad_id');
+        var utm_source_param = getUrlParameter('utm_source');
+        var utm_medium_param = getUrlParameter('utm_medium');
+        var utm_campaign_param = getUrlParameter('utm_campaign');
+        var utm_content_param = getUrlParameter('utm_content');
+        var utm_term_param = getUrlParameter('utm_term');
+        var me_ad_id_param = getUrlParameter('me_ad_id');
         var country = $('body').attr('country');
+
+        console.log(utm_source_param);
 
         dataLayer.push({
             event: "page_view",
-            utm_source: utm_source,
-            utm_medium: utm_medium,
-            utm_campaign: utm_campaign,
-            utm_content: utm_content,
-            utm_term: utm_term,
-            me_ad_id: me_ad_id,
+            utm_source: utm_source_param,
+            utm_medium: utm_medium_param,
+            utm_campaign: utm_campaign_param,
+            utm_content: utm_content_param,
+            utm_term: utm_term_param,
+            me_ad_id: me_ad_id_param,
             countrySF: country
         });
     });
