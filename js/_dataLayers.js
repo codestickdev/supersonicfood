@@ -58,8 +58,6 @@
         var me_ad_id_param = getUrlParameter('me_ad_id');
         var country = $('body').attr('country');
 
-        console.log(utm_source_param);
-
         dataLayer.push({
             event: "page_view",
             utm_source: utm_source_param,
@@ -70,6 +68,37 @@
             me_ad_id: me_ad_id_param,
             countrySF: country
         });
+    });
+
+    /*
+     *  Product list event
+     */
+    $(document).ready(function(){
+        if($('body').hasClass('post-type-archive-product')){
+            if($('.shopProdcuts').length){
+                var country = $('body').attr('country');
+
+                var items = [];
+
+                $('.productTile').each(function(){
+                    var name = $(this).find('.productTile__title').text();
+                    var id = $(this).attr('productid');
+
+                    items.push({ item_name: name, item_id: id, item_brand: 'SUPERSONIC' });
+                });
+                console.log(items);
+
+
+                dataLayer.push({ ecommerce: null });
+                dataLayer.push({
+                event: "view_item_list",
+                ecommerce: {
+                    items: items
+                },
+                countrySF: country,
+                });
+            }
+        }
     });
 }(jQuery))
 

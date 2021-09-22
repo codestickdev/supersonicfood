@@ -69,7 +69,7 @@ $queryAccessories = new WP_Query($productsAccessories);
                 $post_id = get_the_ID();
                 $product = wc_get_product($post_id);
                 $getTitle = get_the_title();
-                $title = str_replace('SUPERSONIC', '', $getTitle);
+                $title = str_replace('SUPERSONIC ', '', $getTitle);
                 $price = $product->get_price();
             ?>
             <article class="productTile" productid="<?php echo $post_id; ?>" >
@@ -98,7 +98,7 @@ $queryAccessories = new WP_Query($productsAccessories);
             <?php while ($queryAccessories->have_posts()) : $queryAccessories->the_post();
                 $post_id = get_the_ID();
                 $getTitle = get_the_title();
-                $title = str_replace('SUPERSONIC', '', $getTitle);
+                $title = str_replace('SUPERSONIC ', '', $getTitle);
             ?>
             <article class="productTile<?php if(strpos($title, 'Powder') !== false): ?> productTile--powder<?php endif; ?>" productid="<?php echo $post_id; ?>" >
                 <a href="<?php the_permalink(); ?>" class="productTile__thumb">
