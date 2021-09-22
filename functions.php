@@ -195,6 +195,9 @@ function theme_scripts() {
 	
 	wp_register_script('sliders-script', get_template_directory_uri() . '/js/sliders.js', array('jquery'), $theme_version . $random_number, true);
     wp_enqueue_script('sliders-script');
+
+    wp_register_script('dataLayers', get_template_directory_uri() . '/js/_dataLayers.js', array('jquery'), $theme_version . $random_number, true);
+    wp_enqueue_script('dataLayers');
 } 
 
 add_action( 'wp_enqueue_scripts', 'theme_scripts', 999 ); 
