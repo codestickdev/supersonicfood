@@ -28,7 +28,27 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
-<div class="ssCheckout container">
+<div class="ssCheckout container" user-id="<?php echo get_current_user_id(); ?>">
+    <div class="ssCheckout__gtmData" style="display: none !important;">
+        <?php
+            foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ):
+            $product = $cart_item['data'];
+            $title = $product->get_title();
+            $fullName = $product->name;
+            $variantName = str_replace($title . ' - ', '', $fullName);
+            $parentID = $cart_item['product_id'];
+            $variantID = $cart_item['variation_id'];
+            $price = round($product->price);
+            $quantity = $cart_item['quantity'];
+            
+            $imageID = $product->image_id;
+            $imageURL = wp_get_attachment_image_src($imageID);
+
+            $productURL = get_permalink($parentID);
+        ?>
+            <div data-title="<?php echo $title; ?>" data-variant-name="<?php echo $variantName; ?>" data-variant-id="<?php echo $variantID; ?>" data-id="<?php echo $parentID; ?>" data-price="<?php echo $price; ?>" data-image="<?php echo $imageURL[0]; ?>" data-url="<?php echo $productURL; ?>" data-quantity="<?php echo $quantity; ?>"></div>
+        <?php endforeach; ?>
+    </div>
     <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
         <div class="ssCheckout__form">
             <?php if ( $checkout->get_checkout_fields() ) : ?>
@@ -49,12 +69,21 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
             <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
                 <h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-            <div id="order_review" class="woocommerce-checkout-review-order">
+            <?php
+                $taxes = WC()->cart->get_total_tax();
+                foreach ( WC()->cart->get_coupons() as $code => $coupon ){
+                   $couponCode = esc_attr( sanitize_title( $code ) );
+                }
+                global $woocommerce;
+                $couponData = new WC_Coupon($couponCode);
+            ?>
+            <div id="order_review" class="woocommerce-checkout-review-order" data-order-total="<?php echo WC()->cart->cart_contents_total + $taxes ; ?>" data-coupon="<?php echo $couponCode; ?>" data-coupon-value="<?php echo $couponData->amount; ?>" data-coupon-type="<?php echo $couponData->discount_type; ?>">
                 <?php do_action( 'woocommerce_checkout_order_review' ); ?>
             </div>
             <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
         </div>
     </form>
+    <h1 class="testBtn">testuj</h1>
 </div>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

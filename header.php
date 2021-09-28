@@ -72,8 +72,19 @@ foreach ($cart_items as $cart_item => $item){
 		$productQuantity += $getDataQuantity;
 	}
 }
+
+if(is_user_logged_in()){
+	$userid = get_current_user_id();
+	$user_info = get_userdata($user_id);
+	$first_name = $user_info->first_name;
+    $last_name = $user_info->last_name;
+    $email = $user_info->user_email;
+
+	$customer = new WC_Customer( $user_id );
+	$phone = $customer->get_billing_phone();
+}
 ?>
-<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>">
+<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" data-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>">
 <?php wp_body_open(); ?>
 
 	<!-- Google Tag Manager (noscript) -->

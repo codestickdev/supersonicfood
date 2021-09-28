@@ -687,3 +687,84 @@ function custom_cart_totals_order_total_html( $value ){
     }
     return $value;
 }
+
+/*
+ *  DataLayers
+ */
+// add_action( 'wp_login', 'user_login_datalayer' ); // hook failed login
+// function user_login_datalayer() {
+//     wp_register_script('dataLayers-login', get_template_directory_uri() . '/js/_dataLayers_login.js', array('jquery'), _S_VERSION, true);
+//     wp_enqueue_script('dataLayers-login');
+// }
+
+function wpse38285_wp_login( $user_login ) {
+    set_transient( $user_login, '1', 0 );
+}
+add_action('wp_login', 'wpse38285_wp_login');
+
+function wpse38285_wp_footer() {
+    global $current_user;
+    get_currentuserinfo();
+
+    if ( ! is_user_logged_in() )
+        return;
+
+    if ( ! get_transient( $current_user->user_login ) )
+        return;
+
+    $js = <<<JS
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            var country = $('body').attr('country');
+            var userid = $('body').attr('userid');
+            var firstname = $('body').attr('user-firstname');
+            var lastname = $('body').attr('user-lastname');
+            var email = $('body').attr('user-email');
+            var phone = $('body').attr('user-phone');
+
+            dataLayer.push({
+                event: "login",
+                user_id: userid,
+                first_name: firstname,
+                last_name: lastname,
+                email: email,
+                phone_number: phone,
+                marketing_consent: false,
+                countrySF: country
+            });
+        });
+    </script>
+JS;
+    echo $js;
+    delete_transient( $current_user->user_login );
+}
+add_action( 'wp_footer', 'wpse38285_wp_footer', 0, 3);
+
+
+/**
+ *  On newsletter sent ok
+ */
+add_action( 'wp_footer', 'mycustom_wp_footer' );
+  
+function mycustom_wp_footer() {
+?>
+    <script type="text/javascript">
+    document.addEventListener('wpcf7mailsent', function(event) {
+        if ( '11485' == event.detail.contactFormId || '11768' == event.detail.contactFormId ) {
+            var userid = document.getElementsByTagName('body')[0].getAttribute('userid');
+            var email = document.getElementsByClassName('wpcf7-email')[0].value;
+            var country = document.getElementsByTagName('body')[0].getAttribute('country');
+
+            dataLayer.push({
+                event: "newsletter",
+                user_id: userid,
+                email: email,
+                marketing_consent: false,
+                countrySF: country,
+            });
+        }
+    }, false );
+    </script>
+<?php
+}

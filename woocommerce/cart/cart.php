@@ -68,7 +68,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                                 <?php $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key ); echo $thumbnail; ?>
                             </td>
 
-                            <td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+                            <td class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>" data-name="<?php echo get_the_title($product_id); ?>">
                             <?php
                             if ( ! $product_permalink ) {
                                 echo wp_kses_post( apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;' );
@@ -94,7 +94,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                             ?>
                             </td>
 
-                            <td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>">
+                            <td class="product-price" data-title="<?php esc_attr_e( 'Price', 'woocommerce' ); ?>" data-price="<?php echo round($cart_item['data']->price); ?>">
                                 <?php
                                     echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key ); // PHPCS: XSS ok.
                                 ?>

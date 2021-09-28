@@ -18,8 +18,42 @@
 
 defined('ABSPATH') || exit;
 ?>
+<div class="thankyou__gtm" userid="<?php echo get_current_user_id(); ?>" firstname="<?php echo $order->get_billing_first_name(); ?>" lastname="<?php echo $order->get_billing_last_name(); ?>" email="<?php echo $order->get_billing_email(); ?>" phone="<?php echo $order->get_billing_phone(); ?>">
+	<?php // print_r($order); ?>
+	<?php
+		foreach ( $order->get_items() as $item_id => $item ):
+		$fullName = $item['name'];
+		$productID = $item['product_id'];
+		$title = get_the_title($productID);
+		$variantName = str_replace($title . ' - ', '', $fullName);
+		$variantID = $item['variation_id'];
+		$quantity = $item['quantity'];
+		$price = round($item['subtotal'] + $item['subtotal_tax']) / $quantity;
+		
+		if($variantID !== 0){
+			$product = new WC_Product_Variable($productID);
+			$variations = $product->get_available_variations();
+			foreach ( $variations as $variation ) {
+				if($variation['variation_id'] == $variantID){
+					$imageURL = wp_get_attachment_image_src($variation['image_id']);
+				}
+			}
+		}else{
+			$imageURL = wp_get_attachment_image_src(get_post_thumbnail_id($productID));
+		}
+
+		$productURL = get_permalink($productID);
+	?>
+		<div data-title="<?php echo $title; ?>" data-variant-name="<?php echo $variantName; ?>" data-variant-id="<?php echo $variantID; ?>" data-id="<?php echo $productID; ?>" data-price="<?php echo $price; ?>" data-image="<?php echo $imageURL[0]; ?>" data-url="<?php echo $productURL; ?>" data-quantity="<?php echo $quantity; ?>"></div>
+	<?php endforeach; ?>
+	<?php
+		foreach( $order->get_coupon_codes() as $coupon_code ):
+			$coupon = $coupon_code;
+	?>
+	<?php endforeach; ?>
+</div>
 <img src="https://smartmailings.go2cloud.org/aff_l?offer_id=1176&adv_sub=<?php echo $order->get_id(); ?>" width="1" height="1" />
-<div class="woocommerce-order container" orderID="<?php echo $order->get_id(); ?>" orderAMOUNT="<?php $orderTax = $order->get_total_tax(); $orderValue = $order->get_total(); echo $orderValue - $orderTax;?>">
+<div class="woocommerce-order container" orderID="<?php echo $order->get_id(); ?>" orderAMOUNT="<?php $orderTax = $order->get_total_tax(); $orderValue = $order->get_total(); echo $orderValue - $orderTax;?>" ordertax="<?php echo $orderTax; ?>" shippingcost="<?php echo $order->get_shipping_total(); ?>" couponcode="<?php echo $coupon; ?>">
 
 	<?php
 	if ($order) :
