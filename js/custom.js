@@ -467,6 +467,7 @@
                     $('body').attr('country', currentLang);
                     $('.langSelector__country[data-iso="' + currentLang + '"]').addClass('langSelector__country--active');
                     $('.selectLang').append('<img src="' + flag + '"/>');
+                    $('body').trigger('country_added');
                 },
             });
         }else{
@@ -502,6 +503,7 @@
                 }
             }
             $('.selectLang').append('<img src="' + flag + '"/>');
+            $('body').trigger('country_added');
         }
     });
 })(jQuery);

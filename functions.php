@@ -715,7 +715,7 @@ function wpse38285_wp_footer() {
     $js = <<<JS
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        jQuery(document).ready(function(){
+        jQuery('body').on('country_added', function(){
             var country = $('body').attr('country');
             var userid = $('body').attr('userid');
             var firstname = $('body').attr('user-firstname');
@@ -741,6 +741,58 @@ JS;
 }
 add_action( 'wp_footer', 'wpse38285_wp_footer', 0, 3);
 
+/**
+ * After user register GTM
+ */
+// function action_user_register_script() {
+//     $js = <<<JS
+//         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+//         <script type="text/javascript">
+//             jQuery(document).ready(function(){
+//                 // var country = $('body').attr('country');
+//                 // var userid = $('body').attr('userid');
+//                 // var firstname = $('body').attr('user-firstname');
+//                 // var lastname = $('body').attr('user-lastname');
+//                 // var email = $('body').attr('user-email');
+//                 // var phone = $('body').attr('user-phone');
+
+//                 // dataLayer.push({
+//                 //     event: "login",
+//                 //     user_id: userid,
+//                 //     first_name: firstname,
+//                 //     last_name: lastname,
+//                 //     email: email,
+//                 //     phone_number: phone,
+//                 //     marketing_consent: false,
+//                 //     countrySF: country
+//                 // });
+//                 console.log('registered!')
+//             });
+//         </script>
+//     JS;
+//     echo $js;
+// }
+// function action_user_register($user_id) {
+//     add_action('wp_footer', 'action_user_register_script');
+// }
+// add_action( 'user_register', 'action_user_register' );
+
+function wpse_200441_user_register( $user_id ) {
+    global $wpse_200441_user_register;
+
+    // Store the user ID that just registered in a global so that the script
+    // function can access it later.
+    $wpse_200441_user_register = $user_id;
+
+    // Hook the script function
+    add_action( 'wp_head', 'wpse_200441_script' );
+}
+
+add_action( 'user_register', 'wpse_200441_user_register' );
+
+function wpse_200441_script() {
+    die();
+}
 
 /**
  *  On newsletter sent ok

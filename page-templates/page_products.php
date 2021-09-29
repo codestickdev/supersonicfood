@@ -26,7 +26,7 @@ get_header(); ?>
         <div class="productsList__list">
         <?php foreach($list as $post): 
         setup_postdata($post); ?>
-            <a href="<?php the_permalink(); ?>" class="productsList__product">
+            <a href="<?php the_permalink(); ?>" class="productsList__product" productid="<?php echo get_the_ID(); ?>">
                 <div class="thumb">
                     <img src="<?php the_field('product_main_image'); ?>"/>
                 </div>

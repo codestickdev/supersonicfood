@@ -36,7 +36,7 @@
 				document.location.search
 			});
 		});
-	}, 100);
+	}, 1000);
 	</script>
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -84,7 +84,7 @@ if(is_user_logged_in()){
 	$phone = $customer->get_billing_phone();
 }
 ?>
-<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" data-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>">
+<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" user-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>">
 <?php wp_body_open(); ?>
 
 	<!-- Google Tag Manager (noscript) -->

@@ -593,6 +593,10 @@ body.postid-21695 .productTesVid__video .thumb {
   border-top: 1px solid #E6E6E6;
 }
 
+.productPage__content .pagination_row .vpe_row .vpe-img-td .variation-image-id {
+  display: none !important;
+}
+
 .productPage__content .pagination_row .vpe_row .vpe-img-td .variation_title {
   font-weight: 400;
   text-align: left !important;

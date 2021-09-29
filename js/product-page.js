@@ -147,43 +147,45 @@ jQuery(document).ready(function($){
      *  Product rating
      */
     $(document).ready(function(){
-        var rate = $('.ratingStars__stars').attr('data-rate');
-        var range = parseFloat(5);
-        if(rate.indexOf('.') !== -1){
-            var rateFull = parseFloat(rate.replace('.5', ''));
-            var empty = range - rateFull - 1;
-            $('.ratingStars__stars').find('.fa-star:lt(' + rateFull + ')').removeClass('star--none');
-            $('.ratingStars__stars').find('.fa-star-half-alt').removeClass('star--none');
+        if($('.ratingStars__stars').length){
+            var rate = $('.ratingStars__stars').attr('data-rate');
+            var range = parseFloat(5);
+            if(rate.indexOf('.') !== -1){
+                var rateFull = parseFloat(rate.replace('.5', ''));
+                var empty = range - rateFull - 1;
+                $('.ratingStars__stars').find('.fa-star:lt(' + rateFull + ')').removeClass('star--none');
+                $('.ratingStars__stars').find('.fa-star-half-alt').removeClass('star--none');
 
-            if(empty > 0){
+                if(empty > 0){
+                    $('.ratingStars__stars').find('.star--empty:lt(' + empty + ')').removeClass('star--none');
+                }
+            }else{
+                var empty = range - rate;
+                $('.ratingStars__stars').find('.fa-star:lt(' + rate + ')').removeClass('star--none');
                 $('.ratingStars__stars').find('.star--empty:lt(' + empty + ')').removeClass('star--none');
             }
-        }else{
-            var empty = range - rate;
-            $('.ratingStars__stars').find('.fa-star:lt(' + rate + ')').removeClass('star--none');
-            $('.ratingStars__stars').find('.star--empty:lt(' + empty + ')').removeClass('star--none');
-        }
-        $('.ratingStars').addClass('ratingStars--ready');
+            $('.ratingStars').addClass('ratingStars--ready');
 
-        $('.ratingStars').on('click', function(){
-            $('body').addClass('modalActive');
-            $('.ratingModal').addClass('ratingModal--ready');
-            setTimeout(function(){
-                $('.ratingModal').addClass('ratingModal--active');
-            }, 300);
-        });
-        $(document).mouseup(function(e){
-            var modal = $(".ratingModal__wrap");
-            if (!modal.is(e.target) && modal.has(e.target).length === 0){
-                if($(modal).parent().hasClass('ratingModal--active')){
-                    modal.parent().removeClass('ratingModal--active');
-                    setTimeout(function(){
-                        modal.parent().removeClass('ratingModal--ready');
-                    }, 300);
-                    $('body').removeClass('modalActive');
+            $('.ratingStars').on('click', function(){
+                $('body').addClass('modalActive');
+                $('.ratingModal').addClass('ratingModal--ready');
+                setTimeout(function(){
+                    $('.ratingModal').addClass('ratingModal--active');
+                }, 300);
+            });
+            $(document).mouseup(function(e){
+                var modal = $(".ratingModal__wrap");
+                if (!modal.is(e.target) && modal.has(e.target).length === 0){
+                    if($(modal).parent().hasClass('ratingModal--active')){
+                        modal.parent().removeClass('ratingModal--active');
+                        setTimeout(function(){
+                            modal.parent().removeClass('ratingModal--ready');
+                        }, 300);
+                        $('body').removeClass('modalActive');
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     // Product variant auto select
