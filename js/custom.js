@@ -495,7 +495,7 @@
                 }else if(lang == 'pl-PL'){
                     if(selectedLang !== 'pl'){
                         var flag = $('.langData').find('.langData__lang[data-iso="pl"]').attr('data-flag');
-                        $('body').attr('country', 'de');
+                        $('body').attr('country', 'pl');
                     }else{
                         var flag = $('.langData').find('.langData__lang[data-iso="' + selectedLang + '"]').attr('data-flag');
                         $('body').attr('country', selectedLang);
