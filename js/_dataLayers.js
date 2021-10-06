@@ -50,26 +50,24 @@
     /*
      *  Page view
      */
-    $(document).ready(function(){
-        $('body').on('country_added', function(){
-            var utm_source_param = getUrlParameter('utm_source');
-            var utm_medium_param = getUrlParameter('utm_medium');
-            var utm_campaign_param = getUrlParameter('utm_campaign');
-            var utm_content_param = getUrlParameter('utm_content');
-            var utm_term_param = getUrlParameter('utm_term');
-            var me_ad_id_param = getUrlParameter('me_ad_id');
-            var country = $('body').attr('country');
-        
-            dataLayer.push({
-                event: "page_view",
-                utm_source: utm_source_param,
-                utm_medium: utm_medium_param,
-                utm_campaign: utm_campaign_param,
-                utm_content: utm_content_param,
-                utm_term: utm_term_param,
-                me_ad_id: me_ad_id_param,
-                countrySF: country
-            });
+    $('body').on('country_added', function(){
+        var utm_source_param = getUrlParameter('utm_source');
+        var utm_medium_param = getUrlParameter('utm_medium');
+        var utm_campaign_param = getUrlParameter('utm_campaign');
+        var utm_content_param = getUrlParameter('utm_content');
+        var utm_term_param = getUrlParameter('utm_term');
+        var me_ad_id_param = getUrlParameter('me_ad_id');
+        var country = $('body').attr('country');
+    
+        dataLayer.push({
+            event: "page_view",
+            utm_source: utm_source_param,
+            utm_medium: utm_medium_param,
+            utm_campaign: utm_campaign_param,
+            utm_content: utm_content_param,
+            utm_term: utm_term_param,
+            me_ad_id: me_ad_id_param,
+            countrySF: country
         });
     });
 
