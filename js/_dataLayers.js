@@ -1120,6 +1120,39 @@
             });
         }
     });
+
+    /**
+     * User register
+     */
+    $('form.woocommerce-form-register').on('submit', function(){
+        var email = $(this).find('#reg_email').val();
+        var pass = $(this).find('#reg_password').val();
+
+        if(email !== '' && pass !== ''){
+            var country = $('body').attr('country');
+
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'get_user_id',
+                    email: email,
+                },
+                success: function(data_id){
+                    dataLayer.push({
+                        event: "sign_up",
+                        user_id: data_id,
+                        first_name: false,
+                        last_name: false,
+                        email: email,
+                        phone_number: false,
+                        marketing_consent: false,
+                        countrySF: country,
+                    });
+                },
+            });
+        }
+    });
 }(jQuery))
 
 

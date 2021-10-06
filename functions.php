@@ -820,3 +820,17 @@ function mycustom_wp_footer() {
     </script>
 <?php
 }
+
+/**
+ * Get user ID
+ */
+add_action('wp_ajax_nopriv_get_user_id', 'get_user_id');
+add_action('wp_ajax_get_user_id', 'get_user_id');
+function get_user_id(){
+    $email = $_POST['email'];
+    $user = get_user_by('email', $email);
+    $id = $user->ID;
+    
+    echo $id;
+    wp_die();
+};
