@@ -716,23 +716,25 @@ function wpse38285_wp_footer() {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         jQuery('body').on('country_added', function(){
-            var country = $('body').attr('country');
-            var userid = $('body').attr('userid');
-            var firstname = $('body').attr('user-firstname');
-            var lastname = $('body').attr('user-lastname');
-            var email = $('body').attr('user-email');
-            var phone = $('body').attr('user-phone');
+            setTimeout(function(){
+                var country = $('body').attr('country');
+                var userid = $('body').attr('userid');
+                var firstname = $('body').attr('user-firstname');
+                var lastname = $('body').attr('user-lastname');
+                var email = $('body').attr('user-email');
+                var phone = $('body').attr('user-phone');
 
-            dataLayer.push({
-                event: "login",
-                user_id: userid,
-                first_name: firstname,
-                last_name: lastname,
-                email: email,
-                phone_number: phone,
-                marketing_consent: false,
-                countrySF: country
-            });
+                dataLayer.push({
+                    event: "login",
+                    user_id: userid,
+                    first_name: firstname,
+                    last_name: lastname,
+                    email: email,
+                    phone_number: phone,
+                    marketing_consent: false,
+                    countrySF: country
+                });
+            }, 300);
         });
     </script>
 JS;
