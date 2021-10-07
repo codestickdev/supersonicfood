@@ -51,12 +51,42 @@
      *  Page view
      */
     $('body').on('country_added', function(){
-        var utm_source_param = getUrlParameter('utm_source');
-        var utm_medium_param = getUrlParameter('utm_medium');
-        var utm_campaign_param = getUrlParameter('utm_campaign');
-        var utm_content_param = getUrlParameter('utm_content');
-        var utm_term_param = getUrlParameter('utm_term');
-        var me_ad_id_param = getUrlParameter('me_ad_id');
+        if(getUrlParameter('utm_source') !== false){
+            var utm_source_param = getUrlParameter('utm_source');
+        }else{
+            var utm_source_param = '';
+        }
+
+        if(getUrlParameter('utm_medium') !== false){
+            var utm_medium_param = getUrlParameter('utm_medium');
+        }else{
+            var utm_medium_param = '';
+        }
+
+        if(getUrlParameter('utm_campaign') !== false){
+            var utm_campaign_param = getUrlParameter('utm_campaign');
+        }else{
+            var utm_campaign_param = '';
+        }
+
+        if(getUrlParameter('utm_content') !== false){
+            var utm_content_param = getUrlParameter('utm_content');
+        }else{
+            var utm_content_param = '';
+        }
+
+        if(getUrlParameter('utm_term') !== false){
+            var utm_term_param = getUrlParameter('utm_term');
+        }else{
+            var utm_term_param = '';
+        }
+
+        if(getUrlParameter('me_ad_id') !== false){
+            var me_ad_id_param = getUrlParameter('me_ad_id');
+        }else{
+            var me_ad_id_param = '';
+        }
+        
         var country = $('body').attr('country');
     
         dataLayer.push({
