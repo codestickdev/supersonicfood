@@ -28,14 +28,12 @@
 
 	<!-- Google Tag Manager -->
 	<script type="text/javascript">
-		(function(){
-			window.dataLayer = window.dataLayer || [];
-			window.dataLayer.push({
-				originalLocation: document.location.protocol + '//' +
-				document.location.hostname +
-				document.location.pathname +
-				document.location.search
-			});
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			originalLocation: document.location.protocol + '//' +
+			document.location.hostname +
+			document.location.pathname +
+			document.location.search
 		});
 
 		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
