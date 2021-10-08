@@ -750,7 +750,7 @@
                 item_brand: "SUPERSONIC",
                 item_variant: variantName,
                 item_variant_id: variantID,
-                item_category: false,
+                item_category: '',
                 quantity: quantity,
                 img_url: image,
                 url: url,
@@ -794,7 +794,7 @@
                 email: email,
                 phone_number: phone,
                 marketing_consent: marketing,
-                cart_id: false,
+                cart_id: '',
                 countrySF: country,
             }
         });
@@ -813,26 +813,36 @@
                 }
             },
             user_id: userID,
-            cart_id: false,
+            cart_id: '',
             countrySF: country
         });
         console.log('add_shipping_info');
     }
-    $(document).one('ready', function(){
-        $('#place_order').on('click', function(){
-            sendCheckoutData();
-        });
-        $('input[value="ppec_paypal"]').on('click', function(){
-            sendCheckoutData();
-        });
-    });
+    
     $(document.body).on('updated_cart_totals updated_checkout', function(){
-        $('#place_order').on('click', function(){
-            sendCheckoutData();
-        });
-        $('input[value="ppec_paypal"]').on('click', function(){
-            sendCheckoutData();
-        });
+
+        $('#place_order').on('click', sendCheckoutData);
+
+        if($('input[value="ppec_paypal"]').is(":checked")){
+            $('form.woocommerce-checkout').on('submit', function() {
+                sendCheckoutData();
+            });
+            $('input[name="payment_method"]').on('click', function(){  
+                if($('input[value="ppec_paypal"]').is(":checked")){
+                    $('form.woocommerce-checkout').on('submit', sendCheckoutData);
+                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+                    $('form.woocommerce-checkout').off('submit', sendCheckoutData);
+                }
+            });
+        }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+            $('input[name="payment_method"]').on('click', function(){
+                if($('input[value="ppec_paypal"]').is(":checked")){
+                    $('form.woocommerce-checkout').on('submit', sendCheckoutData);
+                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+                    $('form.woocommerce-checkout').off('submit', sendCheckoutData);
+                }
+            });
+        }
     });
 
     /*
@@ -969,36 +979,47 @@
             marketing_consent: marketing,
             countrySF: country
         });
+        console.log('add_payment_info');
     }
 
-    $(document).one('ready', function(){
-        $('#place_order').on('click', function(){
-            sendPaymentInfo();
-        });
-        var checkInreval = setInterval(function(){ 
-            if($('#submit-button').length){
-                clearInterval(checkInreval);
-    
-                $('#submit-button').on('click', function(){
-                    sendPaymentInfo();
-                });
-            }
-        }, 5000);
-    });
     $(document.body).on('updated_cart_totals updated_checkout', function(){
-        $('#place_order').on('click', function(){
-            sendPaymentInfo();
-        });
-        var checkInreval = setInterval(function(){ 
-            if($('#submit-button').length){
-                clearInterval(checkInreval);
-    
-                $('#submit-button').on('click', function(){
-                    sendPaymentInfo();
-                });
-            }
-        }, 3000);
+        $('#place_order').on('click', sendPaymentInfo);
+
+        if($('input[value="ppec_paypal"]').is(":checked")){
+            $('form.woocommerce-checkout').on('submit', function() {
+                sendPaymentInfo();
+            });
+            $('input[name="payment_method"]').on('click', function(){  
+                if($('input[value="ppec_paypal"]').is(":checked")){
+                    $('form.woocommerce-checkout').on('submit', sendPaymentInfo);
+                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+                    $('form.woocommerce-checkout').off('submit', sendPaymentInfo);
+                }
+            });
+        }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+            $('input[name="payment_method"]').on('click', function(){
+                if($('input[value="ppec_paypal"]').is(":checked")){
+                    $('form.woocommerce-checkout').on('submit', sendPaymentInfo);
+                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+                    $('form.woocommerce-checkout').off('submit', sendPaymentInfo);
+                }
+            });
+        }
     });
+    // $(document.body).on('updated_cart_totals updated_checkout', function(){
+    //     $('#place_order').on('click', function(){
+    //         sendPaymentInfo();
+    //     });
+    //     var checkInreval = setInterval(function(){ 
+    //         if($('#submit-button').length){
+    //             clearInterval(checkInreval);
+    
+    //             $('#submit-button').on('click', function(){
+    //                 sendPaymentInfo();
+    //             });
+    //         }
+    //     }, 3000);
+    // });
 
 
 
