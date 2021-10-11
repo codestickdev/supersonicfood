@@ -5,8 +5,8 @@
 get_header(); ?>
 
 <main class="ssfood ssfood--about">
-    
-    <?php if($temporaryDeactive == false): ?>
+
+    <?php if($temp): ?>
     <section class="aboutHeader">
         <div class="aboutHeader__wrap container-md">
             <h1><?php _e('O SUPERSONIC Food', 'supersonicfood'); ?></h1>
