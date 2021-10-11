@@ -1,0 +1,16 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 104" width="131" height="104">
+	<title>Obszar kompozycji 1</title>
+	<defs>
+		<image width="228" height="180" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgMzAwIj48ZyBpZD0iV2Fyc3R3YV8yIiBkYXRhLW5hbWU9IldhcnN0d2EgMiI+PHBhdGggZD0iTTIzMi41LDY1Yy0xMi41Ny01Ljg4LTI2LjU4LTYuNDYtNDAuNTEtMS42OS0xNS4xMyw1LjE4LTI5LjI1LDE2LjI4LTQyLDMzLTEyLjc1LTE2LjY5LTI2Ljg2LTI3Ljc5LTQyLTMzQzk0LjA4LDU4LjUyLDgwLjA3LDU5LjEsNjcuNSw2NWMtMjMuNjQsMTEtMzYuMTMsMzgtMjkuNyw2NC4xM0M1MSwxODIuNjMsMTQ0LjEyLDIzNy4yNSwxNDguMDgsMjM5LjU1YTIuNSwyLjUsMCwwLDAsMS4yNS4zNGgxLjM0YTIuNSwyLjUsMCwwLDAsMS4yNS0uMzRjNC0yLjMsOTcuMS01Ni45MiwxMTAuMjgtMTEwLjQ0QzI2OC42MywxMDMsMjU2LjE0LDc2LDIzMi41LDY1Wm0yNC44NCw2Mi45M0MyNDUuMTksMTc3LjI2LDE1OCwyMzAuMTIsMTUwLDIzNC44N2MtOC00Ljc1LTk1LjE5LTU3LjYxLTEwNy4zNC0xMDctNS44Ni0yMy44LDUuNDctNDguMzYsMjctNTguNCwyNS40Ni0xMS45LDU0LjY0LjA2LDc4LjA3LDMyYTIuNzgsMi43OCwwLDAsMCwyLjMxLjg5LDIuOTMsMi45MywwLDAsMCwyLjMxLS44OWMyMy40My0zMS45Myw1Mi42MS00My44OSw3OC4wNy0zMkMyNTEuODcsNzkuNTUsMjYzLjIsMTA0LjExLDI1Ny4zNCwxMjcuOTFaIi8+PHBhdGggZD0iTTg0LjYsMTQ2LjY4QTM2Ljg3LDM2Ljg3LDAsMCwxLDcyLjI3LDk2LDIuNSwyLjUsMCwwLDAsNjgsOTMuMzksNDEuODYsNDEuODYsMCwwLDAsODIsMTUxYTIuNSwyLjUsMCwxLDAsMi42LTQuMjdaIi8+PC9nPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Obszar kompozycji 1">
+		<g id=" CO OFERUJĄ PRODUKTY">
+			<g id="Grupa 3">
+				<use id="-e-ikona serce" href="#img1" transform="matrix(0.57,0,0,0.572,0,0)"/>
+			</g>
+		</g>
+	</g>
+</svg>

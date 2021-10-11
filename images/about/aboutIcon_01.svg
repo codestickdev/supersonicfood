@@ -1,0 +1,16 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 94" width="128" height="94">
+	<title>Obszar kompozycji 1</title>
+	<defs>
+		<image width="254" height="186" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgMzAwIj48ZyBpZD0iV2Fyc3R3YV8yIiBkYXRhLW5hbWU9IldhcnN0d2EgMiI+PHBhdGggZD0iTTI3NywxMTguNzVhMi40OSwyLjQ5LDAsMCwwLS43Mi0xLjg3LDIuNDYsMi40NiwwLDAsMC0xLjg2LS43NGMtNjIuMTksMi03NC43NCwyNy42LTc2LDc0LjE5YTEyMy4yOSwxMjMuMjksMCwwLDAtMTcsNDkuMTMsMi41LDIuNSwwLDAsMCwyLjE3LDIuNzksMS42MiwxLjYyLDAsMCwwLC4zMSwwLDIuNSwyLjUsMCwwLDAsMi40OC0yLjE5QTExNy4zNSwxMTcuMzUsMCwwLDEsMjAyLjc0LDE5M0MyNTEsMTg4LjE3LDI3NC40NiwxNzUuNSwyNzcsMTE4Ljc1Wm0tNzAuNzgsNjguODFjMTcuMTQtMjQuODEsMzguNjMtMzUuNjIsMzktMzUuNzhhMi41LDIuNSwwLDEsMC0yLjE5LTQuNDljLS41NS4yNi0xMy41Nyw2LjctMjcuNzYsMjEuMjlhMTIzLjQyLDEyMy40MiwwLDAsMC0xMS40NSwxMy42NWMxLjMzLTIwLjQ0LDUuNS0zMy4zOCwxMy41LTQyLjQsMTAuMTYtMTEuNDYsMjcuNTUtMTcuNCw1NC41OC0xOC41OUMyNjksMTcwLjgsMjQ5LDE4Mi43NywyMDYuMjYsMTg3LjU2WiIvPjxwYXRoIGQ9Ik0xMzkuMzcsMTY1LjMxYy0xLjQxLTM3LjgyLTguMjEtNjEtMjIuNS03Ny4xNC0xNy4xNS0xOS4zMy00Ni4xNy0yOS05MS4zMy0zMC40NEEyLjUsMi41LDAsMCwwLDIzLDYwLjM0YzEuOTQsNDIuNzEsMTEuNTgsNjkuMjIsMzEuMjYsODYsMTkuMzksMTYuNSw0NywyMi4xMyw4Mi41NCwyNS40OUgxMzdhMi42MSwyLjYxLDAsMCwwLC40OC0uMDUsMTczLjIsMTczLjIsMCwwLDEsMjMuMzYsNjguMzMsMi41LDIuNSwwLDAsMCwyLjQ4LDIuMTksMS43MiwxLjcyLDAsMCwwLC4zMiwwLDIuNDgsMi40OCwwLDAsMCwyLjE2LTIuNzlBMTc3LjU0LDE3Ny41NCwwLDAsMCwxMzkuMzcsMTY1LjMxWk0yOC4wOSw2Mi44MkMxMTAuMzIsNjYuMSwxMzAuMzUsOTcuNDEsMTM0LDE1Ny4zOGExNzEuNzUsMTcxLjc1LDAsMCwwLTE5LjQ1LTIyLjYyYy0yMS40OC0yMS00MS4xNi0yOS42NS00Mi0zMGEyLjUsMi41LDAsMCwwLTIsNC41OWMuMi4wOCwxOS42Niw4LjY2LDQwLjQ5LDI5YTE2Ny44LDE2Ny44LDAsMCwxLDIzLjE0LDI4LjE4QzY0LjU3LDE1OS41MywzMi4zOSwxNDIuMTQsMjguMDksNjIuODJaIi8+PC9nPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Obszar kompozycji 1">
+		<g id=" CO OFERUJĄ PRODUKTY">
+			<g id="Grupa 1">
+				<use id="-e-ikona pomagasz przyrodzie" href="#img1" transform="matrix(0.5,0,0,0.504,0,0)"/>
+			</g>
+		</g>
+	</g>
+</svg>

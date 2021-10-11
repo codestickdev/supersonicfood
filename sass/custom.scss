@@ -82,6 +82,7 @@ body{
     &--bigFont{
       span{
         font-size: 14px;
+        font-weight: 500;
       }
     }
 }
@@ -326,6 +327,7 @@ body.admin-bar{
 -------------- */
 
 .container,
+.container-md,
 .container-lg{
   width: 100%;
   padding-right: 20px;
@@ -336,6 +338,7 @@ body.admin-bar{
 
 @media (min-width: 576px) {
   .container,
+  .container-md,
   .container-lg {
     max-width: 540px;
   }
@@ -343,6 +346,7 @@ body.admin-bar{
 
 @media (min-width: 768px) {
   .container,
+  .container-md,
   .container-lg {
     max-width: 720px;
   }
@@ -350,6 +354,7 @@ body.admin-bar{
 
 @media (min-width: 992px) {
   .container,
+  .container-md,
   .container-lg {
     max-width: 960px;
   }
@@ -357,8 +362,14 @@ body.admin-bar{
 
 @media (min-width: 1200px) {
   .container,
+  .container-md,
   .container-lg {
     max-width: 1140px;
+  }
+}
+@media (min-width: 1400px){
+  .container-md{
+    max-width: 1370px;
   }
 }
 @media (min-width: 1630px) {
