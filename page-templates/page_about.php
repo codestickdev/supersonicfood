@@ -62,13 +62,13 @@ get_header(); ?>
     <section class="aboutContent aboutContent--reverse">
         <div class="aboutContent__wrap container-md">
             <div class="aboutContent__text">
-                <h2><?php the_field('secsec_lead'); ?></h2>
-                <p class="lead"><?php the_field('secsec_lead'); ?></p>
-                <p><?php the_field('secsec_lead'); ?></p>
+                <h2><?php the_field('thirdsec_lead'); ?></h2>
+                <p class="lead"><?php the_field('thirdsec_lead'); ?></p>
+                <p><?php the_field('thirdsec_lead'); ?></p>
             </div>
             <div class="aboutContent__image aboutContent__image--map">
                 <div class="wrap">
-                    <img src="<?php echo get_template_directory_uri() . '/images/about/content_02.png'; ?>"/>
+                    <img src="<?php the_field('thirdsec_image'); ?>"/>
                 </div>
             </div>
         </div>
@@ -76,13 +76,13 @@ get_header(); ?>
     <section class="aboutContent">
         <div class="aboutContent__wrap container-md">
             <div class="aboutContent__text">
-                <h2><?php the_field('secsec_lead'); ?></h2>
-                <p class="lead"><?php the_field('secsec_lead'); ?></p>
-                <p><?php the_field('secsec_lead'); ?></p>
+                <h2><?php the_field('foursec_lead'); ?></h2>
+                <p class="lead"><?php the_field('foursec_lead'); ?></p>
+                <p><?php the_field('foursec_lead'); ?></p>
             </div>
             <div class="aboutContent__image">
                 <div class="wrap">
-                    <img src="<?php echo get_template_directory_uri() . '/images/about/content_03.png'; ?>"/>
+                    <img src="<?php the_field('foursec_image'); ?>"/>
                 </div>
             </div>
         </div>
