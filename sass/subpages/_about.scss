@@ -11,7 +11,7 @@
         h1{
             font-size: 48px;
             line-height: 58px;
-            margin: -150px 0 0;
+            margin: 0;
             color: #000;
         }
 
@@ -213,6 +213,7 @@
         &__text{
             width: 100% !important;
             margin: 0 0 35px;
+            text-align: center;
         }
         &__image{
             width: 100%;
@@ -501,6 +502,7 @@
             .content{
                 max-width: 100%;
                 margin: 0 0 160px;
+                text-align: center;
             }
 
             .image{
@@ -527,7 +529,9 @@
 }
 
 .aboutLead{
-    margin: 80px 0;
+    padding: 50px 0 40px;
+    margin: 50px 35px 10px;
+    border-top: 1px solid #dbdbdb;
 
     h2{
         font-size: 36px;
@@ -539,8 +543,6 @@
 }
 @media (max-width: 991px){
     .aboutLead{
-        margin: 50px 0 40px;
-
         h2{
             font-size: 28px;
             line-height: 34px;
