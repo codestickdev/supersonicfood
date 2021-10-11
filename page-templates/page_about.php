@@ -5,12 +5,16 @@
 get_header(); ?>
 
 <main class="ssfood ssfood--about">
+    
+    <?php if($temporaryDeactive == false): ?>
     <section class="aboutHeader">
         <div class="aboutHeader__wrap container-md">
             <h1><?php _e('O SUPERSONIC Food', 'supersonicfood'); ?></h1>
             <img class="foods" src="<?php echo get_template_directory_uri() . '/images/about/aboutHeader.png'; ?>"/>
         </div>
     </section>
+    <?php endif; ?>
+
     <section class="aboutContent">
         <div class="aboutContent__wrap container-md">
             <div class="aboutContent__text">
