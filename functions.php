@@ -836,3 +836,21 @@ function get_user_id(){
     echo $id;
     wp_die();
 };
+
+/**
+ * Sent data to GTM - pruchase
+ */
+add_action('wp_ajax_nopriv_gtm_purchase', 'gtm_purchase');
+add_action('wp_ajax_gtm_purchase', 'gtm_purchase');
+function gtm_purchase(){
+    $orderid = $_POST['orderid'];
+    $gtmStatus = get_post_meta($orderid, '_gtm_sent_purchase', true );
+
+    if($gtmStatus !== 'yes'){
+        echo 'new_order';
+        update_post_meta($orderid, '_gtm_sent_purchase', 'yes' );
+    }else{
+        echo 'old_order';
+    }
+    wp_die();
+}

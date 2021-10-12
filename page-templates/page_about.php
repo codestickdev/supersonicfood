@@ -29,6 +29,7 @@ get_header(); ?>
             </div>
         </div>
     </section>
+    
     <section class="aboutProducts">
         <div class="aboutProducts__heading">
             <h2><?php _e('Co oferują nasze produkty?', 'supersonicfood'); ?></h2>
@@ -50,6 +51,7 @@ get_header(); ?>
         </div>
         <a href="<?php echo get_permalink(icl_object_id(19751, 'page', true)); ?>" class="btn btn--bigFont"><span><?php _e('Poznaj produkty', 'supersonicfood'); ?></span></a>
     </section>
+
     <section class="aboutParts">
         <div class="aboutParts__wrap container-md">
             <div class="aboutParts__box">

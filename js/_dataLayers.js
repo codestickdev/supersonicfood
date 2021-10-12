@@ -1026,114 +1026,130 @@
     /*
      *  Udane zamówienie
      */
+    function sendPurchaseInfo(id){
+        var country = $('body').attr('country');
+        var getCurrency = $('body').attr('currency');
+        var currency;
+        if(getCurrency == 'zł'){
+            currency = 'PLN';
+        }else{
+            currency = 'EUR';
+        }
+        var value = $('.woocommerce-order').attr('orderamount');
+        var orderID = id;
+        var tax = $('.woocommerce-order').attr('ordertax');
+        var shipping = $('.woocommerce-order').attr('shippingcost');
+        var coupon = $('.woocommerce-order').attr('couponcode');
+
+
+        //  Products
+
+        var items = [];
+        var itemsUA = [];
+        $('.thankyou__gtm div').each(function(){
+            var name = $(this).attr('data-title');
+            var id = $(this).attr('data-id');
+            var price = $(this).attr('data-price');
+            var variantID = $(this).attr('data-variant-id');
+            if(variantID !== '0'){
+                var variantName = $(this).attr('data-variant-name');
+            }else{
+                variantID = false;
+                var variantName = false;
+            }
+            var quantity = $(this).attr('data-quantity');
+            var image = $(this).attr('data-image');
+            var url = $(this).attr('data-url');
+
+            items.push({
+                item_name: name,
+                item_id: id,
+                price: price,
+                item_brand: "SUPERSONIC",
+                item_variant: variantName,
+                item_variant_id: variantID,
+                item_category: false,
+                quantity: quantity,
+                img_url: image,
+                url: url,
+            });
+            itemsUA.push({
+                'name': name,
+                'id': id,
+                'price': price,
+                'brand': "SUPERSONIC",
+                'variant': variantName,
+                'variant_id': variantID,
+                'quantity': quantity,
+            });
+        });
+
+        var userid = $('.thankyou__gtm').attr('userid');
+        var firstname = $('.thankyou__gtm').attr('firstname');
+        var lastname = $('.thankyou__gtm').attr('lastname');
+        var email = $('.thankyou__gtm').attr('email');
+        var phone = $('.thankyou__gtm').attr('phone');
+
+        dataLayer.push({ ecommerce: null });
+        dataLayer.push({
+            event: "purchase",
+            ecommerce: {
+                transaction_id: orderID,
+                affiliation: "Online Store",
+                value: value,
+                tax: tax,
+                shipping: shipping,
+                currency: currency,
+                coupon: coupon,
+                items: items,
+            },
+            user_id: userid,
+            first_name: firstname,
+            last_name: lastname,
+            email: email,
+            phone_number: phone,
+            marketing_consent: false,
+            cart_id: false,
+            countrySF: country
+        });
+        dataLayer.push({ ecommerce: null });
+        dataLayer.push({
+            'event': "purchase_UA",
+            'ecommerce': {
+                currencyCode: currency,
+                'purchase': {
+                    'actionField': {
+                        'id': orderID,
+                        'affiliation': 'Online Store',
+                        'revenue': value,
+                        'tax': tax,
+                        'shipping': shipping,
+                        'coupon': coupon
+                    },
+                    'products': itemsUA
+                }
+            },
+            user_id: userid,
+            cart_id: false,
+            countrySF: country
+        });
+    }
     $('body').on('country_added', function(){
         if($('body').hasClass('woocommerce-order-received')){
-            var country = $('body').attr('country');
-            var getCurrency = $('body').attr('currency');
-            var currency;
-            if(getCurrency == 'zł'){
-                currency = 'PLN';
-            }else{
-                currency = 'EUR';
-            }
             var orderID = $('.woocommerce-order').attr('orderid');
-            var value = $('.woocommerce-order').attr('orderamount');
-            var tax = $('.woocommerce-order').attr('ordertax');
-            var shipping = $('.woocommerce-order').attr('shippingcost');
-            var coupon = $('.woocommerce-order').attr('couponcode');
-
-
-            //  Products
-
-            var items = [];
-            var itemsUA = [];
-            $('.thankyou__gtm div').each(function(){
-                var name = $(this).attr('data-title');
-                var id = $(this).attr('data-id');
-                var price = $(this).attr('data-price');
-                var variantID = $(this).attr('data-variant-id');
-                if(variantID !== '0'){
-                    var variantName = $(this).attr('data-variant-name');
-                }else{
-                    variantID = false;
-                    var variantName = false;
-                }
-                var quantity = $(this).attr('data-quantity');
-                var image = $(this).attr('data-image');
-                var url = $(this).attr('data-url');
-
-                items.push({
-                    item_name: name,
-                    item_id: id,
-                    price: price,
-                    item_brand: "SUPERSONIC",
-                    item_variant: variantName,
-                    item_variant_id: variantID,
-                    item_category: false,
-                    quantity: quantity,
-                    img_url: image,
-                    url: url,
-                });
-                itemsUA.push({
-                    'name': name,
-                    'id': id,
-                    'price': price,
-                    'brand': "SUPERSONIC",
-                    'variant': variantName,
-                    'variant_id': variantID,
-                    'quantity': quantity,
-                });
-            });
-
-            var userid = $('.thankyou__gtm').attr('userid');
-            var firstname = $('.thankyou__gtm').attr('firstname');
-            var lastname = $('.thankyou__gtm').attr('lastname');
-            var email = $('.thankyou__gtm').attr('email');
-            var phone = $('.thankyou__gtm').attr('phone');
-
-            dataLayer.push({ ecommerce: null });
-            dataLayer.push({
-                event: "purchase",
-                ecommerce: {
-                    transaction_id: orderID,
-                    affiliation: "Online Store",
-                    value: value,
-                    tax: tax,
-                    shipping: shipping,
-                    currency: currency,
-                    coupon: coupon,
-                    items: items,
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'gtm_purchase',
+                    orderid: orderID,
                 },
-                user_id: userid,
-                first_name: firstname,
-                last_name: lastname,
-                email: email,
-                phone_number: phone,
-                marketing_consent: false,
-                cart_id: false,
-                countrySF: country
-            });
-            dataLayer.push({ ecommerce: null });
-            dataLayer.push({
-                'event': "purchase_UA",
-                'ecommerce': {
-                    currencyCode: currency,
-                    'purchase': {
-                        'actionField': {
-                            'id': orderID,
-                            'affiliation': 'Online Store',
-                            'revenue': value,
-                            'tax': tax,
-                            'shipping': shipping,
-                            'coupon': coupon
-                        },
-                        'products': itemsUA
+                success: function(data){
+                    if(data == 'new_order'){
+                        sendPurchaseInfo(orderID);
                     }
                 },
-                user_id: userid,
-                cart_id: false,
-                countrySF: country
-            });
+            })
         }
     });
 
