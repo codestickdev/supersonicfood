@@ -2207,6 +2207,7 @@ body.postid-21695 .productTesVid__video .thumb {
 .aboutParts__box .content {
   width: 100%;
   max-width: 470px;
+  margin-bottom: 100px;
 }
 
 .aboutParts__box .content h2 {
@@ -2262,6 +2263,7 @@ body.postid-21695 .productTesVid__video .thumb {
   }
   .aboutParts__box .content {
     max-width: 480px;
+    margin-bottom: 0;
   }
   .aboutParts__box .content h2 {
     font-size: 28px;
