@@ -164,8 +164,8 @@
                 var id = $('.product.type-product').attr('id').replace('product-', '');
                 var price = $('.productPrice').attr('data-price');
 
-                items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: false });
-                itemsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': false });
+                items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: "" });
+                itemsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': "" });
             }
 
             dataLayer.push({ ecommerce: null });
@@ -199,6 +199,12 @@
     $('body').on('product-added-to-cart', function(){
         var country = $('body').attr('country');
         var getCurrency = $('body').attr('currency');
+        var cartid = $('body').attr('data-cartid');
+        if (typeof cartid == 'undefined' && cartid == false) {
+            $('body').on('cart-id-created', function(){
+                cartid = $('body').attr('data-cartid');
+            });
+        }
         var currency;
         if(getCurrency == 'zł'){
             currency = 'PLN';
@@ -233,10 +239,9 @@
             var price = $('.productPrice').attr('data-price');
             var quantity = $('form.cart').find('.quantity').find('input[type="number"]').val();
 
-            items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: false, quantity: quantity });
-            itemsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': false, 'variant_id': false, 'quantity': quantity });
+            items.push({ item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: "", quantity: quantity });
+            itemsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': "", 'variant_id': "", 'quantity': quantity });
         }
-        console.log(items);
 
         // Send data to GTM
         dataLayer.push({ ecommerce: null });
@@ -246,7 +251,7 @@
             ecommerce: {
                 items: items,
             },
-            cart_id: false,
+            cart_id: cartid,
             countrySF: country
         });
 
@@ -259,7 +264,7 @@
                     'products': itemsUA,
                 }
             },
-            cart_id: false,
+            cart_id: cartid,
             countrySF: country
         });
     });
@@ -392,6 +397,10 @@
         $('.product-remove a').on('click', function(){
             var country = $('body').attr('country');
             var getCurrency = $('body').attr('currency');
+            var cartid = $('body').attr('data-cartid');
+            if (typeof cartid == 'undefined' && cartid == false) {
+                cartid = '';
+            }
             var currency;
             if(getCurrency == 'zł'){
                 currency = 'PLN';
@@ -412,11 +421,11 @@
                 var getVariant_name = parent.find('.product-name').find('a').text();
                 var variantName = getVariant_name.replace(productName, '');
             }else{
-                var variantName = false;
-                variantID = false;
+                var variantName = "";
+                variantID = "";
             }
             
-            var category = false;
+            var category = "";
             var quantityInput = parent.find('.product-quantity').find('input[type="number"]');
             var quantity;
             if(quantityInput.length){
@@ -460,7 +469,7 @@
                         ecommerce: {
                             items: items,
                         },
-                        cart_id: false,
+                        cart_id: cartid,
                         countrySF: country
                     });
                     
@@ -472,7 +481,7 @@
                                 'products': itemsUA
                             }
                         },
-                        cart_id: false,
+                        cart_id: cartid,
                         countrySF: country
                     });
                 });
@@ -605,6 +614,10 @@
         $('.wc-proceed-to-checkout a').on('click', function(e){
             var country = $('body').attr('country');
             var getCurrency = $('body').attr('currency');
+            var cartid = $('body').attr('data-cartid');
+            if (typeof cartid == 'undefined' && cartid == false) {
+                cartid = '';
+            }
             var currency;
             if(getCurrency == 'zł'){
                 currency = 'PLN';
@@ -629,11 +642,11 @@
                         var getVariant_name = $(this).find('.product-name').find('a').text();
                         var variantName = getVariant_name.replace(productName, '');
                     }else{
-                        var variantName = false;
-                        variantID = false;
+                        var variantName = "";
+                        variantID = "";
                     }
                     
-                    var category = false;
+                    var category = "";
                     var quantityInput = $(this).find('.product-quantity').find('input[type="number"]');
                     var quantity;
                     if(quantityInput.length){
@@ -677,7 +690,7 @@
                 ecommerce: {
                     items: items,
                 },
-                cart_id: false,
+                cart_id: cartid,
                 countrySF: country,
             });
             dataLayer.push({ ecommerce: null });
@@ -690,7 +703,7 @@
                         'products': itemsUA
                     }
                 },
-                cart_id: false,
+                cart_id: cartid,
                 countrySF: country
             });
         });
@@ -709,6 +722,10 @@
     function sendCheckoutData(){
         var country = $('body').attr('country');
         var getCurrency = $('body').attr('currency');
+        var cartid = $('body').attr('data-cartid');
+        if (typeof cartid == 'undefined' && cartid == false) {
+            cartid = '';
+        }
         var currency;
         if(getCurrency == 'zł'){
             currency = 'PLN';
@@ -794,7 +811,7 @@
                 email: email,
                 phone_number: phone,
                 marketing_consent: marketing,
-                cart_id: '',
+                cart_id: cartid,
                 countrySF: country,
             }
         });
@@ -813,42 +830,46 @@
                 }
             },
             user_id: userID,
-            cart_id: '',
+            cart_id: cartid,
             countrySF: country
         });
         console.log('add_shipping_info');
     }
     
-    $(document.body).on('updated_cart_totals updated_checkout', function(){
+    // $(document.body).on('updated_cart_totals updated_checkout', function(){
+    //     $('#place_order').off('click.gtm');
+    //     $('#terms').off('click.gtm');
 
-        // $('form.woocommerce-checkout').on('submit', function() {
-        //     if($('input[value="ppec_paypal"]').is(":checked")){
-        //         $('#place_order').on('click', sendCheckoutData);
-        //     }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-        //         $('#place_order').off('click', sendCheckoutData);
-        //     }
-        // });
-        if($('input[value="ppec_paypal"]').is(":checked")){
-            $('form.woocommerce-checkout').on('submit', function() {
-                sendCheckoutData();
-            });
-            $('input[name="payment_method"]').on('click', function(){  
-                if($('input[value="ppec_paypal"]').is(":checked")){
-                    $('form.woocommerce-checkout').on('submit', sendCheckoutData);
-                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-                    $('form.woocommerce-checkout').off('submit', sendCheckoutData);
-                }
-            });
-        }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-            $('input[name="payment_method"]').on('click', function(){
-                if($('input[value="ppec_paypal"]').is(":checked")){
-                    $('form.woocommerce-checkout').on('submit', sendCheckoutData);
-                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-                    $('form.woocommerce-checkout').off('submit', sendCheckoutData);
-                }
-            });
-        }
-    });
+    //     if($('input[value="payu"]').is(":checked")){
+    //         $('#place_order').on('click.gtm', sendCheckoutData);
+            
+    //     }else if($('input[value="payu"]').is(':not(:checked)')){
+    //         $('#terms').on('click.gtm', function(){
+    //             if($(this).is(":checked")){
+    //                 console.log('sent');
+    //                 sendCheckoutData();
+    //             }
+    //         });
+    //     }
+
+    //     $('input[name="payment_method"]').each(function(){            
+    //         $(this).on('click', function(){
+    //             $('#place_order').off('click.gtm');
+    //             $('#terms').off('click.gtm');
+
+    //             if($(this).attr('value') == 'payu'){
+    //                 $('#place_order').on('click.gtm', sendCheckoutData);
+    //             }else{
+    //                 $('#terms').on('click.gtm', function(){
+    //                     if($(this).is(":checked")){
+    //                         console.log('sent');
+    //                         sendCheckoutData();
+    //                     }
+    //                 });
+    //             }
+    //         });
+    //     });
+    // });
 
     /*
      *  Payment info
@@ -856,6 +877,10 @@
     function sendPaymentInfo(){
         var country = $('body').attr('country');
         var getCurrency = $('body').attr('currency');
+        var cartid = $('body').attr('data-cartid');
+        if (typeof cartid == 'undefined' && cartid == false) {
+            cartid = '';
+        }
         var currency;
         if(getCurrency == 'zł'){
             currency = 'PLN';
@@ -885,8 +910,8 @@
             if(variantID !== '0'){
                 var variantName = $(this).attr('data-variant-name');
             }else{
-                variantID = false;
-                var variantName = false;
+                variantID = "";
+                var variantName = "";
             }
             var quantity = $(this).attr('data-quantity');
             var image = $(this).attr('data-image');
@@ -901,7 +926,7 @@
                 item_brand: "SUPERSONIC",
                 item_variant: variantName,
                 item_variant_id: variantID,
-                item_category: false,
+                item_category: "",
                 quantity: quantity,
                 img_url: image,
                 url: url,
@@ -951,7 +976,7 @@
                 email: email,
                 phone_number: phone,
                 marketing_consent: marketing,
-                cart_id: false,
+                cart_id: cartid,
                 countrySF: country
             }
         });
@@ -971,62 +996,52 @@
                 }
             },
             user_id: userID,
-            cart_id: false,
-            countrySF: country
-        });
-        // if checked
-        dataLayer.push({
-            event: "sign_up",
-            user_id: userID,
-            first_name: firstName,
-            last_name: lastName,
-            email: email,
-            phone_number: phone,
-            marketing_consent: marketing,
+            cart_id: cartid,
             countrySF: country
         });
         console.log('add_payment_info');
     }
 
     $(document.body).on('updated_cart_totals updated_checkout', function(){
-        $('#place_order').on('click', sendPaymentInfo);
+        $('#place_order').off('click.gtm');
+        $('#terms').off('click.gtm');
 
-        if($('input[value="ppec_paypal"]').is(":checked")){
-            $('form.woocommerce-checkout').on('submit', function() {
+        if($('input[value="payu"]').is(":checked")){
+            $('#place_order').on('click.gtm', function(){
                 sendPaymentInfo();
+                sendCheckoutData();
             });
-            $('input[name="payment_method"]').on('click', function(){  
-                if($('input[value="ppec_paypal"]').is(":checked")){
-                    $('form.woocommerce-checkout').on('submit', sendPaymentInfo);
-                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-                    $('form.woocommerce-checkout').off('submit', sendPaymentInfo);
-                }
-            });
-        }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-            $('input[name="payment_method"]').on('click', function(){
-                if($('input[value="ppec_paypal"]').is(":checked")){
-                    $('form.woocommerce-checkout').on('submit', sendPaymentInfo);
-                }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
-                    $('form.woocommerce-checkout').off('submit', sendPaymentInfo);
+            
+        }else if($('input[value="payu"]').is(':not(:checked)')){
+            $('#terms').on('click.gtm', function(){
+                if($(this).is(":checked")){
+                    sendPaymentInfo();
+                    sendCheckoutData();
                 }
             });
         }
-    });
-    // $(document.body).on('updated_cart_totals updated_checkout', function(){
-    //     $('#place_order').on('click', function(){
-    //         sendPaymentInfo();
-    //     });
-    //     var checkInreval = setInterval(function(){ 
-    //         if($('#submit-button').length){
-    //             clearInterval(checkInreval);
-    
-    //             $('#submit-button').on('click', function(){
-    //                 sendPaymentInfo();
-    //             });
-    //         }
-    //     }, 3000);
-    // });
 
+        $('input[name="payment_method"]').each(function(){            
+            $(this).on('click', function(){
+                $('#place_order').off('click.gtm');
+                $('#terms').off('click.gtm');
+
+                if($(this).attr('value') == 'payu'){
+                    $('#place_order').on('click.gtm', function(){
+                        sendPaymentInfo();
+                        sendCheckoutData();
+                    });
+                }else{
+                    $('#terms').on('click.gtm', function(){
+                        if($(this).is(":checked")){
+                            sendPaymentInfo();
+                            sendCheckoutData();
+                        }
+                    });
+                }
+            });
+        });
+    });
 
 
     /*
@@ -1035,16 +1050,20 @@
     function sendPurchaseInfo(id){
         var country = $('body').attr('country');
         var getCurrency = $('body').attr('currency');
+        var cartid = $('body').attr('data-cartid');
+        if (typeof cartid == 'undefined' && cartid == false) {
+            cartid = '';
+        }
         var currency;
         if(getCurrency == 'zł'){
             currency = 'PLN';
         }else{
             currency = 'EUR';
         }
-        var value = $('.woocommerce-order').attr('orderamount');
+        var value = parseFloat($('.woocommerce-order').attr('orderamount'));
         var orderID = id;
-        var tax = $('.woocommerce-order').attr('ordertax');
-        var valueBurtto = parseFloat(value + tax);
+        var tax = parseFloat($('.woocommerce-order').attr('ordertax'));
+        var valueBurtto = value + tax;
         var shipping = $('.woocommerce-order').attr('shippingcost');
         var coupon = $('.woocommerce-order').attr('couponcode');
 
@@ -1061,8 +1080,8 @@
             if(variantID !== '0'){
                 var variantName = $(this).attr('data-variant-name');
             }else{
-                variantID = false;
-                var variantName = false;
+                variantID = "";
+                var variantName = "";
             }
             var quantity = $(this).attr('data-quantity');
             var image = $(this).attr('data-image');
@@ -1075,7 +1094,7 @@
                 item_brand: "SUPERSONIC",
                 item_variant: variantName,
                 item_variant_id: variantID,
-                item_category: false,
+                item_category: "",
                 quantity: quantity,
                 img_url: image,
                 url: url,
@@ -1116,7 +1135,7 @@
             email: email,
             phone_number: phone,
             marketing_consent: false,
-            cart_id: false,
+            cart_id: cartid,
             countrySF: country
         });
         dataLayer.push({ ecommerce: null });
@@ -1137,9 +1156,22 @@
                 }
             },
             user_id: userid,
-            cart_id: false,
+            cart_id: cartid,
             countrySF: country
         });
+
+        if (typeof userid == 'undefined' && userid == false) {
+            dataLayer.push({
+                event: "sign_up",
+                user_id: userid,
+                first_name: firstname,
+                last_name: lastname,
+                email: email,
+                phone_number: phone,
+                marketing_consent: "",
+                countrySF: country
+            });
+        }
     }
     $('body').on('country_added', function(){
         if($('body').hasClass('woocommerce-order-received')){
@@ -1216,15 +1248,38 @@
                     dataLayer.push({
                         event: "sign_up",
                         user_id: data_id,
-                        first_name: false,
-                        last_name: false,
+                        first_name: "",
+                        last_name: "",
                         email: email,
-                        phone_number: false,
+                        phone_number: "",
                         marketing_consent: false,
                         countrySF: country,
                     });
                 },
             });
         }
+    });
+
+    /**
+     * Cart ID create
+     */
+    $(document).ready(function(){
+        $('body').on('product-added-to-cart', function(){
+            $.ajax({
+                type: 'POST',
+                url: ajaxurl,
+                data: {
+                    action: 'cartid_cookie',
+                },
+                success: function(response){
+                    if(response !== 'exists'){
+                        $('body').attr('data-cartid', response);
+                        $('body').trigger('cart-id-created');
+                    }else{
+                        console.log('cart id exists');
+                    }
+                }
+            })
+        });
     });
 }(jQuery))

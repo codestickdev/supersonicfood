@@ -81,8 +81,11 @@ if(is_user_logged_in()){
 	$customer = new WC_Customer( $user_id );
 	$phone = $customer->get_billing_phone();
 }
+
+// Cart id
+$cartID = WC()->session->get('cartid');
 ?>
-<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" user-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>">
+<body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" user-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>" data-cartid="<?php echo $cartID; ?>">
 <?php wp_body_open(); ?>
 
 	<!-- Google Tag Manager (noscript) -->

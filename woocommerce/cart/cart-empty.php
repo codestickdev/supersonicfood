@@ -23,6 +23,18 @@ defined( 'ABSPATH' ) || exit;
 do_action( 'woocommerce_cart_is_empty' );
 
 if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
+<?php
+	// Unset cart id
+	$cartID = WC()->session->get('cartid');
+	if(!is_null($cartID)){
+		echo "<script>console.log('CARTID: not NULL - " . $cartID . " - unset');</script>";
+		WC()->session->set('cartid', null);
+		$cartID = WC()->session->get('cartid');
+		echo "<script>console.log('CARTID: Done! " . $cartID . "');</script>";
+	}else{
+		echo "<script>console.log('CARTID: Cart ID is NULL!');</script>";
+	}
+?>
 <?php $lang = get_bloginfo("language"); ?>
 	<div class="cartEmpty">
         <p><?php _e('Your cart is empty', 'codestick'); ?></p>

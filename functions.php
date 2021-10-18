@@ -854,3 +854,23 @@ function gtm_purchase(){
     }
     wp_die();
 }
+
+/**
+ * Generate unique cart ID
+ */
+
+add_action('wp_ajax_nopriv_cartid_cookie', 'cartid_cookie');
+add_action('wp_ajax_cartid_cookie', 'cartid_cookie');
+function cartid_cookie(){
+    // WC()->session->set( 'cartid', null );
+    $cartID = WC()->session->get('cartid');
+    if(is_null($cartID)){
+        $uniqueID = rand(100000, 999999);
+        WC()->session->set('cartid', $uniqueID);
+        $cartID = WC()->session->get('cartid');
+        echo $cartID;
+    }else{
+        echo 'exists';
+    }
+    wp_die();
+}

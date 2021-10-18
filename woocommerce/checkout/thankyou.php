@@ -18,6 +18,18 @@
 
 defined('ABSPATH') || exit;
 ?>
+<?php
+	// Unset cart id
+	$cartID = WC()->session->get('cartid');
+	if(!is_null($cartID)){
+		echo "<script>console.log('CARTID: not NULL - " . $cartID . " - unset');</script>";
+		WC()->session->set('cartid', null);
+		$cartID = WC()->session->get('cartid');
+		echo "<script>console.log('CARTID: Done! " . $cartID . "');</script>";
+	}else{
+		echo "<script>console.error('CARTID: Cart ID is NULL!');</script>";
+	}
+?>
 <div class="thankyou__gtm" userid="<?php echo get_current_user_id(); ?>" firstname="<?php echo $order->get_billing_first_name(); ?>" lastname="<?php echo $order->get_billing_last_name(); ?>" email="<?php echo $order->get_billing_email(); ?>" phone="<?php echo $order->get_billing_phone(); ?>">
 	<?php // print_r($order); ?>
 	<?php
