@@ -821,8 +821,13 @@
     
     $(document.body).on('updated_cart_totals updated_checkout', function(){
 
-        $('#place_order').on('click', sendCheckoutData);
-
+        // $('form.woocommerce-checkout').on('submit', function() {
+        //     if($('input[value="ppec_paypal"]').is(":checked")){
+        //         $('#place_order').on('click', sendCheckoutData);
+        //     }else if($('input[value="ppec_paypal"]').is(':not(:checked)')){
+        //         $('#place_order').off('click', sendCheckoutData);
+        //     }
+        // });
         if($('input[value="ppec_paypal"]').is(":checked")){
             $('form.woocommerce-checkout').on('submit', function() {
                 sendCheckoutData();
@@ -969,6 +974,7 @@
             cart_id: false,
             countrySF: country
         });
+        // if checked
         dataLayer.push({
             event: "sign_up",
             user_id: userID,
@@ -1038,6 +1044,7 @@
         var value = $('.woocommerce-order').attr('orderamount');
         var orderID = id;
         var tax = $('.woocommerce-order').attr('ordertax');
+        var valueBurtto = parseFloat(value + tax);
         var shipping = $('.woocommerce-order').attr('shippingcost');
         var coupon = $('.woocommerce-order').attr('couponcode');
 
@@ -1096,7 +1103,7 @@
             ecommerce: {
                 transaction_id: orderID,
                 affiliation: "Online Store",
-                value: value,
+                value: valueBurtto,
                 tax: tax,
                 shipping: shipping,
                 currency: currency,
@@ -1121,7 +1128,7 @@
                     'actionField': {
                         'id': orderID,
                         'affiliation': 'Online Store',
-                        'revenue': value,
+                        'revenue': valueBurtto,
                         'tax': tax,
                         'shipping': shipping,
                         'coupon': coupon
