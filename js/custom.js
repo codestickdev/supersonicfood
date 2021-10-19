@@ -161,6 +161,15 @@
     //     });
     // });
 
+
+    /**
+     *  Added to cart modal
+     */
+    $('body').on('product-added-to-cart', function(){
+        $('.modalAdded').addClass('modalAdded--toggle');
+        $('.productPage__content').removeClass('loading');
+    });
+
     /* Currency load to span */
     $(document).ready(function(){
         var currenntcurrency = $('body').attr('currency');

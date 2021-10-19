@@ -859,18 +859,23 @@ function gtm_purchase(){
  * Generate unique cart ID
  */
 
-add_action('wp_ajax_nopriv_cartid_cookie', 'cartid_cookie');
-add_action('wp_ajax_cartid_cookie', 'cartid_cookie');
-function cartid_cookie(){
-    // WC()->session->set( 'cartid', null );
-    $cartID = WC()->session->get('cartid');
-    if(is_null($cartID)){
-        $uniqueID = rand(100000, 999999);
-        WC()->session->set('cartid', $uniqueID);
-        $cartID = WC()->session->get('cartid');
-        echo $cartID;
-    }else{
-        echo 'exists';
-    }
-    wp_die();
+add_action( 'wp_footer', 'remove_cartid' );
+function remove_cartid() {
+    if (WC()->cart->is_empty()) { ?>
+    <script type="text/javascript">
+        localStorage.removeItem('cartid');
+    </script>
+<?php }else{ ?>
+    <script type="text/javascript">
+        var cartID = localStorage.getItem('cartid');
+        if (cartID === null){
+            var random = Math.floor(Math.random() * (9999999 - 1000000 + 1)) + 1000000;
+            localStorage.setItem('cartid', random);
+            cartID = localStorage.getItem('cartid');
+            console.log('setting - ' + cartID);
+            jQuery('body').attr('data-cartid', cartID);
+            jQuery('body').trigger('cart-id-created');
+        }
+    </script>
+<?php }
 }

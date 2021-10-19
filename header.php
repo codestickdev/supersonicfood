@@ -28,19 +28,19 @@
 
 	<!-- Google Tag Manager -->
 	<script type="text/javascript">
-		// window.dataLayer = window.dataLayer || [];
-		// window.dataLayer.push({
-		// 	originalLocation: document.location.protocol + '//' +
-		// 	document.location.hostname +
-		// 	document.location.pathname +
-		// 	document.location.search
-		// });
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			originalLocation: document.location.protocol + '//' +
+			document.location.hostname +
+			document.location.pathname +
+			document.location.search
+		});
 
-		// (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		// new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		// j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		// 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		// })(window,document,'script','dataLayer','GTM-NGD9FV2');
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-NGD9FV2');
 	</script>
 	<!-- End Google Tag Manager -->
 
@@ -83,7 +83,7 @@ if(is_user_logged_in()){
 }
 
 // Cart id
-$cartID = WC()->session->get('cartid');
+// $cartID = WC()->session->get('cartid');
 ?>
 <body <?php body_class(); ?> powderItems="<?php echo $productQuantity; ?>" currency="<?php echo get_woocommerce_currency_symbol(); ?>" lang="<?php echo get_bloginfo('language'); ?>" userid="<?php echo $userid; ?>" user-firstname="<?php echo $first_name; ?>" user-lastname="<?php echo $last_name; ?>" user-email="<?php echo $email; ?>" user-phone="<?php echo $phone; ?>" data-cartid="<?php echo $cartID; ?>">
 <?php wp_body_open(); ?>

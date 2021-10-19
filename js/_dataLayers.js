@@ -1264,22 +1264,42 @@
      * Cart ID create
      */
     $(document).ready(function(){
+
+        // Clear cart
+        var clearcart = getUrlParameter('empty-cart');
+        if(clearcart == 'clearcart'){
+            localStorage.removeItem('cartid');
+        }
+        $(document.body).on('wc_cart_emptied', function(){
+            localStorage.removeItem('cartid');
+        });
+
+        // Order received
+        if($('body').hasClass('woocommerce-order-received')){
+            localStorage.removeItem('cartid');
+        }
+    });
+    $(document).ready(function(){
+        var cartID = localStorage.getItem('cartid');
+        if (cartID !== null){
+            console.log('localStorage - cartid has value - ' + cartID + ' added to parameter');
+            $('body').attr('data-cartid', cartID);
+            $('body').trigger('cart-id-added');
+        }else{
+            console.log('localStorage - cartid is empty - ' + cartID);
+        }
+
         $('body').on('product-added-to-cart', function(){
-            $.ajax({
-                type: 'POST',
-                url: ajaxurl,
-                data: {
-                    action: 'cartid_cookie',
-                },
-                success: function(response){
-                    if(response !== 'exists'){
-                        $('body').attr('data-cartid', response);
-                        $('body').trigger('cart-id-created');
-                    }else{
-                        console.log('cart id exists');
-                    }
-                }
-            })
+            if (cartID !== null){
+                console.log('localStorage - cartid has value - ' + cartID);
+            }else{
+                var random = Math.floor(Math.random() * (9999999 - 1000000 + 1)) + 1000000;
+                localStorage.setItem('cartid', random);
+                cartID = localStorage.getItem('cartid');
+                console.log('setting - ' + cartID);
+                $('body').attr('data-cartid', cartID);
+                $('body').trigger('cart-id-created');
+            }
         });
     });
 }(jQuery))
