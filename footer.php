@@ -284,16 +284,6 @@
 			</div>
 		</div>
 		<?php endif;?>
-		<?php
-			$cartURL = '';
-			if($lang == 'en-US'){
-				$cartURL = home_url('/cart/');
-			}else if($lang == 'de-DE'){
-				$cartURL = home_url('/korb/');
-			}else{
-				$cartURL = home_url('/koszyk/');
-			}
-		?>
 		<div class="modalAdded__continue">
 			<a href="<?php 
 				$obj_id = get_queried_object_id();
@@ -301,7 +291,7 @@
 				$redirect = $current_url . '?cartModal=success';
 				echo $redirect;
 			?>" class="continue"><span><?php _e('Continue shopping', 'codestick'); ?></span></a>
-			<a href="<?php echo $cartURL; ?>" class="btn"><span><?php _e('Go to cart', 'codestick'); ?></span></a>
+			<a href="<?php echo wc_get_cart_url(); ?>" class="btn"><span><?php _e('Go to cart', 'codestick'); ?></span></a>
 		</div>
 	</div>
 </div>

@@ -171,3 +171,36 @@ defined('ABSPATH') || exit;
 		s.parentNode.insertBefore(tt, s);
 	})(ttConversionOptions);
 </script>
+
+<script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+<script>
+	jQuery(document).ready(function(){
+		jQuery('body').on('country_added', function(){
+			var gcr_orderid = jQuery('.woocommerce-order').attr('orderid');
+			var gcr_email = jQuery('.thankyou__gtm').attr('email');
+			var gcr_country = jQuery('body').attr('country');
+
+			var d = new Date();
+			d.setHours(d.getHours() + 24);
+			var month = d.getMonth()+1;
+			var day = d.getDate();
+			var gcr_delivery = d.getFullYear() + '-' + (month<10 ? '0' : '') + month + '-' + (day<10 ? '0' : '') + day;
+
+			window.renderOptIn = function() {
+				window.gapi.load('surveyoptin', function() {
+					window.gapi.surveyoptin.render({
+						// REQUIRED FIELDS
+						"merchant_id": 118481053,
+						"order_id": gcr_orderid,
+						"email": gcr_email,
+						"delivery_country": gcr_country,
+						"estimated_delivery_date": gcr_delivery,
+
+						// OPTIONAL FIELDS
+						// "products": [{"gtin":"GTIN1"}, {"gtin":"GTIN2"}]
+					});
+				});
+			}
+		});
+	});
+</script>
