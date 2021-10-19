@@ -40,6 +40,7 @@ get_header(); ?>
     <?php endif; ?>
     <?php if( have_rows('logosList', 11377) && $lang == 'pl-PL' ): ?>
     <section class="logosList">
+        <h2 class="logosList__heading"><?php _e('As seen in', 'codestick'); ?>:</h2>
         <div class="logosList__list container-lg">
             <?php while( have_rows('logosList', 11377) ): the_row();
                 $count = count(get_field('logosList', 11377));

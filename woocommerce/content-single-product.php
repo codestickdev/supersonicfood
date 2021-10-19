@@ -89,6 +89,7 @@ if (post_password_required()) {
 
         <?php if( have_rows('mediaListProduct', icl_object_id(11377, 'page', true))): ?>
         <section id="morecontent" class="logosList">
+            <h2 class="logosList__heading"><?php _e('As seen in', 'codestick'); ?>:</h2>
             <div class="logosList__list container-lg">
                 <?php while( have_rows('mediaListProduct', icl_object_id(11377, 'page', true)) ): the_row();
                     $count = count(get_field('mediaListProduct', icl_object_id(11377, 'page', true)));
