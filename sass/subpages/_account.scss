@@ -438,3 +438,222 @@ body.woocommerce-account{
         }
     }
 }
+
+/**
+ *  Lost password page
+ */
+
+body.woocommerce-lost-password,
+body.woocommerce-account{
+    .woocommerce-message{
+        max-width: 1000px;
+        margin: 90px auto 0;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px 15px;
+    }
+    .woocommerce-notices-wrapper{
+        display: block !important;
+
+        .woocommerce-error{
+            max-width: 1000px;
+            margin: 90px auto 0;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 15px;
+            list-style: none;
+
+            a{
+                color: #fff;
+                font-weight: 500;
+                text-decoration: underline;
+                cursor: pointer;
+                transition: ease .3s;
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+.lostPassPage{
+    padding: 80px 0;
+
+    &__heading{
+        font-size: 30px;
+        line-height: 36px;
+        color: #000;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 0 20px;
+    }
+    &__form{
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+        input[name="user_login"]{
+            max-width: 320px;
+            width: 100%;
+            height: 45px;
+            font-size: 14px;
+            color: #000;
+            border: 1px solid #838383;
+            background-color: #fff;
+            border-radius: 0;
+            text-align: center;
+            transition: ease .3s;
+            outline: none;
+
+            &::placeholder{
+                color: #838383;
+            }
+
+            &:focus{
+                border-color: #000;
+            }
+        }
+        button.button{
+            padding: 0 20px;
+            height: 45px;
+            background-color: #44c680;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            outline: none;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
+
+.lostPassConfirmation{
+    padding: 40px 20px 80px;
+
+    p{
+        font-size: 14px;
+        line-height: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+.lostPassReset{
+    padding: 80px 0;
+
+    &__heading{
+        font-size: 30px;
+        line-height: 36px;
+        color: #000;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 0 20px;
+    }
+
+    &__form{
+        max-width: 600px;
+        padding: 0 20px;
+        margin: 0 auto;
+
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: #000;
+            text-align: center;
+            margin: 0 0 20px;
+
+            &.woocommerce-form-row{
+                margin: 0 0 10px;
+
+                .woocommerce-password-strength{
+                    text-align: center;
+                    margin-top: 10px;
+                    font-weight: 400;
+                    background: #f77e63;
+                    padding: 5px 10px;
+                    color: #fff;
+                    border-radius: 5px;
+                    max-width: 320px;
+                    margin: 10px auto;
+                    font-size: 12px;
+                    line-height: 16px;
+
+                    &.bad{
+                        background: #f77e63;
+                    }
+                    &.good{
+                        background: #f7ae41;
+                    }
+                    &.strong{
+                        background: #44c680;
+                    }
+                }
+                .woocommerce-password-hint{
+                    font-size: 10px;
+                    line-height: 14px;
+                    display: block;
+                    text-align: center;
+                    max-width: 320px;
+                    margin: 0 auto;
+                }
+            }
+        }
+        input{
+            max-width: 320px;
+            width: 100%;
+            height: 45px;
+            font-size: 14px;
+            color: #000;
+            border: 1px solid #838383;
+            background-color: #fff;
+            border-radius: 0;
+            text-align: center;
+            transition: ease .3s;
+            outline: none;
+
+            &::placeholder{
+                color: #838383;
+            }
+
+            &:focus{
+                border-color: #000;
+            }
+        }
+        button.button{
+            padding: 0 20px;
+            height: 45px;
+            background-color: #44c680;
+            border: 0;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            outline: none;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
+}
