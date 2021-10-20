@@ -70,7 +70,15 @@ $queryAccessories = new WP_Query($productsAccessories);
                 $product = wc_get_product($post_id);
                 $getTitle = get_the_title();
                 $title = str_replace('SUPERSONIC ', '', $getTitle);
-                $price = $product->get_price();
+                
+                if($product->is_type('variable')){
+                    $available_variations = $product->get_available_variations();
+                    foreach ( $available_variations as $variation ){
+                        $price = $variation['display_price'];         
+                    }
+                }else{
+                    $price = $product->get_price();
+                }
             ?>
             <article class="productTile" productid="<?php echo $post_id; ?>" >
                 <a href="<?php the_permalink(); ?>" class="productTile__thumb">
