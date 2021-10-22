@@ -593,11 +593,11 @@ body.postid-21695 .productTesVid__video .thumb {
   border-top: 1px solid #E6E6E6;
 }
 
-.productPage__content .pagination_row .vpe_row.not-available {
+.productPage__content .pagination_row .vpe_row.not-available td {
   opacity: .3;
 }
 
-.productPage__content .pagination_row .vpe_row.not-available .vpe-qty-td {
+.productPage__content .pagination_row .vpe_row.not-available td.vpe-qty-td {
   font-size: 14px;
 }
 

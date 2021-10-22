@@ -411,10 +411,12 @@ body.postid-21695{
                 border-top: 1px solid #E6E6E6;
 
                 &.not-available{
-                    opacity: .3;
+                    td{
+                        opacity: .3;
 
-                    .vpe-qty-td{
-                        font-size: 14px;
+                        &.vpe-qty-td{
+                            font-size: 14px;
+                        }
                     }
                 }
 
