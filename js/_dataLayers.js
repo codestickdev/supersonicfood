@@ -891,11 +891,10 @@
         var orderCoupon = $('#order_review').attr('data-coupon');
         var orderCouponValue = $('#order_review').attr('data-coupon-value');
         var orderCouponType = $('#order_review').attr('data-coupon-type');
+        var orderCouponAmount = $('#order_review').attr('data-coupon-total');
 
         if(orderCouponType == 'percent'){
             orderCouponValue += '%';
-        }else{
-            orderCouponValue += ' ' + currency;
         }
 
         //  Products
@@ -966,7 +965,7 @@
             currency: currency,
             value: orderTotal,
             coupon: orderCoupon,
-            discount: orderCouponValue,
+            discount: orderCouponAmount,
             ecommerce: {
                 payment_type: payment,
                 items: items,
@@ -988,7 +987,7 @@
             coupon: orderCoupon,
             payment_type: payment,
             affiliation: "Online Store",
-            discount: orderCouponValue,
+            discount: orderCouponAmount,
             'ecommerce': {
                 'checkout': {
                     'actionField': {'step': 3, 'option': 'Add Payment Info'},

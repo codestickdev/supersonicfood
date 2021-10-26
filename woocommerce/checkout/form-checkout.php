@@ -76,8 +76,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
                 }
                 global $woocommerce;
                 $couponData = new WC_Coupon($couponCode);
+                $couponDiscoutAmount = WC()->cart->get_coupon_discount_amount($couponCode) + WC()->cart->get_discount_tax();
             ?>
-            <div id="order_review" class="woocommerce-checkout-review-order" data-order-total="<?php echo WC()->cart->cart_contents_total + $taxes ; ?>" data-coupon="<?php echo $couponCode; ?>" data-coupon-value="<?php echo $couponData->amount; ?>" data-coupon-type="<?php echo $couponData->discount_type; ?>">
+            <div id="order_review" class="woocommerce-checkout-review-order" data-order-total="<?php echo round(WC()->cart->cart_contents_total + $taxes); ?>" data-coupon="<?php echo $couponCode; ?>" data-coupon-value="<?php echo $couponData->amount; ?>" data-coupon-type="<?php echo $couponData->discount_type; ?>" data-coupon-total="<?php echo $couponDiscoutAmount; ?>">
                 <?php do_action( 'woocommerce_checkout_order_review' ); ?>
             </div>
             <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
