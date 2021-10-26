@@ -1006,15 +1006,16 @@
         $('#place_order').off('click.gtm');
         $('#terms').off('click.gtm');
 
-        if($('input[value="payu"]').is(":checked")){
+        if($('input[value="payustandard"]').is(":checked")){
             $('#place_order').on('click.gtm', function(){
+                console.log('payu_sent');
                 sendPaymentInfo();
                 sendCheckoutData();
             });
-            
-        }else if($('input[value="payu"]').is(':not(:checked)')){
+        }else if($('input[value="payustandard"]').is(':not(:checked)')){
             $('#terms').on('click.gtm', function(){
                 if($(this).is(":checked")){
+                    console.log('other_sent');
                     sendPaymentInfo();
                     sendCheckoutData();
                 }
@@ -1026,14 +1027,16 @@
                 $('#place_order').off('click.gtm');
                 $('#terms').off('click.gtm');
 
-                if($(this).attr('value') == 'payu'){
+                if($(this).attr('value') == 'payustandard'){
                     $('#place_order').on('click.gtm', function(){
+                        console.log('payu_sent');
                         sendPaymentInfo();
                         sendCheckoutData();
                     });
                 }else{
                     $('#terms').on('click.gtm', function(){
                         if($(this).is(":checked")){
+                            console.log('other_sent');
                             sendPaymentInfo();
                             sendCheckoutData();
                         }
@@ -1160,7 +1163,7 @@
             countrySF: country
         });
 
-        if (typeof userid == 'undefined' && userid == false) {
+        if(userid > 0){
             dataLayer.push({
                 event: "sign_up",
                 user_id: userid,
@@ -1171,6 +1174,7 @@
                 marketing_consent: "",
                 countrySF: country
             });
+            console.log('user_sign_up');
         }
     }
     $('body').on('country_added', function(){
@@ -1184,6 +1188,7 @@
                     orderid: orderID,
                 },
                 success: function(data){
+                    console.log(data);
                     if(data == 'new_order'){
                         sendPurchaseInfo(orderID);
                     }
