@@ -861,7 +861,7 @@ function gtm_purchase(){
 
 add_action( 'wp_footer', 'remove_cartid' );
 function remove_cartid() {
-    if (WC()->cart->is_empty()) { ?>
+    if (WC()->cart->is_empty() && !is_wc_endpoint_url('order-received')) { ?>
     <script type="text/javascript">
         localStorage.removeItem('cartid');
     </script>

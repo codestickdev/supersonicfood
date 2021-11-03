@@ -269,127 +269,6 @@
         });
     });
 
-    /* 
-     *  Add quantity in cart 
-     */
-    // TEMPORARY DEACTIVATED
-    // $(document).ready(function(){
-    //     var input = $('.quantity').find('input[type="number"]');
-    //     var inputs = [];
-    //     var products = [];
-    //     var productsUA = [];
-
-    //     $(input).each(function(){
-    //         var parent = $(this).parent().parent().parent();
-    //         var value = $(this).val();
-
-    //         if(parent.attr('variantid').length){
-    //             var id = parent.attr('variantid');
-    //         }else{
-    //             var id = parent.attr('productid');
-    //         }
-            
-    //         inputs.push({input_id: id, input_value: value});
-    //     });
-    //     $(input).on('change', function(){
-    //         var parent = $(this).parent().parent().parent();
-    //         var name = parent.find('.product-name').attr('data-name');
-    //         var id = parent.attr('productid');
-    //         if(parent.attr('variantid').length){
-    //             var variant_id = parent.attr('variantid');
-    //         }else{
-    //             var variant_id = false;
-    //         }
-            
-    //         var price = parent.find('.product-price').attr('data-price');
-
-    //         // variant name
-    //         var productName = name + ' – ';
-    //         var getVariant_name = parent.find('.product-name').find('a').text();
-    //         var variant_name = getVariant_name.replace(productName, '');
-
-    //         var quantity = $(this).val();
-
-    //         var currentInputs = [];
-    //         if(parent.attr('variantid').length){
-    //             currentInputs.push({input_id: variant_id, input_value: quantity});
-    //         }else{
-    //             currentInputs.push({input_id: id, input_value: quantity});
-    //         }
-
-    //         $(inputs).each(function(key, value) {
-    //             var inputs_input_id = value['input_id'];
-    //             var inputs_input_value = value['input_value'];
-
-    //             $(currentInputs).each(function(key, value){
-    //                 var currentInputs_input_id = value['input_id'];
-    //                 var currentInputs_input_value = value['input_value'];
-
-    //                 if(inputs_input_id == currentInputs_input_id){
-    //                     if(inputs_input_value < currentInputs_input_value){
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-
-    //                         products.push({item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: variant_name, item_variant_id: variant_id, quantity: quantity});
-    //                         productsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': variant_name, 'variant_id': variant_id, 'quantity': quantity });
-    //                     }else if(inputs_input_value == currentInputs_input_value){
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-    //                     }else{
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-    //                     }
-    //                 }
-    //             });
-    //         });
-    //         // console.log(inputs);
-    //         // console.log(currentInputs);
-    //         // console.log(products);
-    //     });
-    //     $(document.body).on('updated_cart_totals', function(){
-    //         if($('.ssCart').length){
-    //             if(products.length !== 0){
-    //                 var country = $('body').attr('country');
-    //                 var getCurrency = $('body').attr('currency');
-    //                 var currency;
-    //                 if(getCurrency == 'zł'){
-    //                     currency = 'PLN';
-    //                 }else{
-    //                     currency = 'EUR';
-    //                 }
-    
-    //                 dataLayer.push({ ecommerce: null });
-    //                 dataLayer.push({
-    //                     event: "add_to_cart",
-    //                     currency: currency,
-    //                     ecommerce: {
-    //                         items: products
-    //                     },
-    //                     cart_id: false,
-    //                     countrySF: country
-    //                 });
-    
-    //                 dataLayer.push({ ecommerce: null });
-    //                 dataLayer.push({
-    //                     'event': "add_to_cart_UA",
-    //                     'ecommerce': {
-    //                         'currencyCode': currency,
-    //                         'add': {
-    //                             'products': productsUA,
-    //                         }
-    //                     },
-    //                     cart_id: false,
-    //                     countrySF: country
-    //                 });
-    //             }
-    //         }
-    //     });
-    // });
-
-
     /*
      *  Usunięcie produktu z koszyka
      */
@@ -494,117 +373,6 @@
     $(document.body).on('updated_cart_totals removed_from_cart wc_cart_emptied', function(){
         removeActionGTM();
     });
-
-    /**
-     *  Decrase product quantity
-     */
-    // TEMPORARY DEACTIVATED
-    // function decraseQuantityGTM(){
-    //     var input = $('.quantity').find('input[type="number"]');
-    //     var inputs = [];
-    //     var products = [];
-    //     var productsUA = [];
-
-    //     $(input).each(function(){
-    //         var parent = $(this).parent().parent().parent();
-    //         var value = $(this).val();
-
-    //         if(parent.attr('variantid').length){
-    //             var id = parent.attr('variantid');
-    //         }else{
-    //             var id = parent.attr('productid');
-    //         }
-            
-    //         inputs.push({input_id: id, input_value: value});
-    //     });
-    //     $(input).on('change', function(){
-    //         var parent = $(this).parent().parent().parent();
-    //         var name = parent.find('.product-name').attr('data-name');
-    //         var id = parent.attr('productid');
-    //         if(parent.attr('variantid').length){
-    //             var variant_id = parent.attr('variantid');
-    //         }else{
-    //             var variant_id = false;
-    //         }
-            
-    //         var price = parent.find('.product-price').attr('data-price');
-
-    //         // variant name
-    //         var productName = name + ' – ';
-    //         var getVariant_name = parent.find('.product-name').find('a').text();
-    //         var variant_name = getVariant_name.replace(productName, '');
-
-    //         var quantity = $(this).val();
-
-    //         var currentInputs = [];
-    //         if(parent.attr('variantid').length){
-    //             currentInputs.push({input_id: variant_id, input_value: quantity});
-    //         }else{
-    //             currentInputs.push({input_id: id, input_value: quantity});
-    //         }
-
-    //         $(inputs).each(function(key, value) {
-    //             var inputs_input_id = value['input_id'];
-    //             var inputs_input_value = value['input_value'];
-
-    //             $(currentInputs).each(function(key, value){
-    //                 var currentInputs_input_id = value['input_id'];
-    //                 var currentInputs_input_value = value['input_value'];
-
-    //                 if(inputs_input_id == currentInputs_input_id){
-    //                     if(inputs_input_value > currentInputs_input_value){
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-
-    //                         products.push({item_name: name, item_id: id, price: price, item_brand: 'SUPERSONIC', item_variant: variant_name, item_variant_id: variant_id, quantity: quantity});
-    //                         productsUA.push({ 'name': name, 'id': id, 'price': price, 'brand': 'SUPERSONIC', 'variant': variant_name, 'variant_id': variant_id, 'quantity': quantity });
-    //                     }else if(inputs_input_value == currentInputs_input_value){
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-    //                     }else{
-    //                         products = $.grep(products, function(value) {
-    //                             return value['item_variant_id'] != currentInputs_input_id;
-    //                         });
-    //                     }
-    //                 }
-    //             });
-    //         });
-    //         if(products.length !== 0){
-    //             $(document.body).one('updated_cart_totals removed_from_cart wc_cart_emptied', function(){
-    //                 dataLayer.push({ ecommerce: null });
-    //                 dataLayer.push({
-    //                     event: "remove_from_cart",
-    //                     currency: currency,
-    //                     ecommerce: {
-    //                         items: products,
-    //                     },
-    //                     cart_id: false,
-    //                     countrySF: country
-    //                 });
-                    
-    //                 dataLayer.push({ ecommerce: null });
-    //                 dataLayer.push({
-    //                     'event': "remove_from_cart_UA",
-    //                     'ecommerce': {
-    //                         'remove': {
-    //                             'products': productsUA
-    //                         }
-    //                     },
-    //                     cart_id: false,
-    //                     countrySF: country
-    //                 });
-    //             });
-    //         }
-    //     });
-    // }
-    // $(document).one('ready', function(){
-    //     decraseQuantityGTM();
-    // });
-    // $(document.body).on('updated_cart_totals removed_from_cart wc_cart_emptied', function(){
-    //     decraseQuantityGTM();
-    // });
 
 
     /*
@@ -1001,7 +769,8 @@
         console.log('add_payment_info');
     }
 
-    $(document.body).on('updated_cart_totals updated_checkout', function(){
+    $(document.body).on('init_checkout update_checkout updated_checkout updated_cart_totals', function(){
+        console.log('updated checkout');
         $('#place_order').off('click.gtm');
         $('#terms').off('click.gtm');
 
@@ -1175,6 +944,7 @@
             });
             console.log('user_sign_up');
         }
+        $('body').trigger('purchase_event_sent');
     }
     $('body').on('country_added', function(){
         if($('body').hasClass('woocommerce-order-received')){
@@ -1280,7 +1050,9 @@
 
         // Order received
         if($('body').hasClass('woocommerce-order-received')){
-            localStorage.removeItem('cartid');
+            $('body').on('purchase_event_sent', function(){
+                localStorage.removeItem('cartid');
+            });
         }
     });
     $(document).ready(function(){
